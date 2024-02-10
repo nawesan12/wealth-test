@@ -48,11 +48,13 @@
 </script>
 
 <!-- Estructura del componente -->
-<form
-	class="mx-auto my-10 flex w-screen max-w-4xl flex-col gap-8 rounded-md border-2 border-green-800 bg-white p-12"
->
+<form class="mx-auto my-10 flex w-screen max-w-2xl flex-col items-center gap-12">
 	<article>
-		<h2 class="my-2 mb-4 text-xl font-semibold">{preguntas[currentStep].texto}</h2>
+		<h2
+			class="text-verde my-2 mb-8 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-2xl font-bold"
+		>
+			{preguntas[currentStep].texto}
+		</h2>
 		{#if preguntas[currentStep].tipo === 'opcion_multiple'}
 			<form class="list-none space-y-1">
 				{#each preguntas[currentStep].opciones as opcion (opcion)}
@@ -100,11 +102,11 @@
 		{/if}
 	</article>
 
-	<Button
+	<button
 		on:click={handleAnswers}
 		type="button"
-		class="inline-block self-end rounded-md bg-black px-6 py-2 font-semibold text-white transition-colors duration-200 hover:bg-green-800"
+		class="bg-dorado text-verde inline-block rounded-lg bg-black px-6 py-2 text-xl font-semibold text-white transition-colors duration-200 hover:bg-green-800"
 	>
 		{currentStep === preguntas.length - 1 ? 'Finalizar' : 'Siguiente'}
-	</Button>
+	</button>
 </form>

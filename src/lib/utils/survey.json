@@ -35,128 +35,233 @@
 	"conociendo_el_negocio": [
 		{
 			"id": 1,
-			"tipo": "opcion_multiple",
-			"texto": "¿Cómo describirías tu conocimiento en el área de la administración financiera de negocios?",
-			"opciones": ["Básico", "Intermedio", "Avanzado", "Experto"]
+			"tipo": "area",
+			"texto": "¿Cuál es la historia y visión detrás de tu negocio? (Lo más importante)"
 		},
 		{
 			"id": 2,
-			"tipo": "opcion_multiple",
-			"texto": "¿Recibes formación constante en el área financiera para aplicar en tu negocio?",
-			"opciones": [
-				"No estudio sobre finanzas",
-				"Sí, consumo contenido sobre finanzas para negocios",
-				"Otro:"
-			]
+			"tipo": "texto",
+			"texto": "¿Qué tipo de negocio tienes? (Ejemplo, barbería, cosmética, veterinaria, mayorista, fabricantes de muebles, venta de indumentaria, restaurante, etc.) Aclarar si eres fabricante, revendedor o vendes servicios."
 		},
 		{
 			"id": 3,
-			"tipo": "number",
-			"texto": "Del 1 al 10, ¿Cuál dirías que es tu conocimiento actual sobre Excel o Google Sheets?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Cuál es tu modelo de negocio actual?",
+			"opciones": [
+				"B2B (negocio a negocio)",
+				"B2C (negocio a consumidor)",
+				"B2G (negocio a gobierno)",
+				"C2B (consumidor a negocio)",
+				"C2C (consumidor a consumidor)",
+				"C2G (consumidor a gobierno)"
+			]
 		},
 		{
 			"id": 4,
-			"tipo": "texto",
-			"texto": "¿Hace cuánto tiempo estás realizando tu negocio? ¿Estás satisfecho/a con tus resultados actuales?"
-		},
-		{
-			"id": 5,
 			"tipo": "opcion_multiple",
 			"texto": "Tu negocio ofrece un:",
 			"opciones": ["Producto Físico", "Servicio Físico", "Producto Digital", "Servicio Digital"]
 		},
 		{
-			"id": 6,
+			"id": 5,
 			"tipo": "area",
 			"texto": "¿Cuál es el producto o servicio principal que ofreces? (Si tienes varios productos / servicios puedes escribirlos, mucho mejor)"
 		},
 		{
-			"id": 7,
-			"tipo": "area",
-			"texto": "¿Cuáles son los 3 aspectos principales que te gustaría mejorar en tu marca / negocio? (No tienen por qué ser todos financieros)"
-		},
-		{
-			"id": 8,
-			"tipo": "texto",
-			"texto": "¿Cuál es el mayor desafío según tú que actualmente enfrentas en cuanto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
-		},
-		{
-			"id": 9,
-			"tipo": "texto",
-			"texto": "¿Tienes empleados a día de hoy? ¿Cuántos? ¿En blanco o en negro?"
-		},
-		{
-			"id": 10,
-			"tipo": "area",
-			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc."
-		},
-		{
-			"id": 11,
+			"id": 6,
 			"tipo": "area",
 			"texto": "¿Qué ventaja competitiva tiene tu negocio?"
 		},
 		{
+			"id": 7,
+			"tipo": "opcion_multiple",
+			"texto": "¿Alguna vez realizaste un estudio de mercado sobre tu rubro y competidores a detalle?",
+			"opciones": ["Si", "No", "Otro:"]
+		},
+		{
+			"id": 8,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes un plan de Marketing?",
+			"opciones": ["Si", "No", "Otro:"]
+		},
+		{
+			"id": 9,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes un contador que se ocupe del área fiscal y la contabilidad patrimonial? ",
+			"opciones": ["Si", "No", "Otro:"]
+		},
+		{
+			"id": 10,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes una clara separación entre tus finanzas personales y las del negocio, o prefieres llevarlas de manera conjunta?",
+			"opciones": ["Las administro en conjunto", "Las administro por separado"]
+		},
+		{
+			"id": 11,
+			"tipo": "opcion_multiple",
+			"texto": "¿Qué sistemas de tecnología y software se utilizan actualmente para la contabilidad y gestión financiera? (Si es un software, aclararlo y escribir el nombre)",
+			"opciones": ["Excel", "Papel", "App", "Software Contable", "Otro:"]
+		},
+		{
 			"id": 12,
-			"tipo": "texto",
-			"texto": "¿Alguna vez realizaste un estudio de mercado completo?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Alguna vez trabajaste con un consultor financiero? Si la respuesta es sí, ¿cómo fue tu experiencia?",
+			"opciones": ["Si", "No", "Otro:"]
 		},
 		{
 			"id": 13,
-			"tipo": "texto",
-			"texto": "¿Tienes un plan de Marketing?"
+			"tipo": "area",
+			"texto": "¿Qué objetivos te gustaría alcanzar en los próximos 12 meses con tu negocio?"
 		},
 		{
 			"id": 14,
+			"tipo": "area",
+			"texto": "¿Por qué crees que aún no has logrado esos objetivos?"
+		},
+		{
+			"id": 15,
+			"tipo": "area",
+			"texto": "¿Cuáles son los 3 aspectos principales que te gustaría mejorar en tu marca / negocio? (No tienen por qué ser todos financieros)"
+		},
+		{
+			"id": 16,
+			"tipo": "area",
+			"texto": "¿Cuál es el mayor desafío según tú que actualmente enfrentas en cuánto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
+		},
+		{
+			"id": 17,
 			"tipo": "texto",
-			"texto": "¿Tenes un contador que se ocupe del área fiscal y la contabilidad patrimonial?"
+			"texto": "¿Tienes empleados a día de hoy? ¿Cuántos? ¿Están registrados legalmente o no?"
+		},
+		{
+			"id": 18,
+			"tipo": "opcion_multiple",
+			"texto": "¿Realizas auditorías completas del negocio de manera regular, ya sea mensual, trimestral u en otra temporalidad?",
+			"opciones": [
+				"Sí, realizo auditorías mensuales/trimestrales/semestrales de manera regular.",
+				"Sí, realizo auditorías, pero no de manera regular.",
+				"No, no realizo auditorías completas en mi negocio."
+			]
+		},
+		{
+			"id": 19,
+			"tipo": "opcion_multiple",
+			"texto": "¿Utilizas publicidad de pago (ADS) para promocionar tu negocio?",
+			"opciones": [
+				"Sí, utilizo publicidad de pago de forma regular.",
+				"He utilizado publicidad de pago en el pasado, pero no de manera regular.",
+				"No, nunca he utilizado publicidad de pago para promocionar mi negocio."
+			]
+		},
+		{
+			"id": 20,
+			"tipo": "opcion_multiple",
+			"texto": "¿Realizas proyecciones de ventas a futuro para estimar el rendimiento financiero de tu negocio?",
+			"opciones": [
+				"Si, realizo proyecciones de ventas de forma regular.",
+				"No realizo proyecciones de ventas, pero estoy interesado/a en aprender más sobre su importancia y aplicación."
+			]
 		}
 	],
 	"analisis_subjetivo": [
 		{
 			"id": 1,
 			"tipo": "opcion_multiple",
-			"texto": "¿Tenes un socio (o más) o emprendes solo/a? (Puede ser tu pareja)",
-			"opciones": ["Socio", "Emprendedor"]
+			"texto": "¿Cómo describirías tu conocimiento en el área de la administración financiera de negocios?",
+			"opciones": ["Basico", "Intermedio", "Avanzado", "Experto"]
 		},
 		{
 			"id": 2,
-			"tipo": "area",
-			"texto": "¿Cuál es tu relación actual con el dinero?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Qué nivel de conocimiento tienes en el área contable de tu negocio?",
+			"opciones": ["Basico", "Intermedio", "Avanzado", "Experto"]
 		},
 		{
 			"id": 3,
-			"tipo": "texto",
-			"texto": "¿Sueles experimentar miedo, ansiedad y demás emociones negativas por pensar en exceso o crear resultados rápidos?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Sueles recibir formación en el área financiera para aplicar en tu negocio?",
+			"opciones": [
+				"No estoy recibiendo formación actualmente, pero estoy interesado en hacerlo.",
+				"Sí, estoy recibiendo formación continua en áreas financieras relevantes para mi negocio.",
+				"Otro:"
+			]
 		},
 		{
 			"id": 4,
-			"tipo": "area",
-			"texto": "¿Alguna vez se te presentó una buena oportunidad para crecer tu negocio y por algún miedo interno terminaste desaprovechándola?"
+			"tipo": "texto",
+			"texto": "¿Tienes un socio (o más) o emprendes solo/a? (Puede ser tu pareja)"
 		},
 		{
 			"id": 5,
-			"tipo": "texto",
-			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Has considerado delegar responsabilidades en tu negocio? Si es así, ¿en qué áreas específicas te gustaría delegar y por qué?",
+			"opciones": [
+				"Sí, ya estoy delegando algunas responsabilidades en mi negocio. ",
+				"Estoy considerando delegar responsabilidades en el futuro.",
+				"No he considerado delegar responsabilidades en mi negocio"
+			]
 		},
 		{
 			"id": 6,
-			"tipo": "area",
-			"texto": "Programación verbal, ¿Cuáles son las 5 creencias más comunes que se repetían en tu casa durante tu adolescencia?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Sueles experimentar miedo, ansiedad y demás emociones negativas por pensar en exceso o desear resultados rápidos?",
+			"opciones": ["Sí, seguido", "Casi nunca", "A menudo", "Pocas veces"]
 		},
 		{
 			"id": 7,
 			"tipo": "area",
-			"texto": "Modelos de referencia, ¿Qué viste en tu entorno respecto al dinero? ¿Abundancia o escasez? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?"
+			"texto": "¿Alguna vez se te presentó una buena oportunidad para crecer tu negocio y por algún miedo interno terminaste desaprovechándola?"
 		},
 		{
 			"id": 8,
 			"tipo": "texto",
-			"texto": "Incidentes concretos, ¿Viviste alguna experiencia que te marcó durante toda tu vida?"
+			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?"
 		},
 		{
 			"id": 9,
 			"tipo": "area",
-			"texto": "¿Haces un balance emocional evaluando el año del negocio en este aspecto? Teniendo en cuenta las decisiones tomadas y demás factores. "
+			"texto": "Programación verbal, ¿Cuáles son las 5 creencias sobre el dinero más comunes que se repetían en tu casa durante tu adolescencia? (Ejemplo, el dinero es malo, los ricos son ávaros, etc.)"
+		},
+		{
+			"id": 10,
+			"tipo": "area",
+			"texto": "Durante tu infancia-adolescencia, ¿Cómo fueron tus modelos de referencia, viviste una situación de escasez o de abundancia financiera? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?"
+		},
+		{
+			"id": 11,
+			"tipo": "opcion_multiple",
+			"texto": "Incidentes concretos, ¿Viviste alguna experiencia puntual que te marcó durante toda tu vida?",
+			"opciones": ["Si", "No", "No estoy seguro"]
+		},
+		{
+			"id": 12,
+			"tipo": "opcion_multiple",
+			"texto": "¿Realizas una evaluación emocional del año en términos de cómo has gestionado tus emociones en relación con las decisiones tomadas y otros factores que han impactado en tu negocio?",
+			"opciones": ["Si", "No", "Nunca lo hice", "Me gustaria hacerlo"]
+		},
+		{
+			"id": 13,
+			"tipo": "area",
+			"texto": "¿Visualizas tu negocio como un proyecto a largo plazo, estando dispuesto a comprometerte durante los próximos 5 a 10 años, o por el contrario lo proyectas solo a corto plazo?"
+		},
+		{
+			"id": 14,
+			"tipo": "opcion_multiple",
+			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero? y qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
+			"opciones": [
+				"Tengo una alta tolerancia al riesgo",
+				"Tengo una baja tolerancia al riesgo",
+				"No estoy seguro/a de cuál es mi tolerancia al riesgo"
+			]
+		},
+		{
+			"id": 15,
+			"tipo": "opcion_multiple",
+			"texto": "¿Qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
+			"opciones": [
+				"Prefiero tomar decisiones financieras de manera independiente ",
+				"Prefiero recibir la orientación de un consultor para tomar decisiones financieras adecuadas"
+			]
 		}
 	],
 	"analisis_objetivo": [
@@ -281,32 +386,36 @@
 	"feedback": [
 		{
 			"id": 1,
-			"tipo": "texto",
-			"texto": "¿Cómo te sentiste a lo largo de la sesión?"
+			"tipo": "area",
+			"texto": "¿Alguna vez habías realizado un diagnóstico tan completo? (Si la respuesta es no) ¿Por qué no? (Si la respuesta es sí) ¿Hace cuánto no lo hacías?"
 		},
 		{
 			"id": 2,
 			"tipo": "texto",
-			"texto": "¿Alguna vez habías realizado un diagnóstico tan completo? (Si la respuesta es no) ¿Por qué no? (Si la respuesta es sí) ¿Hace cuánto no lo hacías?"
+			"texto": "¿Cómo te sentiste a medida que ibas respondiendo las preguntas?"
 		},
 		{
 			"id": 3,
-			"tipo": "opcion_multiple",
-			"texto": "¿Cuál fue la pregunta o sección que más te gustó analizar?",
-			"opciones": ["Conociendo el negocio", "Analisis Subjetivo", "Analisis Objetivo"]
+			"tipo": "texto",
+			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador?"
 		},
 		{
 			"id": 4,
 			"tipo": "area",
-			"texto": "¿Qué aprendiste hoy?"
+			"texto": "¿Sientes que aprendiste algo nuevo sobre la gestión financiera de tu negocio durante el proceso?"
 		},
 		{
 			"id": 5,
-			"tipo": "texto",
-			"texto": "¿Hay algo que le agregarías o mejorarías de la dinámica?"
+			"tipo": "area",
+			"texto": "¿Qué es lo que más resaltas del diagnóstico?"
 		},
 		{
 			"id": 6,
+			"tipo": "area",
+			"texto": "¿Hay algo que le agregarías o mejorarías de la dinámica?"
+		},
+		{
+			"id": 7,
 			"tipo": "opcion_multiple",
 			"texto": "¿Le recomendarías esta sesión de análisis a otros emprendedores?",
 			"opciones": ["Si", "No"]

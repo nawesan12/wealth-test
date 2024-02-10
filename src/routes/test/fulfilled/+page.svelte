@@ -18,7 +18,7 @@
 	fallDistance="98vh"
 />
 
-<section class="bg-zinc-50">
+<section class="text-white">
 	<div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
 		<div class="mx-auto max-w-xl text-center">
 			<h1 class="text-3xl font-extrabold sm:text-5xl">
@@ -33,7 +33,7 @@
 
 			<div class="mt-8 flex flex-wrap justify-center gap-4">
 				<a
-					class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow transition duration-200 hover:bg-blue-400 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+					class="bg-dorado text-verde block w-full rounded px-12 py-3 text-sm font-medium text-white shadow transition duration-200 hover:bg-blue-400 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
 					href="/get-started"
 				>
 					Ver Informe
