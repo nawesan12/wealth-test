@@ -86,8 +86,8 @@
 			Valores de Argentina.
 			<br />
 			<br />
-			Trabajo exclusivamente con individuos comprometidos y listos para dar lo mejor de sí para que su
-			negocio prospere.
+			Trabajo exclusivamente con emprendedores comprometidos y listos para dar lo mejor de sí para que
+			su negocio prospere.
 			<br />
 			<br />
 			La visión de la marca es lograr ser la
