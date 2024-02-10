@@ -14,10 +14,16 @@
 	export let next: string;
 	export let backend: string;
 
+	let currentStep = 0; // Keep track of the current step
 	let respuestas: string[] = Array(preguntas.length).fill('');
 
 	function handleAnswers() {
-		if (!$surveyAnswers[section].includes('')) {
+		if (respuestas[currentStep] === '') {
+			toast.error('Debes llenar el campo');
+			return;
+		}
+
+		if (currentStep === preguntas.length - 1) {
 			surveyAnswers.update((value) => {
 				return {
 					...value,
@@ -35,10 +41,9 @@
 				});
 				goto(next);
 			});
+		} else {
+			currentStep++;
 		}
-
-		toast.error('Debes llenar todos los campos');
-		return;
 	}
 </script>
 
@@ -46,62 +51,60 @@
 <form
 	class="mx-auto my-10 flex w-screen max-w-4xl flex-col gap-8 rounded-md border-2 border-green-800 bg-white p-12"
 >
-	{#each preguntas as pregunta (pregunta.id)}
-		<article>
-			<h2 class="my-2 mb-4 text-xl font-semibold">{pregunta.texto}</h2>
-			{#if pregunta.tipo === 'opcion_multiple'}
-				<form class="list-none space-y-1">
-					{#each pregunta.opciones as opcion (opcion)}
-						<li>
-							{#if opcion === 'Otro:'}
-								<label class="px-8 font-normal" for="opcion_multiple">{opcion}</label>
-								<Input
-									placeholder="Otro..."
-									name="opcion_multiple"
-									bind:value={respuestas[pregunta.id - 1]}
-								/>
-							{:else}
-								<input
-									type="radio"
-									name="opcion_multiple"
-									bind:group={respuestas[pregunta.id - 1]}
-									value={opcion}
-								/>
-								<label class="p-4 font-normal" for="opcion_multiple">{opcion}</label>
-							{/if}
-						</li>
-					{/each}
-				</form>
-			{/if}
-			{#if pregunta.tipo === 'texto'}
-				<Input
-					class=""
-					type="text"
-					placeholder="Ingresa tu respuesta"
-					bind:value={respuestas[pregunta.id - 1]}
-				/>
-			{/if}
-			{#if pregunta.tipo === 'number'}
-				<Input
-					type="number"
-					inputmode="numeric"
-					max="10"
-					min="1"
-					placeholder="Ingresa tu respuesta"
-					bind:value={respuestas[pregunta.id - 1]}
-				/>
-			{/if}
-
-			{#if pregunta.tipo === 'area'}
-				<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[pregunta.id - 1]} />
-			{/if}
-		</article>
-	{/each}
+	<article>
+		<h2 class="my-2 mb-4 text-xl font-semibold">{preguntas[currentStep].texto}</h2>
+		{#if preguntas[currentStep].tipo === 'opcion_multiple'}
+			<form class="list-none space-y-1">
+				{#each preguntas[currentStep].opciones as opcion (opcion)}
+					<li>
+						{#if opcion === 'Otro:'}
+							<label class="px-8 font-normal" for="opcion_multiple">{opcion}</label>
+							<Input
+								placeholder="Otro..."
+								name="opcion_multiple"
+								bind:value={respuestas[currentStep]}
+							/>
+						{:else}
+							<input
+								type="radio"
+								name="opcion_multiple"
+								bind:group={respuestas[currentStep]}
+								value={opcion}
+							/>
+							<label class="p-4 font-normal" for="opcion_multiple">{opcion}</label>
+						{/if}
+					</li>
+				{/each}
+			</form>
+		{/if}
+		{#if preguntas[currentStep].tipo === 'texto'}
+			<Input
+				class=""
+				type="text"
+				placeholder="Ingresa tu respuesta"
+				bind:value={respuestas[currentStep]}
+			/>
+		{/if}
+		{#if preguntas[currentStep].tipo === 'number'}
+			<Input
+				type="number"
+				inputmode="numeric"
+				max="10"
+				min="1"
+				placeholder="Ingresa tu respuesta"
+				bind:value={respuestas[currentStep]}
+			/>
+		{/if}
+		{#if preguntas[currentStep].tipo === 'area'}
+			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
+		{/if}
+	</article>
 
 	<Button
 		on:click={handleAnswers}
-		type="submit"
+		type="button"
 		class="inline-block self-end rounded-md bg-black px-6 py-2 font-semibold text-white transition-colors duration-200 hover:bg-green-800"
-		>Siguiente</Button
 	>
+		{currentStep === preguntas.length - 1 ? 'Finalizar' : 'Siguiente'}
+	</Button>
 </form>
