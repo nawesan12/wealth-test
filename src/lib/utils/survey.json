@@ -1,0 +1,315 @@
+{
+	"datos_iniciales": [
+		{
+			"id": 1,
+			"tipo": "texto",
+			"texto": "Nombre y Apellido"
+		},
+		{
+			"id": 2,
+			"tipo": "texto",
+			"texto": "Instagram de la marca / negocio (escribirlo con el @)"
+		},
+		{
+			"id": 3,
+			"tipo": "texto",
+			"texto": "Número de WhatsApp para contactarte en caso de que califiques a la asesoría (escribirlo con el prefijo de tu país)"
+		},
+		{
+			"id": 4,
+			"tipo": "opcion_multiple",
+			"texto": "¿En qué rango de edad te encuentras?",
+			"opciones": ["16-25", "26-35", "36-50", "50+"]
+		},
+		{
+			"id": 5,
+			"tipo": "texto",
+			"texto": "¿En qué país te encuentras actualmente?"
+		},
+		{
+			"id": 6,
+			"tipo": "texto",
+			"texto": "Email Personal"
+		}
+	],
+	"conociendo_el_negocio": [
+		{
+			"id": 1,
+			"tipo": "opcion_multiple",
+			"texto": "¿Cómo describirías tu conocimiento en el área de la administración financiera de negocios?",
+			"opciones": ["Básico", "Intermedio", "Avanzado", "Experto"]
+		},
+		{
+			"id": 2,
+			"tipo": "opcion_multiple",
+			"texto": "¿Recibes formación constante en el área financiera para aplicar en tu negocio?",
+			"opciones": [
+				"No estudio sobre finanzas",
+				"Sí, consumo contenido sobre finanzas para negocios",
+				"Otro:"
+			]
+		},
+		{
+			"id": 3,
+			"tipo": "number",
+			"texto": "Del 1 al 10, ¿Cuál dirías que es tu conocimiento actual sobre Excel o Google Sheets?"
+		},
+		{
+			"id": 4,
+			"tipo": "texto",
+			"texto": "¿Hace cuánto tiempo estás realizando tu negocio? ¿Estás satisfecho/a con tus resultados actuales?"
+		},
+		{
+			"id": 5,
+			"tipo": "opcion_multiple",
+			"texto": "Tu negocio ofrece un:",
+			"opciones": ["Producto Físico", "Servicio Físico", "Producto Digital", "Servicio Digital"]
+		},
+		{
+			"id": 6,
+			"tipo": "area",
+			"texto": "¿Cuál es el producto o servicio principal que ofreces? (Si tienes varios productos / servicios puedes escribirlos, mucho mejor)"
+		},
+		{
+			"id": 7,
+			"tipo": "area",
+			"texto": "¿Cuáles son los 3 aspectos principales que te gustaría mejorar en tu marca / negocio? (No tienen por qué ser todos financieros)"
+		},
+		{
+			"id": 8,
+			"tipo": "texto",
+			"texto": "¿Cuál es el mayor desafío según tú que actualmente enfrentas en cuanto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
+		},
+		{
+			"id": 9,
+			"tipo": "texto",
+			"texto": "¿Tienes empleados a día de hoy? ¿Cuántos? ¿En blanco o en negro?"
+		},
+		{
+			"id": 10,
+			"tipo": "area",
+			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc."
+		},
+		{
+			"id": 11,
+			"tipo": "area",
+			"texto": "¿Qué ventaja competitiva tiene tu negocio?"
+		},
+		{
+			"id": 12,
+			"tipo": "texto",
+			"texto": "¿Alguna vez realizaste un estudio de mercado completo?"
+		},
+		{
+			"id": 13,
+			"tipo": "texto",
+			"texto": "¿Tienes un plan de Marketing?"
+		},
+		{
+			"id": 14,
+			"tipo": "texto",
+			"texto": "¿Tenes un contador que se ocupe del área fiscal y la contabilidad patrimonial?"
+		}
+	],
+	"analisis_subjetivo": [
+		{
+			"id": 1,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tenes un socio (o más) o emprendes solo/a? (Puede ser tu pareja)",
+			"opciones": ["Socio", "Emprendedor"]
+		},
+		{
+			"id": 2,
+			"tipo": "area",
+			"texto": "¿Cuál es tu relación actual con el dinero?"
+		},
+		{
+			"id": 3,
+			"tipo": "texto",
+			"texto": "¿Sueles experimentar miedo, ansiedad y demás emociones negativas por pensar en exceso o crear resultados rápidos?"
+		},
+		{
+			"id": 4,
+			"tipo": "area",
+			"texto": "¿Alguna vez se te presentó una buena oportunidad para crecer tu negocio y por algún miedo interno terminaste desaprovechándola?"
+		},
+		{
+			"id": 5,
+			"tipo": "texto",
+			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?"
+		},
+		{
+			"id": 6,
+			"tipo": "area",
+			"texto": "Programación verbal, ¿Cuáles son las 5 creencias más comunes que se repetían en tu casa durante tu adolescencia?"
+		},
+		{
+			"id": 7,
+			"tipo": "area",
+			"texto": "Modelos de referencia, ¿Qué viste en tu entorno respecto al dinero? ¿Abundancia o escasez? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?"
+		},
+		{
+			"id": 8,
+			"tipo": "texto",
+			"texto": "Incidentes concretos, ¿Viviste alguna experiencia que te marcó durante toda tu vida?"
+		},
+		{
+			"id": 9,
+			"tipo": "area",
+			"texto": "¿Haces un balance emocional evaluando el año del negocio en este aspecto? Teniendo en cuenta las decisiones tomadas y demás factores. "
+		}
+	],
+	"analisis_objetivo": [
+		{
+			"id": 1,
+			"tipo": "area",
+			"texto": "¿Cómo mides el resultado neto de tu negocio para saber si está ganando dinero realmente?"
+		},
+		{
+			"id": 2,
+			"tipo": "texto",
+			"texto": "¿Cómo mides el resultado del negocio a final de mes, en pesos o en dólares? (Moneda local vs extranjera)"
+		},
+		{
+			"id": 3,
+			"tipo": "area",
+			"texto": "¿Qué estrategias utilizas para “enfrentar” la inflación?"
+		},
+		{
+			"id": 4,
+			"tipo": "texto",
+			"texto": "¿Cuántas cuentas utilizas para gestionar todo tu negocio?"
+		},
+		{
+			"id": 5,
+			"tipo": "opcion_multiple",
+			"texto": "¿Separas tus finanzas personales y las del negocio o las llevas en conjunto?",
+			"opciones": ["Las administro en conjunto", "Las administro por separado"]
+		},
+		{
+			"id": 6,
+			"tipo": "area",
+			"texto": "¿Cómo determinas el dinero que cobras? ¿Cómo dueño, como ejecutivo? ¿Por % o tienes un salario fijo?"
+		},
+		{
+			"id": 7,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes un presupuesto claro que te ayude a tomar decisiones financieras informadas? Diferenciando ingresos, gastos, costos, claro y escrito de manera física o virtual",
+			"opciones": ["Sí, lo tengo", "No, tengo que armar uno", "Otro:"]
+		},
+		{
+			"id": 8,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes una estructura de costos organizada y eficiente? Es uno de los pilares para crear estrategias de ventas y tomar mejores decisiones",
+			"opciones": [
+				"Sí, tengo una estructura de costos",
+				"No, necesito armar una estructura de costos",
+				"Otro:"
+			]
+		},
+		{
+			"id": 9,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes un fondo de tranquilidad que te cubra ante la falta de ingresos? Mínimo de 3 o meses",
+			"opciones": [
+				"Sí, tengo ahorros, aunque no sé de cuantos meses",
+				"No tengo dinero ahorrado para emergencias. Dependo de mis ventas mes a mes"
+			]
+		},
+		{
+			"id": 10,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes un plan para el manejo de deudas? En caso de que tu negocio las posea",
+			"opciones": [
+				"Tengo deudas y tengo un plan para pagarlas",
+				"Tengo deudas y no tengo un plan para pagarlas",
+				"Mi negocio no tiene deudas"
+			]
+		},
+		{
+			"id": 11,
+			"tipo": "texto",
+			"texto": "¿Qué herramientas utilizas para gestionar adecuadamente las finanzas tu negocio? (Puede ser escribir en papel, Excel, alguna app, software, etc.)"
+		},
+		{
+			"id": 12,
+			"tipo": "opcion_multiple",
+			"texto": "El secreto del crecimiento de los negocios radica en tomar buenas decisiones, las cuales surgen de analizar los ratios del negocio. ¿Sabes calcular los ratios financieros, contables y de marketing de tu negocio?",
+			"opciones": [
+				"Sí, lo aplico cada 'X' tiempo",
+				"Sí, pero no lo aplico",
+				"No sé como calcular los ratios",
+				"Otro:"
+			]
+		},
+		{
+			"id": 13,
+			"tipo": "opcion_multiple",
+			"texto": "¿Tienes alguna herramienta para medir la liquidez constante de tu negocio y así manejarlo mejor en los meses de baja demanda? (La liquidez es uno de los conceptos más importantes de todos)",
+			"opciones": ["Sí", "No, necesito medir mi liquidez", "No sé que es la liquidez"]
+		},
+		{
+			"id": 14,
+			"tipo": "opcion_multiple",
+			"texto": "Las grandes empresas utilizan los estados financieros para revisar el negocio, tomar decisiones y proyectar resultados futuros. ¿Tú realizas estados financieros de manera (mensual, trimestral, semestral o anual) de tu negocio?",
+			"opciones": ["Sí, realizo estados financieros", "No realizo estados financieros", "Otro"]
+		},
+		{
+			"id": 15,
+			"tipo": "opcion_multiple",
+			"texto": "La mayoría de marcas nacen como un hobby y no logran dar el salto a convertirse en un negocio por falta de un plan y una estructura financiera clara. ¿Tienes un plan financiero claro para dar el salto de autoempleo a un negocio sólido?",
+			"opciones": ["Tengo un plan financiero claro", "No tengo un plan, necesito uno", "Otro"]
+		}
+	],
+	"preguntas_extras": [
+		{
+			"id": 1,
+			"tipo": "area",
+			"texto": "¿Qué proyección de crecimiento tienes a futuro? ¿Hasta donde te gustaría escalar tu negocio?"
+		},
+		{
+			"id": 2,
+			"tipo": "texto",
+			"texto": "¿Estás listo para dar el siguiente paso?"
+		},
+		{
+			"id": 3,
+			"tipo": "area",
+			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)Tu respuesta"
+		}
+	],
+	"feedback": [
+		{
+			"id": 1,
+			"tipo": "texto",
+			"texto": "¿Cómo te sentiste a lo largo de la sesión?"
+		},
+		{
+			"id": 2,
+			"tipo": "texto",
+			"texto": "¿Alguna vez habías realizado un diagnóstico tan completo? (Si la respuesta es no) ¿Por qué no? (Si la respuesta es sí) ¿Hace cuánto no lo hacías?"
+		},
+		{
+			"id": 3,
+			"tipo": "opcion_multiple",
+			"texto": "¿Cuál fue la pregunta o sección que más te gustó analizar?",
+			"opciones": ["Conociendo el negocio", "Analisis Subjetivo", "Analisis Objetivo"]
+		},
+		{
+			"id": 4,
+			"tipo": "area",
+			"texto": "¿Qué aprendiste hoy?"
+		},
+		{
+			"id": 5,
+			"tipo": "texto",
+			"texto": "¿Hay algo que le agregarías o mejorarías de la dinámica?"
+		},
+		{
+			"id": 6,
+			"tipo": "opcion_multiple",
+			"texto": "¿Le recomendarías esta sesión de análisis a otros emprendedores?",
+			"opciones": ["Si", "No"]
+		}
+	]
+}

@@ -1,0 +1,125 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id           String            @id @default(uuid())
+  fullname     String
+  social       String            @unique
+  phone        String            @unique
+  ageRange     String
+  country      String
+  email        String            @unique
+  tokens       AccessInfoToken[]
+  SurveyAnswer SurveyAnswer[]
+}
+
+model BusinessInfo {
+  id                        Int           @id @default(autoincrement())
+  conocimientoFinanciero    String
+  formacionConstante        String
+  conocimientoExcel         String
+  tiempoNegocioSatisfaccion String
+  tipoNegocio               String
+  productoServicioPrincipal String
+  aspectosMejorar           String
+  desafioAdministracion     String
+  infoEmpleados             String
+  conocimientoIndicadores   String
+  ventajaCompetitiva        String
+  estudioMercado            String
+  planMarketing             String
+  contadorFiscal            String
+  SurveyAnswer              SurveyAnswer?
+}
+
+model SubjectiveAnalysis {
+  id                   Int           @id @default(autoincrement())
+  socioOEmprendedor    String
+  relacionDinero       String
+  emocionesNegativas   String
+  perdidaOportunidades String
+  crecimientoEconomico String
+  SurveyAnswer         SurveyAnswer?
+}
+
+model ObjectiveAnalysis {
+  id                   Int           @id @default(autoincrement())
+  resultadoNeto        String
+  resultadoMoneda      String
+  estrategiasInflacion String
+  cuentasNegocio       String
+  separacionFinanzas   String
+  dineroCobrado        String
+  presupuestoClaro     String
+  estructuraCostos     String
+  fondoTranquilidad    String
+  planDeudas           String
+  herramientasGestion  String
+  calculoRatios        String
+  medicionLiquidez     String
+  estadosFinancieros   String
+  planFinancieroSalto  String
+  SurveyAnswer         SurveyAnswer?
+}
+
+model ExtraQuestions {
+  id                 Int           @id @default(autoincrement())
+  crecimientoFuturo  String
+  listoSiguientePaso String
+  comentarioExtra    String
+  SurveyAnswer       SurveyAnswer?
+}
+
+model Feedback {
+  id                  Int           @id @default(autoincrement())
+  sentimientoSesion   String
+  diagnosticoCompleto String
+  seccionFavorita     String
+  aprendizaje         String
+  mejorasDinamica     String
+  recomendacionSesion String
+  SurveyAnswer        SurveyAnswer?
+}
+
+model MoneyInversion {
+  id             Int           @id @default(autoincrement())
+  rangoInversion String
+  SurveyAnswer   SurveyAnswer?
+}
+
+model AccessInfoToken {
+  id     Int     @id @default(autoincrement())
+  token  String  @unique @default(uuid())
+  userId String?
+  User   User?   @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+model SurveyAnswer {
+  id                   Int                @id @default(autoincrement())
+  userId               String
+  bussinessInfoId      Int                @unique
+  subjectiveAnalysisId Int                @unique
+  objectiveAnalysisId  Int                @unique
+  extraQuestionsId     Int                @unique
+  feedbackId           Int                @unique
+  moneyInversionId     Int                @unique
+  token                String             @unique
+  user                 User               @relation(fields: [userId], references: [id])
+  bussinessInfo        BusinessInfo       @relation(fields: [bussinessInfoId], references: [id])
+  subjectiveAnalysis   SubjectiveAnalysis @relation(fields: [subjectiveAnalysisId], references: [id])
+  objectiveAnalysis    ObjectiveAnalysis  @relation(fields: [objectiveAnalysisId], references: [id])
+  extraQuestions       ExtraQuestions     @relation(fields: [extraQuestionsId], references: [id])
+  feedback             Feedback           @relation(fields: [feedbackId], references: [id])
+  moneyInversion       MoneyInversion     @relation(fields: [moneyInversionId], references: [id])
+
+  @@index([userId, bussinessInfoId, subjectiveAnalysisId, objectiveAnalysisId, extraQuestionsId, feedbackId, moneyInversionId])
+}
