@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <section
 	class="flex h-screen w-screen flex-col items-center justify-center gap-28 overflow-hidden text-gray-900"
 >

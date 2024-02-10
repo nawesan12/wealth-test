@@ -90,5 +90,21 @@ body {
 }
 
 .text-dorado {
-	color: #f8bc88;
+	color: #f8bc88 !important;
+}
+
+.bg-dorado {
+	background: #f8bc88 !important;
+}
+
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
 }
