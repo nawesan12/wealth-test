@@ -49,7 +49,7 @@
 	<header
 		class="mx-auto my-6 flex flex-col items-center lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-1"
 	>
-		<h1 class="text-dorado col-span-1 flex text-9xl font-bold">DEP</h1>
+		<h1 class="text-dorado col-span-1 flex text-7xl font-bold">DEP</h1>
 		<h2 class="text-center text-2xl text-white">
 			La formula para transformar las finanzas de tu negocio
 		</h2>
@@ -62,7 +62,7 @@
 	/>
 
 	<section
-		class="texto my-8 mb-4 p-4 text-white lg:relative lg:bottom-16 lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-2 lg:my-0"
+		class="texto my-8 mb-4 p-4 text-white lg:relative lg:bottom-24 lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-2 lg:my-0"
 	>
 		<p class="mb-6 text-xl">
 			<span class="font-bold">
@@ -97,16 +97,14 @@
 	</section>
 
 	<div
-		class="my-4 mb-12 flex flex-col gap-4 px-8 lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-4 lg:mx-auto lg:grid lg:max-w-md lg:grid-cols-2"
+		class="my-4 mb-12 flex flex-col gap-4 px-8 lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-4 lg:mx-auto lg:grid lg:max-w-lg lg:grid-cols-2"
 	>
 		<Input type="text" bind:value={token} placeholder="Codigo de acceso" />
 		<Button
-			class="bg-dorado flex items-center justify-center gap-1 rounded-xl p-2 py-2 font-medium text-black hover:bg-rose-700"
+			class="bg-dorado flex items-center justify-center gap-1 rounded-xl p-4  font-medium text-black hover:bg-rose-700"
 			on:click={handleAccessToken}
 		>
 			Comenzar diagnostico
 		</Button>
 	</div>
 </section>
-
-<!--  -->
