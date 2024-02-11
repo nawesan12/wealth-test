@@ -11,7 +11,7 @@
 	const actualQuestions: any = survey[section];
 </script>
 
-<main class="flex h-screen w-screen flex-col items-center">
+<main class="flex w-screen flex-col items-center">
 	<BreadCrumb actualSection={section} />
 	<Survey {backend} {section} preguntas={actualQuestions} {next} />
 </main>

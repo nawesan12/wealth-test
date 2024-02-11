@@ -7,6 +7,7 @@
 	import { goto } from '$app/navigation';
 	import { toast } from 'svelte-sonner';
 	import { sendDataToBackendAndSave } from '@/utils';
+	import CountrySelect from '$lib/components/country-select/country-select.svelte';
 
 	export let preguntas: Question[];
 	export let section: string;
@@ -47,32 +48,39 @@
 </script>
 
 <!-- Estructura del componente -->
-<form class="mx-auto my-10 flex w-screen max-w-2xl flex-col items-center gap-12">
+<main class="mx-auto my-10 flex w-screen max-w-2xl flex-col items-center gap-20 p-4">
 	<article>
 		<h2
-			class="text-verde my-2 mb-8 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-2xl font-bold"
+			class="text-verde my-4 mb-16 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-3xl font-bold"
 		>
 			{preguntas[currentStep].texto}
 		</h2>
 		{#if preguntas[currentStep].tipo === 'opcion_multiple'}
-			<form class="list-none space-y-1">
-				{#each preguntas[currentStep].opciones as opcion (opcion)}
+			<form class="grid max-w-2xl list-none grid-cols-2 gap-6 space-y-1">
+				{#each preguntas[currentStep].opciones as opcion, index}
 					<li>
 						{#if opcion === 'Otro:'}
-							<label class="px-8 font-normal" for="opcion_multiple">{opcion}</label>
 							<Input
-								placeholder="Otro..."
+								class="w-full"
+								placeholder="Otro (especificar)"
 								name="opcion_multiple"
 								bind:value={respuestas[currentStep]}
 							/>
 						{:else}
-							<input
-								type="radio"
-								name="opcion_multiple"
-								bind:group={respuestas[currentStep]}
-								value={opcion}
-							/>
-							<label class="p-4 font-normal" for="opcion_multiple">{opcion}</label>
+							<div
+								class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+							>
+								<input
+									type="radio"
+									id={opcion}
+									name={opcion}
+									bind:group={respuestas[currentStep]}
+									value={opcion}
+									class="absolute opacity-0"
+								/>
+								<label class="text-md cursor-pointer p-4 font-semibold" for={opcion}>{opcion}</label
+								>
+							</div>
 						{/if}
 					</li>
 				{/each}
@@ -99,6 +107,15 @@
 		{#if preguntas[currentStep].tipo === 'area'}
 			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
 		{/if}
+		{#if preguntas[currentStep].tipo === 'country'}
+			<select
+				placeholder="Selecciona un país"
+				class="text-verde w-full rounded-lg p-4 py-3"
+				bind:value={respuestas[currentStep]}
+			>
+				<CountrySelect />
+			</select>
+		{/if}
 	</article>
 
 	<button
@@ -108,4 +125,4 @@
 	>
 		{currentStep === preguntas.length - 1 ? 'Finalizar' : 'Siguiente'}
 	</button>
-</form>
+</main>

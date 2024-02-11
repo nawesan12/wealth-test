@@ -31,3 +31,5 @@
 		}, 30000);
 	});
 </script>
+
+hay que hacer que las frases vayan apareciendo con el formato deseado

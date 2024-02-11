@@ -33,7 +33,7 @@
 		},
 		{
 			"id": 7,
-			"tipo": "texto",
+			"tipo": "country",
 			"texto": "¿En qué país te encuentras actualmente?"
 		},
 		{
