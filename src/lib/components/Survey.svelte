@@ -5,7 +5,6 @@
 	import Input from './ui/input/input.svelte';
 	import Textarea from './ui/textarea/textarea.svelte';
 	import { goto } from '$app/navigation';
-	import Button from './ui/button/button.svelte';
 	import { toast } from 'svelte-sonner';
 	import { sendDataToBackendAndSave } from '@/utils';
 
