@@ -264,123 +264,161 @@
 			]
 		}
 	],
-	"analisis_objetivo": [
+	"analisis_financiero": [
 		{
 			"id": 1,
-			"tipo": "area",
-			"texto": "¿Cómo mides el resultado neto de tu negocio para saber si está ganando dinero realmente?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Cuentas con alguna política financiera interna establecida para el manejo del dinero en tu negocio?",
+			"opciones": [
+				"Sí, tengo una política financiera claramente definida.",
+				"No, actualmente no cuento con una política financiera establecida.",
+				"Estoy en proceso de desarrollar una política financiera para mi negocio.",
+				"No estoy seguro/a de lo que implica una política financiera interna."
+			]
 		},
 		{
 			"id": 2,
-			"tipo": "texto",
-			"texto": "¿Cómo mides el resultado del negocio a final de mes, en pesos o en dólares? (Moneda local vs extranjera)"
+			"tipo": "area",
+			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc."
 		},
 		{
 			"id": 3,
 			"tipo": "area",
-			"texto": "¿Qué estrategias utilizas para “enfrentar” la inflación?"
+			"texto": "¿Qué indicadores o métricas utilizas para evaluar la rentabilidad real de tu negocio y asegurarte de que esté generando ganancias?"
 		},
 		{
 			"id": 4,
-			"tipo": "texto",
-			"texto": "¿Cuántas cuentas utilizas para gestionar todo tu negocio?"
+			"tipo": "area",
+			"texto": "¿Cómo mides el resultado del negocio a final de mes, en la moneda local o prefieres medir en dólares u otra moneda extranjera?"
 		},
 		{
 			"id": 5,
-			"tipo": "opcion_multiple",
-			"texto": "¿Separas tus finanzas personales y las del negocio o las llevas en conjunto?",
-			"opciones": ["Las administro en conjunto", "Las administro por separado"]
+			"tipo": "area",
+			"texto": "¿Qué acciones o estrategias implementas para mitigar los efectos de la inflación en tu negocio?"
 		},
 		{
 			"id": 6,
-			"tipo": "area",
-			"texto": "¿Cómo determinas el dinero que cobras? ¿Cómo dueño, como ejecutivo? ¿Por % o tienes un salario fijo?"
+			"tipo": "texto",
+			"texto": "Cuántas cuentas diferentes utilizas para administrar todos los aspectos financieros de tu negocio?"
 		},
 		{
 			"id": 7,
 			"tipo": "opcion_multiple",
-			"texto": "¿Tienes un presupuesto claro que te ayude a tomar decisiones financieras informadas? Diferenciando ingresos, gastos, costos, claro y escrito de manera física o virtual",
-			"opciones": ["Sí, lo tengo", "No, tengo que armar uno", "Otro:"]
+			"texto": "¿Cómo estableces tu remuneración como propietario del negocio? ¿Lo haces en función de un porcentaje de las ganancias o tienes un salario fijo? ¿Consideras tu compensación desde la perspectiva de propietario o ejecutivo?",
+			"opciones": [
+				"Porcentaje de ganancias como propietario.",
+				"Salario fijo como propietario.",
+				"Remuneración variable según ganancias.",
+				"Compensación equilibrada propietario-ejecutivo.",
+				"Combinación de salario fijo e incentivos."
+			]
 		},
 		{
 			"id": 8,
 			"tipo": "opcion_multiple",
-			"texto": "¿Tienes una estructura de costos organizada y eficiente? Es uno de los pilares para crear estrategias de ventas y tomar mejores decisiones",
+			"texto": "¿Utilizas un presupuesto detallado que te permita tomar decisiones financieras fundamentadas? ¿Diferencias claramente entre ingresos, gastos y costos, y lo mantienes documentado ya sea en formato físico o virtual? [Puedes agregar una descripción detallada en el cuadro de texto]",
 			"opciones": [
-				"Sí, tengo una estructura de costos",
-				"No, necesito armar una estructura de costos",
-				"Otro:"
+				"Sí, tengo un presupuesto",
+				"No, debería implementar un presupuesto",
+				"Otro:",
+				"Compensación equilibrada propietario-ejecutivo.",
+				"Combinación de salario fijo e incentivos."
 			]
 		},
 		{
 			"id": 9,
 			"tipo": "opcion_multiple",
-			"texto": "¿Tienes un fondo de tranquilidad que te cubra ante la falta de ingresos? Mínimo de 3 o meses",
+			"texto": "¿Tienes una estructura de costos organizada y eficiente?",
+			"opciones": [
+				"Sí, tengo una estructura de costos completa",
+				"Sí, pero es muy básica",
+				"No, necesito armar una estructura de costos",
+				"Otro:"
+			]
+		},
+		{
+			"id": 10,
+			"tipo": "opcion_multiple",
+			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
 				"Sí, tengo ahorros, aunque no sé de cuantos meses",
 				"No tengo dinero ahorrado para emergencias. Dependo de mis ventas mes a mes"
 			]
 		},
 		{
-			"id": 10,
-			"tipo": "opcion_multiple",
-			"texto": "¿Tienes un plan para el manejo de deudas? En caso de que tu negocio las posea",
-			"opciones": [
-				"Tengo deudas y tengo un plan para pagarlas",
-				"Tengo deudas y no tengo un plan para pagarlas",
-				"Mi negocio no tiene deudas"
-			]
-		},
-		{
 			"id": 11,
-			"tipo": "texto",
-			"texto": "¿Qué herramientas utilizas para gestionar adecuadamente las finanzas tu negocio? (Puede ser escribir en papel, Excel, alguna app, software, etc.)"
+			"tipo": "opcion_multiple",
+			"texto": "¿Calculas regularmente el punto de equilibrio financiero del negocio para determinar el nivel de ventas necesario para cubrir los costos operativos del mismo?",
+			"opciones": [
+				"Sí, calculo regularmente mi punto de equilibrio.",
+				"No calculo mi punto de equilibrio, pero estoy interesado/a en aprender más sobre su importancia y aplicación."
+			]
 		},
 		{
 			"id": 12,
 			"tipo": "opcion_multiple",
-			"texto": "El secreto del crecimiento de los negocios radica en tomar buenas decisiones, las cuales surgen de analizar los ratios del negocio. ¿Sabes calcular los ratios financieros, contables y de marketing de tu negocio?",
+			"texto": "¿Has establecido un plan para gestionar las deudas en caso de que tu negocio las tenga?",
 			"opciones": [
-				"Sí, lo aplico cada 'X' tiempo",
-				"Sí, pero no lo aplico",
-				"No sé como calcular los ratios",
-				"Otro:"
+				"Tengo deudas y tengo un plan para pagarlas",
+				"Tengo deudas y no tengo un plan para pagarlas.",
+				"Mi negocio no tiene deudas"
 			]
 		},
 		{
 			"id": 13,
 			"tipo": "opcion_multiple",
-			"texto": "¿Tienes alguna herramienta para medir la liquidez constante de tu negocio y así manejarlo mejor en los meses de baja demanda? (La liquidez es uno de los conceptos más importantes de todos)",
-			"opciones": ["Sí", "No, necesito medir mi liquidez", "No sé que es la liquidez"]
+			"texto": "¿Sueles medir la liquidez constante de tu negocio con el fin de gestionarlo mejor durante los períodos de baja demanda?",
+			"opciones": ["Sí, reviso la liquidez.", "No, me gustaría saber como medir la liquidez."]
 		},
 		{
 			"id": 14,
 			"tipo": "opcion_multiple",
-			"texto": "Las grandes empresas utilizan los estados financieros para revisar el negocio, tomar decisiones y proyectar resultados futuros. ¿Tú realizas estados financieros de manera (mensual, trimestral, semestral o anual) de tu negocio?",
-			"opciones": ["Sí, realizo estados financieros", "No realizo estados financieros", "Otro"]
+			"texto": "¿Elaboras estados financieros de manera regular (ya sea mensual, trimestral, semestral o anual) para revisar el estado de tu negocio, tomar decisiones informadas y proyectar resultados futuros, tal como lo hacen las grandes empresas?",
+			"opciones": [
+				"Sí, elaboro estados financieros.",
+				"No elaboro estados financieros regularmente, pero considero hacerlo",
+				"Otro:"
+			]
 		},
 		{
 			"id": 15,
 			"tipo": "opcion_multiple",
-			"texto": "La mayoría de marcas nacen como un hobby y no logran dar el salto a convertirse en un negocio por falta de un plan y una estructura financiera clara. ¿Tienes un plan financiero claro para dar el salto de autoempleo a un negocio sólido?",
-			"opciones": ["Tengo un plan financiero claro", "No tengo un plan, necesito uno", "Otro"]
-		}
-	],
-	"preguntas_extras": [
-		{
-			"id": 1,
-			"tipo": "area",
-			"texto": "¿Qué proyección de crecimiento tienes a futuro? ¿Hasta donde te gustaría escalar tu negocio?"
+			"texto": "¿Realizas un seguimiento de tu stock/inventario?",
+			"opciones": [
+				"Sí, llevo un control regular de mi inventario.",
+				"No, no llevo un control de mi inventario.",
+				"Estoy en proceso de implementar un sistema de control de inventario."
+			]
 		},
 		{
-			"id": 2,
+			"id": 16,
+			"tipo": "opcion_multiple",
+			"texto": "¿Has recurrido a financiamiento externo para tu negocio en algún momento?",
+			"opciones": [
+				"Sí, he utilizado financiamiento externo.",
+				"No, nunca he utilizado financiamiento externo.",
+				"Estoy considerando utilizar financiamiento externo en el futuro."
+			]
+		},
+		{
+			"id": 17,
+			"tipo": "opcion_multiple",
+			"texto": "¿Has desarrollado un plan financiero claro para hacer la transición de un autoempleo a un negocio sólido? La falta de un plan y una estructura financiera definida suele ser una barrera para muchas marcas que nacen como pasatiempo y desean convertirse en empresas establecidas.",
+			"opciones": [
+				"Sí, tengo un plan financiero detallado para hacer esa transición.",
+				"Estoy en proceso de desarrollar un plan financiero claro.",
+				"No he considerado un plan específico, pero reconozco su importancia y estoy dispuesto a aprender más"
+			]
+		},
+		{
+			"id": 18,
 			"tipo": "texto",
-			"texto": "¿Estás listo para dar el siguiente paso?"
+			"texto": "¿Cuál es el objetivo principal que te gustaría lograr trabajando de la mano con un consultor  financiero?"
 		},
 		{
-			"id": 3,
-			"tipo": "area",
-			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)Tu respuesta"
+			"id": 19,
+			"tipo": "texto",
+			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)"
 		}
 	],
 	"feedback": [

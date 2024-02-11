@@ -2,6 +2,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
 datasource db {
   provider     = "postgresql"
   url          = env("DATABASE_URL")
@@ -9,89 +13,15 @@ datasource db {
 }
 
 model User {
-  id           String            @id @default(uuid())
-  fullname     String
-  social       String            @unique
-  phone        String            @unique
-  ageRange     String
-  country      String
-  email        String            @unique
-  tokens       AccessInfoToken[]
-  SurveyAnswer SurveyAnswer[]
-}
-
-model BusinessInfo {
-  id                        Int           @id @default(autoincrement())
-  conocimientoFinanciero    String
-  formacionConstante        String
-  conocimientoExcel         String
-  tiempoNegocioSatisfaccion String
-  tipoNegocio               String
-  productoServicioPrincipal String
-  aspectosMejorar           String
-  desafioAdministracion     String
-  infoEmpleados             String
-  conocimientoIndicadores   String
-  ventajaCompetitiva        String
-  estudioMercado            String
-  planMarketing             String
-  contadorFiscal            String
-  SurveyAnswer              SurveyAnswer?
-}
-
-model SubjectiveAnalysis {
-  id                   Int           @id @default(autoincrement())
-  socioOEmprendedor    String
-  relacionDinero       String
-  emocionesNegativas   String
-  perdidaOportunidades String
-  crecimientoEconomico String
-  SurveyAnswer         SurveyAnswer?
-}
-
-model ObjectiveAnalysis {
-  id                   Int           @id @default(autoincrement())
-  resultadoNeto        String
-  resultadoMoneda      String
-  estrategiasInflacion String
-  cuentasNegocio       String
-  separacionFinanzas   String
-  dineroCobrado        String
-  presupuestoClaro     String
-  estructuraCostos     String
-  fondoTranquilidad    String
-  planDeudas           String
-  herramientasGestion  String
-  calculoRatios        String
-  medicionLiquidez     String
-  estadosFinancieros   String
-  planFinancieroSalto  String
-  SurveyAnswer         SurveyAnswer?
-}
-
-model ExtraQuestions {
-  id                 Int           @id @default(autoincrement())
-  crecimientoFuturo  String
-  listoSiguientePaso String
-  comentarioExtra    String
-  SurveyAnswer       SurveyAnswer?
-}
-
-model Feedback {
-  id                  Int           @id @default(autoincrement())
-  sentimientoSesion   String
-  diagnosticoCompleto String
-  seccionFavorita     String
-  aprendizaje         String
-  mejorasDinamica     String
-  recomendacionSesion String
-  SurveyAnswer        SurveyAnswer?
-}
-
-model MoneyInversion {
-  id             Int           @id @default(autoincrement())
-  rangoInversion String
-  SurveyAnswer   SurveyAnswer?
+  id        String            @id @default(uuid())
+  name      String
+  instagram String            @unique
+  whatsapp  String            @unique
+  age       String
+  country   String
+  email     String            @unique
+  tokens    AccessInfoToken[]
+  surveys   Business[]
 }
 
 model AccessInfoToken {
@@ -103,23 +33,104 @@ model AccessInfoToken {
   @@index([userId])
 }
 
-model SurveyAnswer {
-  id                   Int                @id @default(autoincrement())
-  userId               String
-  bussinessInfoId      Int                @unique
-  subjectiveAnalysisId Int                @unique
-  objectiveAnalysisId  Int                @unique
-  extraQuestionsId     Int                @unique
-  feedbackId           Int                @unique
-  moneyInversionId     Int                @unique
-  token                String             @unique
-  user                 User               @relation(fields: [userId], references: [id])
-  bussinessInfo        BusinessInfo       @relation(fields: [bussinessInfoId], references: [id])
-  subjectiveAnalysis   SubjectiveAnalysis @relation(fields: [subjectiveAnalysisId], references: [id])
-  objectiveAnalysis    ObjectiveAnalysis  @relation(fields: [objectiveAnalysisId], references: [id])
-  extraQuestions       ExtraQuestions     @relation(fields: [extraQuestionsId], references: [id])
-  feedback             Feedback           @relation(fields: [feedbackId], references: [id])
-  moneyInversion       MoneyInversion     @relation(fields: [moneyInversionId], references: [id])
+// Define the data model for the business
+model Business {
+  id Int @id @default(autoincrement())
 
-  @@index([userId, bussinessInfoId, subjectiveAnalysisId, objectiveAnalysisId, extraQuestionsId, feedbackId, moneyInversionId])
+  businessInfo         BusinessInfo?       @relation(fields: [businessInfoId], references: [id])
+  subjectiveAnalysis   SubjectiveAnalysis? @relation(fields: [subjectiveAnalysisId], references: [id])
+  financialAnalysis    FinancialAnalysis?  @relation(fields: [financialAnalysisId], references: [id])
+  feedback             Feedback?           @relation(fields: [feedbackId], references: [id])
+  businessInfoId       Int?                @unique
+  subjectiveAnalysisId Int?                @unique
+  financialAnalysisId  Int?                @unique
+  feedbackId           Int?                @unique
+  User                 User?               @relation(fields: [userId], references: [id])
+  userId               String?
+
+  @@index([userId])
+}
+
+// Define the data model for the business information
+model BusinessInfo {
+  id                      Int       @id @default(autoincrement())
+  historyAndVision        String
+  businessType            String
+  businessModel           String
+  businessOffering        String
+  mainProduct             String
+  competitiveAdvantage    String
+  marketResearch          String
+  marketingPlan           String
+  accountant              String
+  financialSeparation     String
+  technologySoftware      String
+  financialConsultant     String
+  objectives              String
+  challenges              String
+  mainAspectsToImprove    String
+  administrationChallenge String
+  employees               String
+  audits                  String
+  advertising             String
+  salesProjections        String
+  Business                Business?
+}
+
+// Define the data model for the subjective analysis
+model SubjectiveAnalysis {
+  id                      Int       @id @default(autoincrement())
+  financialKnowledge      String
+  accountingKnowledge     String
+  financialTraining       String
+  partnerStatus           String
+  delegation              String
+  emotionalExperience     String
+  missedOpportunity       String
+  suddenGrowth            String
+  childhoodBeliefs        String
+  childhoodExperience     String
+  lifeIncidents           String
+  emotionalEvaluation     String
+  longTermCommitment      String
+  financialRiskTolerance  String
+  financialDecisionMaking String
+  Business                Business?
+}
+
+// Define the data model for the financial analysis
+model FinancialAnalysis {
+  id                      Int       @id @default(autoincrement())
+  financialPolicy         String
+  financialIndicators     String
+  profitabilityMetrics    String
+  currencyMeasurement     String
+  inflationMitigation     String
+  financialAccounts       String
+  ownerCompensation       String
+  budgeting               String
+  costStructure           String
+  emergencyFund           String
+  breakevenAnalysis       String
+  debtManagement          String
+  liquidityMeasurement    String
+  financialStatements     String
+  inventoryTracking       String
+  externalFinancing       String
+  growthTransitionPlan    String
+  financialConsultantPlan String
+  Business                Business?
+}
+
+// Define the data model for the feedback
+model Feedback {
+  id                     Int       @id @default(autoincrement())
+  comprehensiveDiagnosis String
+  feelings               String
+  surprisingAspects      String
+  newLearnings           String
+  highlights             String
+  suggestions            String
+  recommendSession       String
+  Business               Business?
 }

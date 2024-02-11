@@ -1,0 +1,140 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table User {
+  id String [pk]
+  name String [not null]
+  instagram String [unique, not null]
+  whatsapp String [unique, not null]
+  age String [not null]
+  country String [not null]
+  email String [unique, not null]
+  tokens AccessInfoToken [not null]
+  surveys Business [not null]
+}
+
+Table AccessInfoToken {
+  id Int [pk, increment]
+  token String [unique, not null]
+  userId String
+  User User
+}
+
+Table Business {
+  id Int [pk, increment]
+  businessInfo BusinessInfo
+  subjectiveAnalysis SubjectiveAnalysis
+  financialAnalysis FinancialAnalysis
+  extraQuestions ExtraQuestions
+  feedback Feedback
+  businessInfoId Int [unique]
+  subjectiveAnalysisId Int [unique]
+  financialAnalysisId Int [unique]
+  extraQuestionsId Int [unique]
+  feedbackId Int [unique]
+  User User
+  userId String
+}
+
+Table BusinessInfo {
+  id Int [pk, increment]
+  historyAndVision String [not null]
+  businessType String [not null]
+  businessModel String [not null]
+  businessOffering String [not null]
+  mainProduct String [not null]
+  competitiveAdvantage String [not null]
+  marketResearch String [not null]
+  marketingPlan String [not null]
+  accountant String [not null]
+  financialSeparation String [not null]
+  technologySoftware String [not null]
+  financialConsultant String [not null]
+  objectives String [not null]
+  challenges String [not null]
+  mainAspectsToImprove String [not null]
+  administrationChallenge String [not null]
+  employees String [not null]
+  audits String [not null]
+  advertising String [not null]
+  salesProjections String [not null]
+  Business Business
+}
+
+Table SubjectiveAnalysis {
+  id Int [pk, increment]
+  financialKnowledge String [not null]
+  accountingKnowledge String [not null]
+  financialTraining String [not null]
+  partnerStatus String [not null]
+  delegation String [not null]
+  emotionalExperience String [not null]
+  missedOpportunity String [not null]
+  suddenGrowth String [not null]
+  childhoodBeliefs String [not null]
+  childhoodExperience String [not null]
+  lifeIncidents String [not null]
+  emotionalEvaluation String [not null]
+  longTermCommitment String [not null]
+  financialRiskTolerance String [not null]
+  financialDecisionMaking String [not null]
+  Business Business
+}
+
+Table FinancialAnalysis {
+  id Int [pk, increment]
+  financialPolicy String [not null]
+  financialIndicators String [not null]
+  profitabilityMetrics String [not null]
+  currencyMeasurement String [not null]
+  inflationMitigation String [not null]
+  financialAccounts String [not null]
+  ownerCompensation String [not null]
+  budgeting String [not null]
+  costStructure String [not null]
+  emergencyFund String [not null]
+  breakevenAnalysis String [not null]
+  debtManagement String [not null]
+  liquidityMeasurement String [not null]
+  financialStatements String [not null]
+  inventoryTracking String [not null]
+  externalFinancing String [not null]
+  growthTransitionPlan String [not null]
+  financialConsultantPlan String [not null]
+  Business Business
+}
+
+Table ExtraQuestions {
+  id Int [pk, increment]
+  growthProjection String [not null]
+  nextStep String [not null]
+  additionalComments String [not null]
+  Business Business
+}
+
+Table Feedback {
+  id Int [pk, increment]
+  comprehensiveDiagnosis String [not null]
+  feelings String [not null]
+  surprisingAspects String [not null]
+  newLearnings String [not null]
+  highlights String [not null]
+  suggestions String [not null]
+  recommendSession String [not null]
+  Business Business
+}
+
+Ref: AccessInfoToken.userId > User.id
+
+Ref: Business.businessInfoId - BusinessInfo.id
+
+Ref: Business.subjectiveAnalysisId - SubjectiveAnalysis.id
+
+Ref: Business.financialAnalysisId - FinancialAnalysis.id
+
+Ref: Business.extraQuestionsId - ExtraQuestions.id
+
+Ref: Business.feedbackId - Feedback.id
+
+Ref: Business.userId > User.id
