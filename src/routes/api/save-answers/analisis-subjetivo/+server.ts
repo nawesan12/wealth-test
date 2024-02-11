@@ -5,25 +5,43 @@ export async function POST({ request }) {
 	const { data, token } = await request.json();
 
 	const initialDataToUpload = {
-		socioOEmprendedor: data[0] ?? '',
-		relacionDinero: data[1] ?? '',
-		emocionesNegativas: data[2] ?? '',
-		perdidaOportunidades: data[3] ?? '',
-		crecimientoEconomico: data[4] ?? ''
+		financialKnowledge: data[0] ?? '',
+		accountingKnowledge: data[1] ?? '',
+		financialTraining: data[2] ?? '',
+		partnerStatus: data[3] ?? '',
+		delegation: data[4] ?? '',
+		emotionalExperience: data[5] ?? '',
+		missedOpportunity: data[6] ?? '',
+		suddenGrowth: data[7] ?? '',
+		childhoodBeliefs: data[8] ?? '',
+		childhoodExperience: data[9] ?? '',
+		lifeIncidents: data[10] ?? '',
+		emotionalEvaluation: data[11] ?? '',
+		longTermCommitment: data[12] ?? '',
+		financialRiskTolerance: data[13] ?? '',
+		financialDecisionMaking: data[14] ?? ''
 	};
 
 	const uploadedSubjectiveAnalysis = await prisma.subjectiveAnalysis.create({
 		data: initialDataToUpload
 	});
 
-	await prisma.surveyAnswer.update({
+	const validToken = await prisma.accessInfoToken.findUnique({
 		where: {
 			token: token
-		},
-		data: {
-			subjectiveAnalysisId: uploadedSubjectiveAnalysis.id
 		}
 	});
+
+	if (validToken) {
+		await prisma.business.update({
+			where: {
+				accessInfoTokenId: validToken.id
+			},
+			data: {
+				subjectiveAnalysisId: uploadedSubjectiveAnalysis.id
+			}
+		});
+	}
 
 	return json(uploadedSubjectiveAnalysis);
 }

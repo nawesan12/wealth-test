@@ -3,7 +3,7 @@
 </script>
 
 <SurveySection
-	next="/test/analisis-objetivo"
+	next="/test/analisis-financiero"
 	backend="/api/save-answers/analisis-subjetivo"
 	section="analisis_subjetivo"
 />

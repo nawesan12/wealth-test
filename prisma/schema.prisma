@@ -12,23 +12,35 @@ datasource db {
   relationMode = "prisma"
 }
 
+enum Referece {
+  SOCIAL
+  AMIGO
+  BUSQUEDA
+  CONFERENCIA
+  PUBLICIDAD
+}
+
 model User {
-  id        String            @id @default(uuid())
-  name      String
-  instagram String            @unique
-  whatsapp  String            @unique
-  age       String
-  country   String
-  email     String            @unique
-  tokens    AccessInfoToken[]
-  surveys   Business[]
+  id                         String            @id @default(uuid())
+  name                       String
+  instagram                  String            @unique
+  web                        String            @unique
+  email                      String            @unique
+  whatsapp                   String            @unique
+  age                        String
+  country                    String
+  referredBy                 String
+  businessAgeAndSatisfaction String
+  tokens                     AccessInfoToken[]
+  surveys                    Business[]
 }
 
 model AccessInfoToken {
-  id     Int     @id @default(autoincrement())
-  token  String  @unique @default(uuid())
-  userId String?
-  User   User?   @relation(fields: [userId], references: [id])
+  id       Int       @id @default(autoincrement())
+  token    String    @unique @default(uuid())
+  userId   String?
+  User     User?     @relation(fields: [userId], references: [id])
+  Business Business?
 
   @@index([userId])
 }
@@ -47,6 +59,8 @@ model Business {
   feedbackId           Int?                @unique
   User                 User?               @relation(fields: [userId], references: [id])
   userId               String?
+  token                AccessInfoToken?    @relation(fields: [accessInfoTokenId], references: [id])
+  accessInfoTokenId    Int?                @unique
 
   @@index([userId])
 }

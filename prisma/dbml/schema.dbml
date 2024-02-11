@@ -6,10 +6,13 @@ Table User {
   id String [pk]
   name String [not null]
   instagram String [unique, not null]
+  web String [unique, not null]
+  email String [unique, not null]
   whatsapp String [unique, not null]
   age String [not null]
   country String [not null]
-  email String [unique, not null]
+  referredBy String [not null]
+  businessAgeAndSatisfaction String [not null]
   tokens AccessInfoToken [not null]
   surveys Business [not null]
 }
@@ -19,6 +22,7 @@ Table AccessInfoToken {
   token String [unique, not null]
   userId String
   User User
+  Business Business
 }
 
 Table Business {
@@ -26,15 +30,15 @@ Table Business {
   businessInfo BusinessInfo
   subjectiveAnalysis SubjectiveAnalysis
   financialAnalysis FinancialAnalysis
-  extraQuestions ExtraQuestions
   feedback Feedback
   businessInfoId Int [unique]
   subjectiveAnalysisId Int [unique]
   financialAnalysisId Int [unique]
-  extraQuestionsId Int [unique]
   feedbackId Int [unique]
   User User
   userId String
+  token AccessInfoToken
+  accessInfoTokenId Int [unique]
 }
 
 Table BusinessInfo {
@@ -105,14 +109,6 @@ Table FinancialAnalysis {
   Business Business
 }
 
-Table ExtraQuestions {
-  id Int [pk, increment]
-  growthProjection String [not null]
-  nextStep String [not null]
-  additionalComments String [not null]
-  Business Business
-}
-
 Table Feedback {
   id Int [pk, increment]
   comprehensiveDiagnosis String [not null]
@@ -125,6 +121,14 @@ Table Feedback {
   Business Business
 }
 
+Enum Referece {
+  SOCIAL
+  AMIGO
+  BUSQUEDA
+  CONFERENCIA
+  PUBLICIDAD
+}
+
 Ref: AccessInfoToken.userId > User.id
 
 Ref: Business.businessInfoId - BusinessInfo.id
@@ -133,8 +137,8 @@ Ref: Business.subjectiveAnalysisId - SubjectiveAnalysis.id
 
 Ref: Business.financialAnalysisId - FinancialAnalysis.id
 
-Ref: Business.extraQuestionsId - ExtraQuestions.id
-
 Ref: Business.feedbackId - Feedback.id
 
 Ref: Business.userId > User.id
+
+Ref: Business.accessInfoTokenId - AccessInfoToken.id

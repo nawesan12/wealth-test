@@ -5,26 +5,35 @@ export async function POST({ request }) {
 	const { data, token } = await request.json();
 
 	const initialDataToUpload = {
-		sentimientoSesion: data[0] ?? '',
-		diagnosticoCompleto: data[1] ?? '',
-		seccionFavorita: data[2] ?? '',
-		aprendizaje: data[3] ?? '',
-		mejorasDinamica: data[4] ?? '',
-		recomendacionSesion: data[5] ?? ''
+		comprehensiveDiagnosis: data[0] ?? '',
+		feelings: data[1] ?? '',
+		surprisingAspects: data[2] ?? '',
+		newLearnings: data[3] ?? '',
+		highlights: data[4] ?? '',
+		suggestions: data[5] ?? '',
+		recommendSession: data[6] ?? ''
 	};
 
 	const uploadedFeedback = await prisma.feedback.create({
 		data: initialDataToUpload
 	});
 
-	await prisma.surveyAnswer.update({
+	const validToken = await prisma.accessInfoToken.findUnique({
 		where: {
 			token: token
-		},
-		data: {
-			feedbackId: uploadedFeedback.id
 		}
 	});
+
+	if (validToken) {
+		await prisma.business.update({
+			where: {
+				accessInfoTokenId: validToken.id
+			},
+			data: {
+				feedbackId: uploadedFeedback.id
+			}
+		});
+	}
 
 	return json(uploadedFeedback);
 }

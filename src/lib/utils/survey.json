@@ -13,23 +13,46 @@
 		{
 			"id": 3,
 			"tipo": "texto",
-			"texto": "Número de WhatsApp para contactarte en caso de que califiques a la asesoría (escribirlo con el prefijo de tu país)"
+			"texto": "Página web (Opcional, si tiene)"
 		},
 		{
 			"id": 4,
+			"tipo": "texto",
+			"texto": "Email Personal"
+		},
+		{
+			"id": 5,
+			"tipo": "texto",
+			"texto": "Número de WhatsApp para contactarte en caso de que califiques a la asesoría (escribirlo con el prefijo de tu país)"
+		},
+		{
+			"id": 6,
 			"tipo": "opcion_multiple",
 			"texto": "¿En qué rango de edad te encuentras?",
 			"opciones": ["16-25", "26-35", "36-50", "50+"]
 		},
 		{
-			"id": 5,
+			"id": 7,
 			"tipo": "texto",
 			"texto": "¿En qué país te encuentras actualmente?"
 		},
 		{
-			"id": 6,
+			"id": 8,
+			"tipo": "opcion_multiple",
+			"texto": "¿Cómo conociste nuestro servicio DEP?",
+			"opciones": [
+				"A través de redes sociales",
+				"Recomendación de un amigo o conocido",
+				"Búsqueda en Internet",
+				"Evento o conferencia",
+				"Publicidad en línea",
+				"Otro"
+			]
+		},
+		{
+			"id": 9,
 			"tipo": "texto",
-			"texto": "Email Personal"
+			"texto": "¿Hace cuánto tiempo estás realizando tu negocio? ¿Estás satisfecho/a con tus resultados actuales?"
 		}
 	],
 	"conociendo_el_negocio": [

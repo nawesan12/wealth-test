@@ -5,19 +5,22 @@ export async function POST({ request }) {
 	const { data, token } = await request.json();
 
 	const initialDataToUpload = {
-		fullname: data[0],
-		social: data[1],
-		phone: data[2],
-		ageRange: data[3],
-		country: data[4],
-		email: data[5]
+		name: data[0],
+		instagram: data[1],
+		web: data[2],
+		email: data[3],
+		whatsapp: data[4],
+		age: data[5],
+		country: data[6],
+		referredBy: data[7],
+		businessAgeAndSatisfaction: data[8]
 	};
 
 	const uploadedUser = await prisma.user.create({
 		data: initialDataToUpload
 	});
 
-	await prisma.accessInfoToken.update({
+	const createdToken = await prisma.accessInfoToken.update({
 		where: {
 			token: token as string
 		},
@@ -26,16 +29,14 @@ export async function POST({ request }) {
 		}
 	});
 
-	await prisma.surveyAnswer.create({
+	await prisma.business.create({
 		data: {
 			userId: uploadedUser.id as string,
-			bussinessInfoId: 0 as number,
+			businessInfoId: 0 as number,
 			subjectiveAnalysisId: 0 as number,
-			objectiveAnalysisId: 0 as number,
-			extraQuestionsId: 0 as number,
+			financialAnalysisId: 0 as number,
 			feedbackId: 0 as number,
-			moneyInversionId: 0 as number,
-			token: token as string
+			accessInfoTokenId: createdToken.id as number
 		}
 	});
 
