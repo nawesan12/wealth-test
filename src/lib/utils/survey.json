@@ -18,7 +18,7 @@
 		{
 			"id": 4,
 			"tipo": "texto",
-			"texto": "Email Personal"
+			"texto": "Email Profesional"
 		},
 		{
 			"id": 5,
@@ -59,7 +59,7 @@
 		{
 			"id": 1,
 			"tipo": "area",
-			"texto": "¿Cuál es la historia y visión detrás de tu negocio? (Lo más importante)"
+			"texto": "¿Cuál es la historia y visión detrás de tu negocio?"
 		},
 		{
 			"id": 2,
@@ -88,7 +88,7 @@
 		{
 			"id": 5,
 			"tipo": "area",
-			"texto": "¿Cuál es el producto o servicio principal que ofreces? (Si tienes varios productos / servicios puedes escribirlos, mucho mejor)"
+			"texto": "¿Cuál es el producto o servicio principal que ofreces? (Si tienes varios productos / servicios y puedes describirlos, mucho mejor)"
 		},
 		{
 			"id": 6,
@@ -122,8 +122,8 @@
 		{
 			"id": 11,
 			"tipo": "opcion_multiple",
-			"texto": "¿Qué sistemas de tecnología y software se utilizan actualmente para la contabilidad y gestión financiera? (Si es un software, aclararlo y escribir el nombre)",
-			"opciones": ["Excel", "Papel", "App", "Software Contable", "Otro:"]
+			"texto": "¿Qué sistemas de tecnología y software utilizas actualmente para la contabilidad y gestión financiera de tu negocio?",
+			"opciones": ["Excel", "Papel", "App", "Software Contable"]
 		},
 		{
 			"id": 12,
@@ -149,7 +149,7 @@
 		{
 			"id": 16,
 			"tipo": "area",
-			"texto": "¿Cuál es el mayor desafío según tú que actualmente enfrentas en cuánto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
+			"texto": "¿Cuál es el mayor desafío que actualmente enfrentas en cuánto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
 		},
 		{
 			"id": 17,
@@ -182,7 +182,8 @@
 			"texto": "¿Realizas proyecciones de ventas a futuro para estimar el rendimiento financiero de tu negocio?",
 			"opciones": [
 				"Si, realizo proyecciones de ventas de forma regular.",
-				"No realizo proyecciones de ventas, pero estoy interesado/a en aprender más sobre su importancia y aplicación."
+				"No realizo proyecciones de ventas, pero estoy interesado/a en aprender más sobre su importancia y aplicación.",
+				"No realizo proyecciones de ventas y no estoy interesado/a en implementarlo."
 			]
 		}
 	],
@@ -204,9 +205,8 @@
 			"tipo": "opcion_multiple",
 			"texto": "¿Sueles recibir formación en el área financiera para aplicar en tu negocio?",
 			"opciones": [
-				"No estoy recibiendo formación actualmente, pero estoy interesado en hacerlo.",
-				"Sí, estoy recibiendo formación continua en áreas financieras relevantes para mi negocio.",
-				"Otro:"
+				"No estoy recibiendo formación actualmente, pero estoy interesado/a en hacerlo.",
+				"Sí, estoy recibiendo formación continua en áreas financieras relevantes para mi negocio."
 			]
 		},
 		{
@@ -237,8 +237,13 @@
 		},
 		{
 			"id": 8,
-			"tipo": "texto",
-			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?",
+			"opciones": [
+				"Sí, experimenté un gran crecimiento económico repentino y tuve dificultades para gestionarlo adecuadamente.",
+				"Sí, experimenté un gran crecimiento económico, pero pude administrarlo eficientemente.",
+				"No, nunca he experimentado un crecimiento económico repentino."
+			]
 		},
 		{
 			"id": 9,
@@ -270,7 +275,7 @@
 		{
 			"id": 14,
 			"tipo": "opcion_multiple",
-			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero? y qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
+			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero y qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
 			"opciones": [
 				"Tengo una alta tolerancia al riesgo",
 				"Tengo una baja tolerancia al riesgo",
@@ -295,14 +300,14 @@
 			"opciones": [
 				"Sí, tengo una política financiera claramente definida.",
 				"No, actualmente no cuento con una política financiera establecida.",
-				"Estoy en proceso de desarrollar una política financiera para mi negocio.",
-				"No estoy seguro/a de lo que implica una política financiera interna."
+				"Estoy en proceso de desarrollar una política financiera para mi negocio."
 			]
 		},
 		{
 			"id": 2,
-			"tipo": "area",
-			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc."
+			"tipo": "opcion_multiple",
+			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc.",
+			"opciones": ["Si", "No", "Algunos"]
 		},
 		{
 			"id": 3,
@@ -311,8 +316,9 @@
 		},
 		{
 			"id": 4,
-			"tipo": "area",
-			"texto": "¿Cómo mides el resultado del negocio a final de mes, en la moneda local o prefieres medir en dólares u otra moneda extranjera?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Cómo mides el resultado del negocio a final de mes, en la moneda local o prefieres medir en dólares u otra moneda extranjera?",
+			"opciones": ["Moneda local", "Dolar estadounidense (USD)", "Otra"]
 		},
 		{
 			"id": 5,
@@ -321,15 +327,15 @@
 		},
 		{
 			"id": 6,
+			"coso": "numero",
 			"tipo": "texto",
-			"texto": "Cuántas cuentas diferentes utilizas para administrar todos los aspectos financieros de tu negocio?"
+			"texto": "¿Cuántas billeteras / cuentas de banco diferentes utilizas para administrar todos los aspectos financieros de tu negocio?"
 		},
 		{
 			"id": 7,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cómo estableces tu remuneración como propietario del negocio? ¿Lo haces en función de un porcentaje de las ganancias o tienes un salario fijo? ¿Consideras tu compensación desde la perspectiva de propietario o ejecutivo?",
 			"opciones": [
-				"Porcentaje de ganancias como propietario.",
 				"Salario fijo como propietario.",
 				"Remuneración variable según ganancias.",
 				"Compensación equilibrada propietario-ejecutivo.",
@@ -340,13 +346,7 @@
 			"id": 8,
 			"tipo": "opcion_multiple",
 			"texto": "¿Utilizas un presupuesto detallado que te permita tomar decisiones financieras fundamentadas? ¿Diferencias claramente entre ingresos, gastos y costos, y lo mantienes documentado ya sea en formato físico o virtual? [Puedes agregar una descripción detallada en el cuadro de texto]",
-			"opciones": [
-				"Sí, tengo un presupuesto",
-				"No, debería implementar un presupuesto",
-				"Otro:",
-				"Compensación equilibrada propietario-ejecutivo.",
-				"Combinación de salario fijo e incentivos."
-			]
+			"opciones": ["Sí, tengo un presupuesto", "No, debería implementar un presupuesto", "Otro:"]
 		},
 		{
 			"id": 9,
@@ -355,8 +355,7 @@
 			"opciones": [
 				"Sí, tengo una estructura de costos completa",
 				"Sí, pero es muy básica",
-				"No, necesito armar una estructura de costos",
-				"Otro:"
+				"No, necesito armar una estructura de costos"
 			]
 		},
 		{
@@ -364,8 +363,9 @@
 			"tipo": "opcion_multiple",
 			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
+				"Si, tengo un fondo de tranquilidad bien establecido para hacer frente a cualquier contingencia",
 				"Sí, tengo ahorros, aunque no sé de cuantos meses",
-				"No tengo dinero ahorrado para emergencias. Dependo de mis ventas mes a mes"
+				"No tengo dinero ahorrado para contingencias. Dependo de mis ventas mes a mes"
 			]
 		},
 		{

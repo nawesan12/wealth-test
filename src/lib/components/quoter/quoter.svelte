@@ -24,12 +24,12 @@
 	onMount(() => {
 		quoteInterval = setInterval(() => {
 			text = getRandomQuote();
-		}, 60000);
+		}, 40000);
 
 		factInterval = setInterval(() => {
 			const fact = getRandomFact();
 			toast.info(`Sabias que: ${fact.texto}`, {
-				duration: 10000
+				duration: 25000
 			});
 		}, 40000);
 	});
