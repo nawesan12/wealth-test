@@ -4,7 +4,10 @@ import { error, json, text } from '@sveltejs/kit';
 export async function POST({ request }) {
 	const token = await request.text();
 
-	console.log(token);
+	// Additional validation: Check if token is provided
+	if (!token) {
+		return error(400, 'Token is required!');
+	}
 
 	const verifiedToken = await prisma.accessInfoToken.findUnique({
 		where: {
@@ -24,5 +27,6 @@ export async function POST({ request }) {
 // This handler will respond to PUT, PATCH, DELETE, etc.
 /** @type {import('./$types').RequestHandler} */
 export async function fallback({ request }) {
-	return text(`I caught your ${request.method} request!`);
+	// Additional validation: Handle unsupported methods
+	return text(`Unsupported method: ${request.method}`);
 }
