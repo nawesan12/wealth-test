@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
 
 	import quotes from '$lib/utils/frases_empresariales.json';
@@ -15,21 +15,30 @@
 		return facts.estadisticas_negocios[randomIndex];
 	}
 
+	$: text = getRandomQuote() as any;
+
+	let factInterval: any;
+	let quoteInterval: any;
+
 	onMount(() => {
-		setInterval(() => {
-			const quote = getRandomQuote();
-			toast('"' + quote.frase + '"' + ' - ' + quote.autor, {
-				duration: 10000
-			});
+		quoteInterval = setInterval(() => {
+			text = getRandomQuote() as any;
 		}, 60000);
 
-		setInterval(() => {
+		factInterval = setInterval(() => {
 			const fact = getRandomFact();
-			toast(fact.texto, {
-				duration: 8000
+			toast.info(`Sabias que: ${fact.texto}`, {
+				duration: 10000
 			});
-		}, 30000);
+		}, 40000);
+	});
+
+	onDestroy(() => {
+		clearInterval(factInterval);
+		clearInterval(quoteInterval);
 	});
 </script>
 
-hay que hacer que las frases vayan apareciendo con el formato deseado
+<blockquote class="text-dorado max-w-2xl text-pretty p-4 text-center text-2xl font-normal italic">
+	❝ {text.frase} ❞ <br /> <br /> <span>- {text.autor}</span>
+</blockquote>

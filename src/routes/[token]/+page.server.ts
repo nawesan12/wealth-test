@@ -1,6 +1,6 @@
 import { prisma } from '@/database/client.js';
 
-/** @type {import('./$types').PageLoad} */
+/** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
 	const { token } = params;
 
@@ -15,6 +15,14 @@ export async function load({ params }) {
 			const informe = await prisma.business.findUnique({
 				where: {
 					accessInfoTokenId: validToken.id
+				},
+				include: {
+					businessInfo: true,
+					feedback: true,
+					financialAnalysis: true,
+					subjectiveAnalysis: true,
+					token: true,
+					User: true
 				}
 			});
 

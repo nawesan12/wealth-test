@@ -3,8 +3,23 @@
 	import Confetti from 'svelte-confetti';
 	import emailjs from '@emailjs/browser';
 
+	import { surveyAnswers } from '@/stores/survey';
+
+	$: userEmail = $surveyAnswers.datos_iniciales[3];
+	$: token = $surveyAnswers.token;
+	$: userName = $surveyAnswers.datos_iniciales[0];
+
 	onMount(() => {
-		// emailjs.send('service_ztpqaee', 'template_3wmncfg', {}, 'LzX3tW8GW9p6o7CRP');
+		emailjs.send(
+			'service_ztpqaee',
+			'template_3wmncfg',
+			{
+				userEmail,
+				token: `https://dep.emperadorfinanciero.com/${token}`,
+				userName
+			},
+			'LzX3tW8GW9p6o7CRP'
+		);
 	});
 </script>
 
