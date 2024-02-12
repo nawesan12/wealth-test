@@ -17,42 +17,60 @@
 	export let backend: string;
 
 	let currentStep = 0; // Keep track of the current step
-	let respuestas: string[] = Array(preguntas.length).fill('');
+	let respuestas: Record<string, string> = {}; // Use a dictionary to store answers with question IDs
 	const questionsPerPage = 4;
 
 	function handleAnswers() {
 		// Check if any of the answers are empty
-		for (
-			let i = currentStep * questionsPerPage;
-			i < Math.min((currentStep + 1) * questionsPerPage, preguntas.length);
-			i++
-		) {
-			if (respuestas[i] === '') {
+		const questionsOnCurrentPage = preguntas.slice(
+			currentStep * questionsPerPage,
+			Math.min((currentStep + 1) * questionsPerPage, preguntas.length)
+		);
+		for (const pregunta of questionsOnCurrentPage) {
+			const respuesta = respuestas[pregunta.id];
+			if (!respuesta) {
 				toast.error('Debes llenar todos los campos');
+				return;
+			}
+
+			// Additional validation: Check input length
+			if (respuesta.length > 1000) {
+				toast.error('El campo es demasiado largo');
 				return;
 			}
 		}
 
-		// If it's the last step, save answers and navigate
+		// Save answers and navigate if it's the last step
 		if ((currentStep + 1) * questionsPerPage >= preguntas.length) {
+			// Additional validation: Check if all required fields are filled
+			if (Object.keys(respuestas).length !== preguntas.length) {
+				toast.error('Por favor, completa todas las respuestas');
+				return;
+			}
+
 			surveyAnswers.update((value) => {
 				const updatedAnswers = { ...value };
-				for (let i = currentStep * questionsPerPage; i < preguntas.length; i++) {
-					updatedAnswers[section][i] = respuestas[i];
+				for (const pregunta of preguntas) {
+					updatedAnswers[section][pregunta.id] = respuestas[pregunta.id];
 				}
 				return updatedAnswers;
 			});
 
 			sendDataToBackendAndSave(backend, {
-				data: $surveyAnswers[section],
+				data: $surveyAnswers[section].slice(1),
 				token: $surveyAnswers.token
-			}).then((data) => {
-				console.log(data);
-				toast.success('Respuestas guardadas!', {
-					type: 'success'
+			})
+				.then((data) => {
+					console.log(data);
+					toast.success('Respuestas guardadas!', {
+						type: 'success'
+					});
+					goto(next);
+				})
+				.catch((error) => {
+					toast.error('Error al conectar con el servidor');
+					console.error(error);
 				});
-				goto(next);
-			});
 		} else {
 			currentStep++;
 			window.scrollTo({
@@ -77,18 +95,19 @@
 							{#if pregunta.tipo === 'opcion_multiple'}
 								{#each pregunta.opciones as opcion}
 									<div
-										class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+										class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88]`}
 									>
 										<input
 											type="radio"
-											id={opcion}
-											name={opcion}
-											bind:group={respuestas[step * questionsPerPage + index]}
+											id={pregunta.id + opcion}
+											name={pregunta.id}
+											bind:group={respuestas[pregunta.id]}
 											value={opcion}
 											class="absolute opacity-0"
 										/>
-										<label class="text-md cursor-pointer p-4 font-semibold" for={opcion}
-											>{opcion}</label
+										<label
+											class="text-md cursor-pointer p-4 font-semibold"
+											for={pregunta.id + opcion}>{opcion}</label
 										>
 									</div>
 									<br />
@@ -97,7 +116,7 @@
 								<Input
 									type="text"
 									placeholder="Ingresa tu respuesta"
-									bind:value={respuestas[step * questionsPerPage + index]}
+									bind:value={respuestas[pregunta.id]}
 								/>
 							{:else if pregunta.tipo === 'number'}
 								<Input
@@ -106,17 +125,17 @@
 									max="10"
 									min="1"
 									placeholder="Ingresa tu respuesta"
-									bind:value={respuestas[step * questionsPerPage + index]}
+									bind:value={respuestas[pregunta.id]}
 								/>
 							{:else if pregunta.tipo === 'area'}
 								<Textarea
 									placeholder="Desarrolla tu respuesta"
-									bind:value={respuestas[step * questionsPerPage + index]}
+									bind:value={respuestas[pregunta.id]}
 								/>
 							{:else if pregunta.tipo === 'country'}
 								<select
 									class="text-verde w-full rounded-lg p-4 py-3"
-									bind:value={respuestas[step * questionsPerPage + index]}
+									bind:value={respuestas[pregunta.id]}
 								>
 									<CountrySelect />
 								</select>

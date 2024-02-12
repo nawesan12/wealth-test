@@ -23,6 +23,12 @@
 			return;
 		}
 
+		// Additional validation: Check input length
+		if (respuestas[currentStep].length > 1000) {
+			toast.error('El campo es demasiado largo');
+			return;
+		}
+
 		if (currentStep === preguntas.length - 1) {
 			surveyAnswers.update((value) => {
 				return {
@@ -31,16 +37,32 @@
 				};
 			});
 
+			// Additional validation: Check if all required fields are filled
+			if (respuestas.some((answer) => answer === '')) {
+				toast.error('Por favor, completa todas las respuestas');
+				return;
+			}
+
 			sendDataToBackendAndSave(backend, {
 				data: $surveyAnswers[section],
 				token: $surveyAnswers.token
-			}).then((data) => {
-				console.log(data);
-				toast.success('Respuestas guardadas!', {
-					type: 'success'
+			})
+				.then((data) => {
+					if (data.error) {
+						toast.error('Error al guardar las respuestas');
+						console.error(data.error);
+					} else {
+						console.log(data);
+						toast.success('Respuestas guardadas!', {
+							type: 'success'
+						});
+						goto(next);
+					}
+				})
+				.catch((error) => {
+					toast.error('Error al conectar con el servidor');
+					console.error(error);
 				});
-				goto(next);
-			});
 		} else {
 			currentStep++;
 		}

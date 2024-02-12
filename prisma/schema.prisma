@@ -8,12 +8,9 @@ datasource db {
   relationMode = "prisma"
 }
 
-enum Referece {
-  SOCIAL
-  AMIGO
-  BUSQUEDA
-  CONFERENCIA
-  PUBLICIDAD
+enum BOOLOPTIONS {
+  Si
+  No
 }
 
 model User {
@@ -65,83 +62,83 @@ model Business {
 // Define the data model for the business information
 model BusinessInfo {
   id                      Int       @id @default(autoincrement())
-  historyAndVision        String
-  businessType            String
-  businessModel           String
-  businessOffering        String
-  mainProduct             String
-  competitiveAdvantage    String
-  marketResearch          String
-  marketingPlan           String
-  accountant              String
-  financialSeparation     String
-  technologySoftware      String
-  financialConsultant     String
-  objectives              String
-  challenges              String
-  mainAspectsToImprove    String
-  administrationChallenge String
-  employees               String
-  audits                  String
-  advertising             String
-  salesProjections        String
+  historyAndVision        String    @db.Text
+  businessType            String    @db.Text
+  businessModel           String    @db.Text
+  businessOffering        String    @db.Text
+  mainProduct             String    @db.Text
+  competitiveAdvantage    String    @db.Text
+  marketResearch          String    @db.Text
+  marketingPlan           String    @db.Text
+  accountant              String    @db.Text
+  financialSeparation     String    @db.Text
+  technologySoftware      String    @db.Text
+  financialConsultant     String    @db.Text
+  objectives              String    @db.Text
+  challenges              String    @db.Text
+  mainAspectsToImprove    String    @db.Text
+  administrationChallenge String    @db.Text
+  employees               String    @db.Text
+  audits                  String    @db.Text
+  advertising             String    @db.Text
+  salesProjections        String    @db.Text
   Business                Business?
 }
 
 // Define the data model for the subjective analysis
 model SubjectiveAnalysis {
   id                      Int       @id @default(autoincrement())
-  financialKnowledge      String
-  accountingKnowledge     String
-  financialTraining       String
-  partnerStatus           String
-  delegation              String
-  emotionalExperience     String
-  missedOpportunity       String
-  suddenGrowth            String
-  childhoodBeliefs        String
-  childhoodExperience     String
-  lifeIncidents           String
-  emotionalEvaluation     String
-  longTermCommitment      String
-  financialRiskTolerance  String
-  financialDecisionMaking String
+  financialKnowledge      String    @db.Text
+  accountingKnowledge     String    @db.Text
+  financialTraining       String    @db.Text
+  partnerStatus           String    @db.Text
+  delegation              String    @db.Text
+  emotionalExperience     String    @db.Text
+  missedOpportunity       String    @db.Text
+  suddenGrowth            String    @db.Text
+  childhoodBeliefs        String    @db.Text
+  childhoodExperience     String    @db.Text
+  lifeIncidents           String    @db.Text
+  emotionalEvaluation     String    @db.Text
+  longTermCommitment      String    @db.Text
+  financialRiskTolerance  String    @db.Text
+  financialDecisionMaking String    @db.Text
   Business                Business?
 }
 
 // Define the data model for the financial analysis
 model FinancialAnalysis {
   id                      Int       @id @default(autoincrement())
-  financialPolicy         String
-  financialIndicators     String
-  profitabilityMetrics    String
-  currencyMeasurement     String
-  inflationMitigation     String
-  financialAccounts       String
-  ownerCompensation       String
-  budgeting               String
-  costStructure           String
-  emergencyFund           String
-  breakevenAnalysis       String
-  debtManagement          String
-  liquidityMeasurement    String
-  financialStatements     String
-  inventoryTracking       String
-  externalFinancing       String
-  growthTransitionPlan    String
-  financialConsultantPlan String
+  financialPolicy         String    @db.Text
+  financialIndicators     String    @db.Text
+  profitabilityMetrics    String    @db.Text
+  currencyMeasurement     String    @db.Text
+  inflationMitigation     String    @db.Text
+  financialAccounts       String    @db.Text
+  ownerCompensation       String    @db.Text
+  budgeting               String    @db.Text
+  costStructure           String    @db.Text
+  emergencyFund           String    @db.Text
+  breakevenAnalysis       String    @db.Text
+  debtManagement          String    @db.Text
+  liquidityMeasurement    String    @db.Text
+  financialStatements     String    @db.Text
+  inventoryTracking       String    @db.Text
+  externalFinancing       String    @db.Text
+  growthTransitionPlan    String    @db.Text
+  financialConsultantPlan String    @db.Text
   Business                Business?
 }
 
 // Define the data model for the feedback
 model Feedback {
-  id                     Int       @id @default(autoincrement())
-  comprehensiveDiagnosis String
-  feelings               String
-  surprisingAspects      String
-  newLearnings           String
-  highlights             String
-  suggestions            String
-  recommendSession       String
+  id                     Int         @id @default(autoincrement())
+  comprehensiveDiagnosis String      @db.Text
+  feelings               String      @db.Text
+  surprisingAspects      String      @db.Text
+  newLearnings           String      @db.Text
+  highlights             String      @db.Text
+  suggestions            String      @db.Text
+  recommendSession       BOOLOPTIONS @default(Si)
   Business               Business?
 }
