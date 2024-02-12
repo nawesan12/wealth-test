@@ -51,7 +51,7 @@
 		},
 		{
 			"id": 9,
-			"tipo": "texto",
+			"tipo": "area",
 			"texto": "¿Hace cuánto tiempo estás realizando tu negocio? ¿Estás satisfecho/a con tus resultados actuales?"
 		}
 	],
