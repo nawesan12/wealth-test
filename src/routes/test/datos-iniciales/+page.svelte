@@ -1,8 +1,8 @@
 <script>
-	import SurveySection from '@/components/SurveySection.svelte';
+	import DatosInicialesSection from '@/components/DatosInicialesSection.svelte';
 </script>
 
-<SurveySection
+<DatosInicialesSection
 	next="/test/conociendo-el-negocio"
 	backend="/api/save-answers/datos-iniciales"
 	section="datos_iniciales"

@@ -17,7 +17,6 @@
 </script>
 
 <AlertDialog.Root>
-	<AlertDialog.Trigger>Open</AlertDialog.Trigger>
 	<AlertDialog.Content>
 		<AlertDialog.Header>
 			<AlertDialog.Title>{sectionToShow}</AlertDialog.Title>

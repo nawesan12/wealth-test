@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
+	import { fade } from 'svelte/transition';
 
 	import quotes from '$lib/utils/frases_empresariales.json';
 	import facts from '$lib/utils/estadisticas_negocios.json';
+
+	let text: any = getRandomQuote();
 
 	function getRandomQuote() {
 		const randomIndex = Math.floor(Math.random() * quotes.citas.length);
@@ -15,14 +18,12 @@
 		return facts.estadisticas_negocios[randomIndex];
 	}
 
-	$: text = getRandomQuote() as any;
-
 	let factInterval: any;
 	let quoteInterval: any;
 
 	onMount(() => {
 		quoteInterval = setInterval(() => {
-			text = getRandomQuote() as any;
+			text = getRandomQuote();
 		}, 60000);
 
 		factInterval = setInterval(() => {
@@ -39,6 +40,12 @@
 	});
 </script>
 
-<blockquote class="text-dorado max-w-2xl text-pretty p-4 text-center text-2xl font-normal italic">
-	❝ {text.frase} ❞ <br /> <br /> <span>- {text.autor}</span>
-</blockquote>
+{#if text}
+	<div transition:fade={{ duration: 300 }}>
+		<blockquote
+			class="text-dorado max-w-2xl text-pretty p-4 text-center text-2xl font-normal italic opacity-80"
+		>
+			❝ {text.frase} ❞ <br /> <br /> <span>- {text.autor}</span>
+		</blockquote>
+	</div>
+{/if}
