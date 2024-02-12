@@ -43,13 +43,15 @@
 				</strong>
 			</h1>
 
-			<p class="mt-4 sm:text-xl/relaxed">Te enviamos un informe por email</p>
-			<span>Tambien podes acceder con este link</span>
+			<p class="mt-4 sm:text-xl/relaxed">
+				En breve te enviaremos el informe del diagnostico a tu email
+			</p>
+			<span>Tambien puedes acceder con este link</span>
 
 			<div class="mt-8 flex flex-wrap justify-center gap-4">
 				<a
 					class="bg-dorado text-verde block w-full rounded px-12 py-3 text-sm font-medium text-white shadow transition duration-200 hover:bg-blue-400 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-					href="/get-started"
+					href={`/${$surveyAnswers.token}`}
 				>
 					Ver Informe
 				</a>

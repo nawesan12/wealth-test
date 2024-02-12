@@ -49,7 +49,7 @@
 	>
 		<h1 class="text-dorado col-span-1 flex text-7xl font-bold">DEP</h1>
 		<h2 class="text-center text-2xl text-white">
-			La formula para transformar las finanzas de tu negocio
+			La fórmula para transformar las finanzas de tu negocio
 		</h2>
 	</header>
 

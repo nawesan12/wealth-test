@@ -9,10 +9,10 @@
 
 		<div class="col-span-2 flex flex-col justify-center text-white">
 			<p class="slide-in-top my-2 text-3xl font-semibold">
-				Diagnostico <br /> Empresarial Personalizado
+				Diagnóstico <br /> Empresarial Personalizado
 			</p>
 			<blockquote class="slide-in-br block text-2xl italic">
-				“No sabemos lo que no sabemos” - Nicolas Copernico
+				“No sabemos lo que no sabemos” - Nicolás Copérnico
 			</blockquote>
 		</div>
 	</header>

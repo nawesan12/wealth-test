@@ -364,7 +364,7 @@
 			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
 				"Si, tengo un fondo de tranquilidad bien establecido para hacer frente a cualquier contingencia",
-				"Sí, tengo ahorros, aunque no sé de cuantos meses",
+				"Sí, tengo ahorros, aunque no sé cuantos meses me cubriria",
 				"No tengo dinero ahorrado para contingencias. Dependo de mis ventas mes a mes"
 			]
 		},
@@ -398,8 +398,8 @@
 			"tipo": "opcion_multiple",
 			"texto": "¿Elaboras estados financieros de manera regular (ya sea mensual, trimestral, semestral o anual) para revisar el estado de tu negocio, tomar decisiones informadas y proyectar resultados futuros, tal como lo hacen las grandes empresas?",
 			"opciones": [
-				"Sí, elaboro estados financieros.",
-				"No elaboro estados financieros regularmente, pero considero hacerlo",
+				"Sí, elaboro estados financieros regularmente.",
+				"No elaboro estados financieros.",
 				"Otro:"
 			]
 		},
@@ -409,7 +409,7 @@
 			"texto": "¿Realizas un seguimiento de tu stock/inventario?",
 			"opciones": [
 				"Sí, llevo un control regular de mi inventario.",
-				"No, no llevo un control de mi inventario.",
+				"No llevo un control de mi inventario.",
 				"Estoy en proceso de implementar un sistema de control de inventario."
 			]
 		},
@@ -458,12 +458,12 @@
 		{
 			"id": 3,
 			"tipo": "texto",
-			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador?"
+			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador? ¿Cual?"
 		},
 		{
 			"id": 4,
 			"tipo": "area",
-			"texto": "¿Sientes que aprendiste algo nuevo sobre la gestión financiera de tu negocio durante el proceso?"
+			"texto": "¿Que sientes que aprendiste algo nuevo sobre la gestión financiera de tu negocio durante el proceso? "
 		},
 		{
 			"id": 5,
