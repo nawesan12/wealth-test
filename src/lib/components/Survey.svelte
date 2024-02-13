@@ -161,10 +161,14 @@
 			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
 		{/if}
 		{#if preguntas[currentStep].tipo === 'email'}
-			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
+			<Input
+				type="email"
+				placeholder="Desarrolla tu respuesta"
+				bind:value={respuestas[currentStep]}
+			/>
 		{/if}
 		{#if preguntas[currentStep].tipo === 'url'}
-			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
+			<Input type="url" placeholder="Ingresar URL" bind:value={respuestas[currentStep]} />
 		{/if}
 	</article>
 
