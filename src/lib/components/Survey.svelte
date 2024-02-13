@@ -108,6 +108,37 @@
 				{/each}
 			</form>
 		{/if}
+		{#if preguntas[currentStep].tipo === 'opcion_multiple_largas'}
+			<form class="flex max-w-2xl list-none flex-col gap-6 space-y-1">
+				{#each preguntas[currentStep].opciones as opcion, index}
+					<li>
+						{#if opcion === 'Otro:'}
+							<Input
+								class="w-full"
+								placeholder="Otro (especificar)"
+								name="opcion_multiple"
+								bind:value={respuestas[currentStep]}
+							/>
+						{:else}
+							<div
+								class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+							>
+								<input
+									type="radio"
+									id={opcion}
+									name={opcion}
+									bind:group={respuestas[currentStep]}
+									value={opcion}
+									class="absolute opacity-0"
+								/>
+								<label class="text-md cursor-pointer p-4 font-semibold" for={opcion}>{opcion}</label
+								>
+							</div>
+						{/if}
+					</li>
+				{/each}
+			</form>
+		{/if}
 		{#if preguntas[currentStep].tipo === 'texto'}
 			<Input
 				class=""
@@ -129,14 +160,11 @@
 		{#if preguntas[currentStep].tipo === 'area'}
 			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
 		{/if}
-		{#if preguntas[currentStep].tipo === 'country'}
-			<select
-				placeholder="Selecciona un país"
-				class="text-verde w-full rounded-lg p-4 py-3"
-				bind:value={respuestas[currentStep]}
-			>
-				<CountrySelect />
-			</select>
+		{#if preguntas[currentStep].tipo === 'email'}
+			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
+		{/if}
+		{#if preguntas[currentStep].tipo === 'url'}
+			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
 		{/if}
 	</article>
 

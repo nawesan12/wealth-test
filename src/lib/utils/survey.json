@@ -12,12 +12,12 @@
 		},
 		{
 			"id": 3,
-			"tipo": "texto",
-			"texto": "Página web (Opcional, si tiene)"
+			"tipo": "url",
+			"texto": "Página web (Opcional)"
 		},
 		{
 			"id": 4,
-			"tipo": "texto",
+			"tipo": "email",
 			"texto": "Email Profesional"
 		},
 		{
@@ -158,7 +158,7 @@
 		},
 		{
 			"id": 18,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas auditorías completas del negocio de manera regular, ya sea mensual, trimestral u en otra temporalidad?",
 			"opciones": [
 				"Sí, realizo auditorías mensuales/trimestrales/semestrales de manera regular.",
@@ -168,7 +168,7 @@
 		},
 		{
 			"id": 19,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Utilizas publicidad de pago (ADS) para promocionar tu negocio?",
 			"opciones": [
 				"Sí, utilizo publicidad de pago de forma regular.",
@@ -178,7 +178,7 @@
 		},
 		{
 			"id": 20,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas proyecciones de ventas a futuro para estimar el rendimiento financiero de tu negocio?",
 			"opciones": [
 				"Si, realizo proyecciones de ventas de forma regular.",
@@ -216,7 +216,7 @@
 		},
 		{
 			"id": 5,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Has considerado delegar responsabilidades en tu negocio? Si es así, ¿en qué áreas específicas te gustaría delegar y por qué?",
 			"opciones": [
 				"Sí, ya estoy delegando algunas responsabilidades en mi negocio. ",
@@ -237,7 +237,7 @@
 		},
 		{
 			"id": 8,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Alguna vez experimentaste un gran crecimiento económico de golpe y no supiste administrarlo?",
 			"opciones": [
 				"Sí, experimenté un gran crecimiento económico repentino y tuve dificultades para gestionarlo adecuadamente.",
@@ -284,7 +284,7 @@
 		},
 		{
 			"id": 15,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
 			"opciones": [
 				"Prefiero tomar decisiones financieras de manera independiente ",
@@ -295,7 +295,7 @@
 	"analisis_financiero": [
 		{
 			"id": 1,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Cuentas con alguna política financiera interna establecida para el manejo del dinero en tu negocio?",
 			"opciones": [
 				"Sí, tengo una política financiera claramente definida.",
@@ -333,7 +333,7 @@
 		},
 		{
 			"id": 7,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Cómo estableces tu remuneración como propietario del negocio? ¿Lo haces en función de un porcentaje de las ganancias o tienes un salario fijo? ¿Consideras tu compensación desde la perspectiva de propietario o ejecutivo?",
 			"opciones": [
 				"Salario fijo como propietario.",
@@ -360,7 +360,7 @@
 		},
 		{
 			"id": 10,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
 				"Si, tengo un fondo de tranquilidad bien establecido para hacer frente a cualquier contingencia",
@@ -370,7 +370,7 @@
 		},
 		{
 			"id": 11,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Calculas regularmente el punto de equilibrio financiero del negocio para determinar el nivel de ventas necesario para cubrir los costos operativos del mismo?",
 			"opciones": [
 				"Sí, calculo regularmente mi punto de equilibrio.",
@@ -405,7 +405,7 @@
 		},
 		{
 			"id": 15,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas un seguimiento de tu stock/inventario?",
 			"opciones": [
 				"Sí, llevo un control regular de mi inventario.",
@@ -415,7 +415,7 @@
 		},
 		{
 			"id": 16,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Has recurrido a financiamiento externo para tu negocio en algún momento?",
 			"opciones": [
 				"Sí, he utilizado financiamiento externo.",
@@ -425,7 +425,7 @@
 		},
 		{
 			"id": 17,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Has desarrollado un plan financiero claro para hacer la transición de un autoempleo a un negocio sólido? La falta de un plan y una estructura financiera definida suele ser una barrera para muchas marcas que nacen como pasatiempo y desean convertirse en empresas establecidas.",
 			"opciones": [
 				"Sí, tengo un plan financiero detallado para hacer esa transición.",
