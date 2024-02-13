@@ -139,6 +139,14 @@
 								>
 									<CountrySelect />
 								</select>
+							{:else if pregunta.tipo === 'email'}
+								<Input
+									type="email"
+									placeholder="Ingresa tu email"
+									bind:value={respuestas[pregunta.id]}
+								/>
+							{:else if pregunta.tipo === 'url'}
+								<Input type="url" placeholder="Ingresar URL" bind:value={respuestas[pregunta.id]} />
 							{/if}
 						</li>
 					{/each}

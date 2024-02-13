@@ -73,8 +73,11 @@
 <main class="mx-auto my-10 flex w-screen max-w-2xl flex-col items-center gap-20 p-4">
 	<article>
 		<h2
-			class="text-verde my-4 mb-16 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-3xl font-bold"
+			class="text-verde relative my-4 mb-16 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-3xl font-bold"
 		>
+			<span class="text-verde absolute left-2 top-2 text-sm font-semibold"
+				>{preguntas[currentStep].id + '/' + preguntas.length}</span
+			>
 			{preguntas[currentStep].texto}
 		</h2>
 		{#if preguntas[currentStep].tipo === 'opcion_multiple'}
@@ -159,16 +162,6 @@
 		{/if}
 		{#if preguntas[currentStep].tipo === 'area'}
 			<Textarea placeholder="Desarrolla tu respuesta" bind:value={respuestas[currentStep]} />
-		{/if}
-		{#if preguntas[currentStep].tipo === 'email'}
-			<Input
-				type="email"
-				placeholder="Desarrolla tu respuesta"
-				bind:value={respuestas[currentStep]}
-			/>
-		{/if}
-		{#if preguntas[currentStep].tipo === 'url'}
-			<Input type="url" placeholder="Ingresar URL" bind:value={respuestas[currentStep]} />
 		{/if}
 	</article>
 

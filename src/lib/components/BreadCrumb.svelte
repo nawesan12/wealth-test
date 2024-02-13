@@ -9,12 +9,12 @@
 		},
 		{
 			id: 1,
-			name: 'Analisis Subjetivo',
+			name: 'Análisis Subjetivo',
 			slug: 'analisis-subjetivo'
 		},
 		{
 			id: 2,
-			name: 'Analisis Financiero',
+			name: 'Análisis Financiero',
 			slug: 'analisis-financiero'
 		},
 		{
