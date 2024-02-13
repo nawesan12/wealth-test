@@ -15,7 +15,7 @@
 </script>
 
 <article
-	class={`fixed -left-80 top-1/2 z-40 grid max-w-96 -translate-y-1/2 transform grid-cols-8 rounded-r-2xl bg-white p-4 shadow-md transition-all duration-200 hover:left-0`}
+	class={`fixed -left-80 top-1/2 z-40 hidden max-w-96 -translate-y-1/2 transform grid-cols-8 rounded-r-2xl bg-white p-4 shadow-md transition-all duration-200 hover:left-0 md:grid lg:grid`}
 	on:mouseenter={() => (isShown = true)}
 	on:mouseleave={() => (isShown = false)}
 >
