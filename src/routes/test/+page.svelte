@@ -14,6 +14,8 @@
 				toast.error('Debes ingresar el codigo de acceso!');
 				return;
 			}
+
+			localStorage.setItem('dep-token', token);
 			surveyAnswers.update((value: SurveyAnswers) => {
 				return {
 					...value,
@@ -36,7 +38,7 @@
 			}
 
 			toast.success('Token valido! Accediendo...');
-			goto('/test/datos-iniciales');
+			goto('/test/reglas');
 		} catch (error) {
 			toast.error('Token invalido');
 		}
@@ -49,7 +51,7 @@
 	>
 		<h1 class="text-dorado col-span-1 flex text-7xl font-bold">DEP</h1>
 		<h2 class="text-center text-2xl text-white">
-			La fórmula para transformar las finanzas de tu negocio 
+			La fórmula para transformar las finanzas de tu negocio
 		</h2>
 	</header>
 

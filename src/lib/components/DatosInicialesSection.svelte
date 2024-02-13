@@ -9,5 +9,5 @@
 
 <main class="flex w-screen flex-col items-center">
 	<DatosInicialesSurvey {section} {next} {backend} />
-	<SectionIntroduction {section} introduction="" />
+	<SectionIntroduction {section} />
 </main>

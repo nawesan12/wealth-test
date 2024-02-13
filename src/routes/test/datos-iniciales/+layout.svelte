@@ -1,5 +1,7 @@
 <script>
-	import Progress from '@/components/ui/progress/progress.svelte';
+	import TokenChecker from '@/components/middleware-token/token-checker.svelte';
 </script>
+
+<TokenChecker />
 
 <slot />

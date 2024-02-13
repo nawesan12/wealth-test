@@ -8,8 +8,8 @@
 	import { toast } from 'svelte-sonner';
 	import { sendDataToBackendAndSave } from '@/utils';
 	import CountrySelect from '$lib/components/country-select/country-select.svelte';
-
 	import questions from '$lib/utils/survey.json';
+
 	const preguntas: Question[] = questions['datos_iniciales'];
 
 	export let section: string;
@@ -28,15 +28,18 @@
 		);
 		for (const pregunta of questionsOnCurrentPage) {
 			const respuesta = respuestas[pregunta.id];
-			if (!respuesta) {
-				toast.error('Debes llenar todos los campos');
-				return;
-			}
+			if (pregunta.tipo === 'url') {
+				break;
+			} else {
+				if (!respuesta) {
+					toast.error('Debes llenar todos los campos');
+					return;
+				}
 
-			// Additional validation: Check input length
-			if (respuesta.length > 1000) {
-				toast.error('El campo es demasiado largo');
-				return;
+				if (respuesta.length > 1000) {
+					toast.error('El campo es demasiado largo');
+					return;
+				}
 			}
 		}
 

@@ -43,7 +43,7 @@
 {#if text}
 	<div transition:fade={{ duration: 300 }}>
 		<blockquote
-			class="text-dorado max-w-2xl text-pretty p-4 text-center text-2xl font-normal italic opacity-80"
+			class="text-dorado mb-12 max-w-2xl text-pretty p-4 text-center text-2xl font-normal italic opacity-80"
 		>
 			❝ {text.frase} ❞ <br /> <br /> <span>- {text.autor}</span>
 		</blockquote>

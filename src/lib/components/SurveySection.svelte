@@ -14,8 +14,8 @@
 </script>
 
 <main class="flex w-screen flex-col items-center">
-	<BreadCrumb actualSection={section} />
+	<BreadCrumb />
 	<Survey {backend} {section} preguntas={actualQuestions} {next} />
-	<SectionIntroduction {section} introduction="" />
+	<SectionIntroduction {section} />
 	<Quoter />
 </main>

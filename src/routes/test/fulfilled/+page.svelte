@@ -4,6 +4,7 @@
 	import emailjs from '@emailjs/browser';
 
 	import { surveyAnswers } from '@/stores/survey';
+	import TokenChecker from '@/components/middleware-token/token-checker.svelte';
 
 	$: userEmail = $surveyAnswers.datos_iniciales[3];
 	$: token = $surveyAnswers.token;
@@ -22,6 +23,8 @@
 		);
 	});
 </script>
+
+<TokenChecker />
 
 <Confetti
 	x={[-4, 11]}

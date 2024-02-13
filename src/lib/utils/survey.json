@@ -8,7 +8,7 @@
 		{
 			"id": 2,
 			"tipo": "texto",
-			"texto": "Instagram de la marca / negocio (escribirlo con el @)"
+			"texto": "Instagram de la marca / negocio"
 		},
 		{
 			"id": 3,
@@ -22,7 +22,7 @@
 		},
 		{
 			"id": 5,
-			"tipo": "texto",
+			"tipo": "phone",
 			"texto": "Número de WhatsApp para contactarte en caso de que califiques a la asesoría (escribirlo con el prefijo de tu país)"
 		},
 		{
@@ -129,7 +129,8 @@
 			"id": 12,
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez trabajaste con un consultor financiero? Si la respuesta es sí, ¿cómo fue tu experiencia?",
-			"opciones": ["Si", "No", "Otro:"]
+			"opciones": ["Si", "No", "Otro:"],
+			"tip": "Un consultor financiero suele ser un profesional independiente que ofrece sus servicios a distintas empresas. Normalmente, tras un análisis de cada una de ellas, traza una estrategia para cumplir con los objetivos propuestos y priorizar el bienestar financiero de la misma"
 		},
 		{
 			"id": 13,
@@ -164,7 +165,8 @@
 				"Sí, realizo auditorías mensuales/trimestrales/semestrales de manera regular.",
 				"Sí, realizo auditorías, pero no de manera regular.",
 				"No, no realizo auditorías completas en mi negocio."
-			]
+			],
+			"tip": "Las auditorías implican revisar todos los registros del negocio, incluyendo el área de Marketing, Ventas, Finanzas, Recursos Humanos, etc. El objetivo es mejorar la eficiencia, detectar posibles fallos, mejorar procesos y reducir riesgos."
 		},
 		{
 			"id": 19,
@@ -184,7 +186,8 @@
 				"Si, realizo proyecciones de ventas de forma regular.",
 				"No realizo proyecciones de ventas, pero estoy interesado/a en aprender más sobre su importancia y aplicación.",
 				"No realizo proyecciones de ventas y no estoy interesado/a en implementarlo."
-			]
+			],
+			"tip": "Hay muchos negocios que experimentan fluctuaciones estacionales en las ventas, con picos de altas y bajas, por eso es importante planificar cuidadosamente el flujo de efectivo y el inventario para mitigar los efectos de la estacionalidad en las finanzas del negocio."
 		}
 	],
 	"analisis_subjetivo": [
@@ -253,7 +256,8 @@
 		{
 			"id": 10,
 			"tipo": "area",
-			"texto": "Durante tu infancia-adolescencia, ¿Cómo fueron tus modelos de referencia, viviste una situación de escasez o de abundancia financiera? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?"
+			"texto": "Durante tu infancia-adolescencia, ¿Cómo fueron tus modelos de referencia, viviste una situación de escasez o de abundancia financiera? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?",
+			"tip": "Esta es una de las preguntas más importantes del diagnóstico debido a que saca a la luz nuestra relación con el dinero, y nos brinda información importante para entender nuestros patrones financieros como adultos."
 		},
 		{
 			"id": 11,
@@ -301,13 +305,15 @@
 				"Sí, tengo una política financiera claramente definida.",
 				"No, actualmente no cuento con una política financiera establecida.",
 				"Estoy en proceso de desarrollar una política financiera para mi negocio."
-			]
+			],
+			"tip": "Tener una política financiera interna implica establecer reglas y directrices para la gestión del dinero en un negocio, lo que mejora la toma de decisiones, aumenta la transparencia y reduce los riesgos financieros."
 		},
 		{
 			"id": 2,
 			"tipo": "opcion_multiple",
 			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc.",
-			"opciones": ["Si", "No", "Algunos"]
+			"opciones": ["Si", "No", "Algunos"],
+			"tip": "Los indicadores más importantes para medir como mínimo cada 3 meses son los ratios de liquidez (liquidez corriente y prueba ácida), los ratios de rentabilidad (bruta y neta), ratios de eficiencia y ratios de endeudamiento."
 		},
 		{
 			"id": 3,
@@ -323,7 +329,8 @@
 		{
 			"id": 5,
 			"tipo": "area",
-			"texto": "¿Qué acciones o estrategias implementas para mitigar los efectos de la inflación en tu negocio?"
+			"texto": "¿Qué acciones o estrategias implementas para mitigar los efectos de la inflación en tu negocio?",
+			"tip": "Por ejemplo, aplicar un juste de precios estratégico; Diversificación de proveedores para no depender de uno; Análisis de los costos; Mejora de la productividad o bien Estrategias de marketing y fidelización de clientes."
 		},
 		{
 			"id": 6,
@@ -356,7 +363,8 @@
 				"Sí, tengo una estructura de costos completa",
 				"Sí, pero es muy básica",
 				"No, necesito armar una estructura de costos"
-			]
+			],
+			"tip": "Una estructura de costos en un negocio se refiere a la desglose detallado de todos los gastos necesarios para operar la empresa. Esto incluye costos variables, como materias primas y mano de obra directa, así como costos fijos, como alquiler, salarios administrativos y servicios públicos. Una estructura de costos bien definida ayuda a la empresa a entender sus gastos, calcular el punto de equilibrio y tomar decisiones financieras fundamentadas."
 		},
 		{
 			"id": 10,
@@ -366,7 +374,8 @@
 				"Si, tengo un fondo de tranquilidad bien establecido para hacer frente a cualquier contingencia",
 				"Sí, tengo ahorros, aunque no sé cuantos meses me cubriria",
 				"No tengo dinero ahorrado para contingencias. Dependo de mis ventas mes a mes"
-			]
+			],
+			"tip": "Un fondo de tranquilidad es un fondo reservado para cubrir gastos situaciones imprevistas, como una disminución repentina en las ventas, gastos inesperados, problemas de flujo de efectivo o urgencias operativas, lo que ayuda a mantener la estabilidad financiera y operativa del negocio en tiempos difíciles."
 		},
 		{
 			"id": 11,
@@ -375,7 +384,8 @@
 			"opciones": [
 				"Sí, calculo regularmente mi punto de equilibrio.",
 				"No calculo mi punto de equilibrio, pero estoy interesado/a en aprender más sobre su importancia y aplicación."
-			]
+			],
+			"tip": "El punto de equilibrio es el nivel de ventas en el que los ingresos igualan los costos, lo que indica que el negocio no genera ganancias ni pérdidas. Conocer este dato ayuda mucho a establecer metas y tomar mejores decisiones."
 		},
 		{
 			"id": 12,
@@ -391,7 +401,8 @@
 			"id": 13,
 			"tipo": "opcion_multiple",
 			"texto": "¿Sueles medir la liquidez constante de tu negocio con el fin de gestionarlo mejor durante los períodos de baja demanda?",
-			"opciones": ["Sí, reviso la liquidez.", "No, me gustaría saber como medir la liquidez."]
+			"opciones": ["Sí, reviso la liquidez.", "No, me gustaría saber como medir la liquidez."],
+			"tip": "La liquidez es crucial para garantizar que el negocio pueda cumplir con sus obligaciones financieras y enfrentar cualquier eventualidad sin comprometer su funcionamiento continuo."
 		},
 		{
 			"id": 14,
@@ -401,7 +412,8 @@
 				"Sí, elaboro estados financieros regularmente.",
 				"No elaboro estados financieros.",
 				"Otro:"
-			]
+			],
+			"tip": "Los estados financieros son informes contables que muestran la situación financiera, el rendimiento y los flujos de efectivo de una empresa en un período específico. Incluyen el balance general, que resume los activos, pasivos y patrimonio neto; el estado de resultados, que muestra los ingresos, gastos y utilidades o pérdidas; y el estado de flujo de efectivo, que detalla los cambios en el efectivo y equivalentes durante el período."
 		},
 		{
 			"id": 15,

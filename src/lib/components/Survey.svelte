@@ -7,7 +7,7 @@
 	import { goto } from '$app/navigation';
 	import { toast } from 'svelte-sonner';
 	import { sendDataToBackendAndSave } from '@/utils';
-	import CountrySelect from '$lib/components/country-select/country-select.svelte';
+	import QuestionTip from './question-tip/question-tip.svelte';
 
 	export let preguntas: Question[];
 	export let section: string;
@@ -17,8 +17,18 @@
 	let currentStep = 0; // Keep track of the current step
 	let respuestas: string[] = Array(preguntas.length).fill('');
 
+	function goToPreviousQuestion() {
+		if (currentStep > 0) {
+			currentStep--;
+		}
+	}
+
 	function handleAnswers() {
 		if (respuestas[currentStep] === '') {
+			if (['opcion_multiple', 'opcion_multiple_largas'].includes(preguntas[currentStep].tipo)) {
+				toast.error('Debes elegir una opcion');
+				return;
+			}
 			toast.error('Debes llenar el campo');
 			return;
 		}
@@ -70,12 +80,39 @@
 </script>
 
 <!-- Estructura del componente -->
+{#if preguntas[currentStep].tip != undefined}
+	<QuestionTip tip={preguntas[currentStep].tip} />
+{/if}
 <main class="mx-auto my-10 flex w-screen max-w-2xl flex-col items-center gap-20 p-4">
-	<article>
+	<article class="relative">
+		{#if currentStep > 0}
+			<button
+				class="absolute bottom-full rounded-lg border-green-800 bg-white px-2 lg:right-full lg:mr-2"
+				title="Ir a pregunta anterior"
+				on:click={goToPreviousQuestion}
+			>
+				<svg
+					width="22"
+					height="22"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="#0e362d"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M5 12l14 0" />
+					<path d="M5 12l4 4" />
+					<path d="M5 12l4 -4" />
+				</svg>
+			</button>
+		{/if}
+
 		<h2
 			class="text-verde relative my-4 mb-16 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-3xl font-bold"
 		>
-			<span class="text-verde absolute left-2 top-2 text-sm font-semibold"
+			<span class="text-verde absolute right-2 top-2 text-sm font-semibold"
 				>{preguntas[currentStep].id + '/' + preguntas.length}</span
 			>
 			{preguntas[currentStep].texto}
@@ -92,8 +129,9 @@
 								bind:value={respuestas[currentStep]}
 							/>
 						{:else}
-							<div
-								class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+							<label
+								class={`text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+								for={opcion}
 							>
 								<input
 									type="radio"
@@ -103,9 +141,8 @@
 									value={opcion}
 									class="absolute opacity-0"
 								/>
-								<label class="text-md cursor-pointer p-4 font-semibold" for={opcion}>{opcion}</label
-								>
-							</div>
+								{opcion}
+							</label>
 						{/if}
 					</li>
 				{/each}

@@ -48,7 +48,7 @@
 				<span class={index > actualSectionIndex ? 'opacity-80' : ''}>{section.id + 1}</span>
 				<div class="absolute -bottom-[4.5rem] w-max text-center">
 					<h6
-						class="hidden font-sans text-base font-semibold leading-relaxed tracking-normal text-white antialiased lg:block"
+						class={`hidden font-sans text-base font-semibold leading-relaxed tracking-normal text-white antialiased lg:block ${index > actualSectionIndex ? 'opacity-70' : ''}`}
 					>
 						{section.name}
 					</h6>
