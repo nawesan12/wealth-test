@@ -82,11 +82,11 @@ body {
 }
 
 .bg-verde {
-	background: rgb(14, 54, 45) !important;
+	background: #0e362d !important;
 }
 
 .text-verde {
-	color: rgb(14, 54, 45) !important;
+	color: #0e362d !important;
 }
 
 .text-dorado {
@@ -107,4 +107,13 @@ h4,
 h5,
 h6 {
 	text-wrap: balance;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #f8bc88 !important;
+	border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #0e362d !important;
 }
