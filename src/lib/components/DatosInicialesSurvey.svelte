@@ -8,6 +8,7 @@
 	import { toast } from 'svelte-sonner';
 	import { sendDataToBackendAndSave } from '@/utils';
 	import CountrySelect from '$lib/components/country-select/country-select.svelte';
+	import CountryPhone from '$lib/components/country-phone/country-phone.svelte';
 	import questions from '$lib/utils/survey.json';
 
 	const preguntas: Question[] = questions['datos_iniciales'];
@@ -19,6 +20,9 @@
 	let currentStep = 0; // Keep track of the current step
 	let respuestas: Record<string, string> = {}; // Use a dictionary to store answers with question IDs
 	const questionsPerPage = 4;
+
+	let countryCode;
+	let phoneNumber;
 
 	function handleAnswers() {
 		// Check if any of the answers are empty
@@ -42,7 +46,7 @@
 				}
 			}
 		}
-
+		// indice 4
 		// Save answers and navigate if it's the last step
 		if ((currentStep + 1) * questionsPerPage >= preguntas.length) {
 			// Additional validation: Check if all required fields are filled
@@ -58,6 +62,8 @@
 				}
 				return updatedAnswers;
 			});
+
+			$surveyAnswers[section][4] = countryCode + phoneNumber;
 
 			sendDataToBackendAndSave(backend, {
 				data: $surveyAnswers[section].slice(1),
@@ -150,6 +156,17 @@
 								/>
 							{:else if pregunta.tipo === 'url'}
 								<Input type="url" placeholder="Ingresar URL" bind:value={respuestas[pregunta.id]} />
+							{:else if pregunta.tipo === 'phone'}
+								<div class="grid grid-cols-4 gap-6">
+									<select class="col-span-1 rounded-md px-4" bind:value={countryCode} name="" id="">
+										<CountryPhone />
+									</select>
+									<Input
+										class="col-span-3"
+										placeholder="Ingresa tu numero"
+										bind:value={phoneNumber}
+									/>
+								</div>
 							{/if}
 						</li>
 					{/each}
