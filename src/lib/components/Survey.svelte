@@ -160,8 +160,9 @@
 								bind:value={respuestas[currentStep]}
 							/>
 						{:else}
-							<div
-								class={`text-verde w-full rounded-lg border-4 border-transparent bg-white p-4 focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+							<label
+								class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+								for={opcion}
 							>
 								<input
 									type="radio"
@@ -170,10 +171,8 @@
 									bind:group={respuestas[currentStep]}
 									value={opcion}
 									class="absolute opacity-0"
-								/>
-								<label class="text-md cursor-pointer p-4 font-semibold" for={opcion}>{opcion}</label
-								>
-							</div>
+								/>{opcion}
+							</label>
 						{/if}
 					</li>
 				{/each}
