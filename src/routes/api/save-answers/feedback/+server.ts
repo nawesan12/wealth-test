@@ -15,9 +15,8 @@ export async function POST({ request }) {
 			feelings: data[1] ?? '',
 			surprisingAspects: data[2] ?? '',
 			newLearnings: data[3] ?? '',
-			highlights: data[4] ?? '',
-			suggestions: data[5] ?? '',
-			recommendSession: data[6] ?? ''
+			suggestions: data[4] ?? '',
+			recommendSession: data[5] ?? ''
 		};
 
 		const uploadedFeedback = await prisma.feedback.create({

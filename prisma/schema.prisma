@@ -137,7 +137,6 @@ model Feedback {
   feelings               String      @db.Text
   surprisingAspects      String      @db.Text
   newLearnings           String      @db.Text
-  highlights             String      @db.Text
   suggestions            String      @db.Text
   recommendSession       BOOLOPTIONS @default(Si)
   Business               Business?
