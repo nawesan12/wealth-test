@@ -111,7 +111,7 @@
 											on:click={() => {
 												selectedRadios[pregunta.id] = opcion;
 											}}
-											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold  ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'} ${selectedRadios.includes(opcion) ? 'border-[#f8bc88] shadow-sm shadow-[#f8bc88]' : ''}`}
+											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold  ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'} ${selectedRadios.includes(opcion) ? 'border-dorado shadow-sm shadow-[#f8bc88]' : ''}`}
 											for={opcion}
 										>
 											<input
