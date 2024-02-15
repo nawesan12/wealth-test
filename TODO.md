@@ -1,8 +1,8 @@
-- Presentacion de Angelo
-- Corregir pagina de bienvenida
-- Crear ruta backend para guardar datos en DB
-- Crear dashboard para crear token de acceso
-- Crear informe para usuario final
+- Presentacion de Angelo [x]
+- Corregir pagina de bienvenida [x]
+- Crear ruta backend para guardar datos en DB [x]
+- Crear dashboard para crear token de acceso [x]
+- Crear informe para usuario final [x]
 
 PRIMERO SE CREA EL TOKEN
 DESPUES SE CREA EL USUARIO, Y AL TOKEN SE LE ASIGNA EL USUARIO CREADO
@@ -21,4 +21,6 @@ Y LISTO
 - SI AGREGAR DIALOGO INTRODUCTORIO [x]
 - AGREGAR INDICE DE PREGUNTA EN ESQUINITA [x]
 - CARTEL INICIAL DE REGLAS [x]
-- MIDDLEWARE TOKEN
+- MIDDLEWARE TOKEN [x]
+
+- ARREGLAR INFORME PA QUE SE VEA LINDO
