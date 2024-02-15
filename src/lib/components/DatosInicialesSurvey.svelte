@@ -32,7 +32,7 @@
 		);
 		for (const pregunta of questionsOnCurrentPage) {
 			const respuesta = respuestas[pregunta.id];
-			if (pregunta.tipo === 'url') {
+			if (pregunta.tipo === 'url' || pregunta.tipo === 'phone') {
 				break;
 			} else {
 				if (!respuesta) {
@@ -97,7 +97,7 @@
 				<h2 class="text-dorado my-4 mb-16 rounded-lg p-12 py-8 text-center text-6xl font-bold">
 					Datos Iniciales
 				</h2>
-				<form class="flex max-w-2xl list-none flex-col gap-6 space-y-1">
+				<article class="flex max-w-2xl list-none flex-col gap-6 space-y-1">
 					{#each preguntas.slice(step * questionsPerPage, Math.min((step + 1) * questionsPerPage, preguntas.length)) as pregunta, index}
 						<li>
 							<h3 class="mb-4 text-xl font-semibold text-white">{pregunta.texto}</h3>
@@ -106,12 +106,12 @@
 									{#each pregunta.opciones as opcion}
 										<label
 											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
-											for={pregunta.id + opcion}
+											for={opcion}
 										>
 											<input
 												type="radio"
-												id={pregunta.id + opcion}
-												name={pregunta.id}
+												id={opcion}
+												name={`opcion_${pregunta.id}`}
 												bind:group={respuestas[pregunta.id]}
 												value={opcion}
 												class="absolute opacity-0"
@@ -170,7 +170,7 @@
 							{/if}
 						</li>
 					{/each}
-				</form>
+				</article>
 			</article>
 		{/if}
 	{/each}
@@ -183,3 +183,17 @@
 		{currentStep * questionsPerPage >= preguntas.length ? 'Finalizar' : 'Siguiente'}
 	</button>
 </main>
+
+<style>
+	input[type='radio']:checked + label {
+		border-color: #f8bc88; /* Border color */
+		box-shadow: 0 0 0 2px #f8bc88; /* Shadow effect */
+	}
+
+	input[type='radio']:checked:focus + label {
+		border-color: #f8bc88; /* Border color */
+		box-shadow:
+			0 0 0 2px #f8bc88,
+			0 0 0 4px rgba(248, 188, 136, 0.5); /* Shadow effect */
+	}
+</style>
