@@ -65,7 +65,6 @@ model BusinessInfo {
   historyAndVision        String    @db.Text
   businessType            String    @db.Text
   businessModel           String    @db.Text
-  businessOffering        String    @db.Text
   mainProduct             String    @db.Text
   competitiveAdvantage    String    @db.Text
   marketResearch          String    @db.Text

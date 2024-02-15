@@ -81,84 +81,78 @@
 		},
 		{
 			"id": 4,
-			"tipo": "opcion_multiple",
-			"texto": "Tu negocio ofrece un:",
-			"opciones": ["Producto Físico", "Servicio Físico", "Producto Digital", "Servicio Digital"]
-		},
-		{
-			"id": 5,
 			"tipo": "area",
 			"texto": "¿Cuál es el producto o servicio principal que ofreces? (Si tienes varios productos / servicios y puedes describirlos, mucho mejor)"
 		},
 		{
-			"id": 6,
+			"id": 5,
 			"tipo": "area",
 			"texto": "¿Qué ventaja competitiva tiene tu negocio?"
 		},
 		{
-			"id": 7,
+			"id": 6,
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez realizaste un estudio de mercado sobre tu rubro y competidores a detalle?",
 			"opciones": ["Si", "No", "Otro:"]
 		},
 		{
-			"id": 8,
+			"id": 7,
 			"tipo": "opcion_multiple",
 			"texto": "¿Tienes un plan de Marketing?",
 			"opciones": ["Si", "No", "Otro:"]
 		},
 		{
-			"id": 9,
+			"id": 8,
 			"tipo": "opcion_multiple",
 			"texto": "¿Tienes un contador que se ocupe del área fiscal y la contabilidad patrimonial? ",
 			"opciones": ["Si", "No", "Otro:"]
 		},
 		{
-			"id": 10,
+			"id": 9,
 			"tipo": "opcion_multiple",
 			"texto": "¿Tienes una clara separación entre tus finanzas personales y las del negocio, o prefieres llevarlas de manera conjunta?",
 			"opciones": ["Las administro en conjunto", "Las administro por separado"]
 		},
 		{
-			"id": 11,
+			"id": 10,
 			"tipo": "opcion_multiple",
 			"texto": "¿Qué sistemas de tecnología y software utilizas actualmente para la contabilidad y gestión financiera de tu negocio?",
 			"opciones": ["Excel", "Papel", "App", "Software Contable"]
 		},
 		{
-			"id": 12,
+			"id": 11,
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez trabajaste con un consultor financiero? Si la respuesta es sí, ¿cómo fue tu experiencia?",
 			"opciones": ["Si", "No", "Otro:"],
 			"tip": "La función de un consultor financiero es proporcionar asesoramiento experto y estratégico en todas las áreas relacionadas con las finanzas de un negocio. Esto puede incluir la gestión del flujo de efectivo, la planificación financiera, la inversión, el análisis de riesgos, la obtención de financiamiento, la optimización de impuestos y mucho más."
 		},
 		{
-			"id": 13,
+			"id": 12,
 			"tipo": "area",
 			"texto": "¿Qué objetivos te gustaría alcanzar en los próximos 12 meses con tu negocio?"
 		},
 		{
-			"id": 14,
+			"id": 13,
 			"tipo": "area",
 			"texto": "¿Por qué crees que aún no has logrado esos objetivos?"
 		},
 		{
-			"id": 15,
+			"id": 14,
 			"tipo": "area",
 			"texto": "¿Cuáles son los 3 aspectos principales que te gustaría mejorar en tu marca / negocio? (No tienen por qué ser todos financieros)"
 		},
 		{
-			"id": 16,
+			"id": 15,
 			"tipo": "area",
 			"texto": "¿Cuál es el mayor desafío que actualmente enfrentas en cuánto a la administración financiera de tu negocio? (Cuanto más específico, mejor)"
 		},
 		{
-			"id": 17,
+			"id": 16,
 			"tipo": "texto",
 			"texto": "¿Tienes empleados a día de hoy? ¿Cuántos? ¿Están registrados legalmente o no?"
 		},
 		{
-			"id": 18,
+			"id": 17,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas auditorías completas del negocio de manera regular, ya sea mensual, trimestral u en otra temporalidad?",
 			"opciones": [
@@ -169,7 +163,7 @@
 			"tip": "Las auditorías implican revisar todos los registros del negocio, incluyendo el área de Marketing, Ventas, Finanzas, Recursos Humanos, etc. El objetivo es mejorar la eficiencia, detectar posibles fallos, mejorar procesos y reducir riesgos."
 		},
 		{
-			"id": 19,
+			"id": 18,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Utilizas publicidad de pago (ADS) para promocionar tu negocio?",
 			"opciones": [
@@ -179,7 +173,7 @@
 			]
 		},
 		{
-			"id": 20,
+			"id": 19,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas proyecciones de ventas a futuro para estimar el rendimiento financiero de tu negocio?",
 			"opciones": [
