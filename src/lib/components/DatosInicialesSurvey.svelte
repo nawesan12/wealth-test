@@ -51,12 +51,6 @@
 		// indice 4
 		// Save answers and navigate if it's the last step
 		if ((currentStep + 1) * questionsPerPage >= preguntas.length) {
-			// Additional validation: Check if all required fields are filled
-			if (Object.keys(respuestas).length !== preguntas.length) {
-				toast.error('Por favor, completa todas las respuestas');
-				return;
-			}
-
 			surveyAnswers.update((value) => {
 				const updatedAnswers = { ...value };
 				for (const pregunta of preguntas) {
