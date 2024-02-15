@@ -106,6 +106,7 @@
 							{#if pregunta.tipo === 'opcion_multiple'}
 								<form>
 									{#each pregunta.opciones as opcion}
+										<!-- svelte-ignore a11y -->
 										<label
 											on:click={() => {
 												selectedRadios[pregunta.id] = opcion;
