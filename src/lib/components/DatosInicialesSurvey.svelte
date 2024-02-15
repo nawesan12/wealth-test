@@ -186,14 +186,15 @@
 
 <style>
 	input[type='radio']:checked + label {
-		border-color: #f8bc88; /* Border color */
-		box-shadow: 0 0 0 2px #f8bc88; /* Shadow effect */
+		border-color: #f8bc88;
+		box-shadow: 0 0 0 2px #f8bc88;
 	}
 
+	/* Apply styles to label when the radio input is checked and focused */
 	input[type='radio']:checked:focus + label {
-		border-color: #f8bc88; /* Border color */
+		border-color: #f8bc88;
 		box-shadow:
 			0 0 0 2px #f8bc88,
-			0 0 0 4px rgba(248, 188, 136, 0.5); /* Shadow effect */
+			0 0 0 4px rgba(248, 188, 136, 0.5);
 	}
 </style>
