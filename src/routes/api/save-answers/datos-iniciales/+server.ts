@@ -11,15 +11,15 @@ export async function POST({ request }) {
 		}
 
 		const initialDataToUpload = {
-			name: data[0],
+			name: data[0] ?? '',
 			instagram: data[1].startsWith('@') ? data[1] : '@' + data[1],
-			web: data[2],
-			email: data[3],
-			whatsapp: data[4],
-			age: data[5],
-			country: data[6],
-			referredBy: data[7],
-			businessAgeAndSatisfaction: data[8]
+			web: data[2] ?? 'Sin Pagina Web',
+			email: data[3] ?? '',
+			whatsapp: data[4] ?? '',
+			age: data[5] ?? '',
+			country: data[6] ?? '',
+			referredBy: data[7] ?? '',
+			businessAgeAndSatisfaction: data[8] ?? ''
 		};
 
 		const uploadedUser = await prisma.user.create({
