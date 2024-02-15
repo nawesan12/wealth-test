@@ -165,6 +165,8 @@
 									</select>
 									<Input
 										class="col-span-3"
+										type="number"
+										inputmode="numeric"
 										placeholder="Ingresa tu numero"
 										bind:value={phoneNumber}
 									/>

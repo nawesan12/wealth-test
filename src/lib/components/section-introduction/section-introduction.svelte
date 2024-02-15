@@ -9,7 +9,7 @@
 		conociendo_el_negocio: {
 			name: 'Ahora vamos a hablar de tu negocio',
 			introduction:
-				'Decidimos iniciar el diagnóstico analizando la visión integral del negocio, explorando su historia, modelo de negocio, productos/servicios, ventaja competitiva, y otros aspectos clave. Este análisis profundo establece una base sólida para el resto del diagnóstico financiero.'
+				'Decidimos iniciar el diagnóstico analizando la visión integral del negocio, explorando su historia, modelo de negocio, productos/servicios, ventaja competitiva, y otros aspectos claves. Este análisis profundo establece una base sólida para el resto del diagnóstico financiero.'
 		},
 		analisis_subjetivo: {
 			name: 'Análisis Subjetivo',

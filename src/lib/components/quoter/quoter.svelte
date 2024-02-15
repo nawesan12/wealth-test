@@ -31,7 +31,7 @@
 			toast.info(`Sabias que: ${fact.texto}`, {
 				duration: 25000
 			});
-		}, 40000);
+		}, 70000);
 	});
 
 	onDestroy(() => {

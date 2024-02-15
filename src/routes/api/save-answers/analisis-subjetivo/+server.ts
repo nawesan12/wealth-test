@@ -19,13 +19,13 @@ export async function POST({ request }) {
 			emotionalExperience: data[5] ?? '',
 			missedOpportunity: data[6] ?? '',
 			suddenGrowth: data[7] ?? '',
-			childhoodBeliefs: data[8] ?? '',
-			childhoodExperience: data[9] ?? '',
-			lifeIncidents: data[10] ?? '',
-			emotionalEvaluation: data[11] ?? '',
-			longTermCommitment: data[12] ?? '',
-			financialRiskTolerance: data[13] ?? '',
-			financialDecisionMaking: data[14] ?? ''
+			//childhoodBeliefs: data[8] ?? '',
+			childhoodExperience: data[8] ?? '',
+			//lifeIncidents: data[10] ?? '',
+			emotionalEvaluation: data[9] ?? '',
+			longTermCommitment: data[10] ?? '',
+			financialRiskTolerance: data[11] ?? '',
+			financialDecisionMaking: data[12] ?? ''
 		};
 
 		const uploadedSubjectiveAnalysis = await prisma.subjectiveAnalysis.create({

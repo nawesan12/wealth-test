@@ -96,9 +96,7 @@ model SubjectiveAnalysis {
   emotionalExperience     String    @db.Text
   missedOpportunity       String    @db.Text
   suddenGrowth            String    @db.Text
-  childhoodBeliefs        String    @db.Text
   childhoodExperience     String    @db.Text
-  lifeIncidents           String    @db.Text
   emotionalEvaluation     String    @db.Text
   longTermCommitment      String    @db.Text
   financialRiskTolerance  String    @db.Text

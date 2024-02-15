@@ -130,7 +130,7 @@
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez trabajaste con un consultor financiero? Si la respuesta es sí, ¿cómo fue tu experiencia?",
 			"opciones": ["Si", "No", "Otro:"],
-			"tip": "Un consultor financiero suele ser un profesional independiente que ofrece sus servicios a distintas empresas. Normalmente, tras un análisis de cada una de ellas, traza una estrategia para cumplir con los objetivos propuestos y priorizar el bienestar financiero de la misma"
+			"tip": "La función de un consultor financiero es proporcionar asesoramiento experto y estratégico en todas las áreas relacionadas con las finanzas de un negocio. Esto puede incluir la gestión del flujo de efectivo, la planificación financiera, la inversión, el análisis de riesgos, la obtención de financiamiento, la optimización de impuestos y mucho más."
 		},
 		{
 			"id": 13,
@@ -224,9 +224,11 @@
 			"opciones": [
 				"Sí, ya estoy delegando algunas responsabilidades en mi negocio. ",
 				"Estoy considerando delegar responsabilidades en el futuro.",
-				"No he considerado delegar responsabilidades en mi negocio"
+				"No he considerado delegar responsabilidades en mi negocio",
+				"Otro:"
 			]
 		},
+
 		{
 			"id": 6,
 			"tipo": "opcion_multiple",
@@ -235,8 +237,9 @@
 		},
 		{
 			"id": 7,
-			"tipo": "area",
-			"texto": "¿Alguna vez se te presentó una buena oportunidad para crecer tu negocio y por algún miedo interno terminaste desaprovechándola?"
+			"tipo": "opcion_multiple",
+			"texto": "¿Alguna vez te encontraste con una excelente oportunidad para hacer crecer tu negocio, pero no terminaste aprovechándola debido a algún temor interno?",
+			"opciones": ["Si", "No"]
 		},
 		{
 			"id": 8,
@@ -251,33 +254,29 @@
 		{
 			"id": 9,
 			"tipo": "area",
-			"texto": "Programación verbal, ¿Cuáles son las 5 creencias sobre el dinero más comunes que se repetían en tu casa durante tu adolescencia? (Ejemplo, el dinero es malo, los ricos son ávaros, etc.)"
-		},
-		{
-			"id": 10,
-			"tipo": "area",
 			"texto": "Durante tu infancia-adolescencia, ¿Cómo fueron tus modelos de referencia, viviste una situación de escasez o de abundancia financiera? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?",
 			"tip": "Esta es una de las preguntas más importantes del diagnóstico debido a que saca a la luz nuestra relación con el dinero, y nos brinda información importante para entender nuestros patrones financieros como adultos."
 		},
+
 		{
-			"id": 11,
-			"tipo": "opcion_multiple",
-			"texto": "Incidentes concretos, ¿Viviste alguna experiencia puntual que te marcó durante toda tu vida?",
-			"opciones": ["Si", "No", "No estoy seguro"]
-		},
-		{
-			"id": 12,
+			"id": 10,
 			"tipo": "opcion_multiple",
 			"texto": "¿Realizas una evaluación emocional del año en términos de cómo has gestionado tus emociones en relación con las decisiones tomadas y otros factores que han impactado en tu negocio?",
 			"opciones": ["Si", "No", "Nunca lo hice", "Me gustaria hacerlo"]
 		},
 		{
-			"id": 13,
-			"tipo": "area",
-			"texto": "¿Visualizas tu negocio como un proyecto a largo plazo, estando dispuesto a comprometerte durante los próximos 5 a 10 años, o por el contrario lo proyectas solo a corto plazo?"
+			"id": 11,
+			"tipo": "opcion_multiple_largas",
+			"texto": "¿Visualizas tu negocio como un proyecto a largo plazo, estando dispuesto a comprometerte durante los próximos 5 a 10 años, o por el contrario lo proyectas solo a corto plazo?",
+			"opciones": [
+				"Sí, mi visión para mi negocio es a largo plazo y estoy comprometido a trabajar en él durante los próximos 5 a 10 años.",
+				"Prefiero enfocarme en objetivos a corto plazo y reevaluar constantemente la dirección de mi negocio.",
+				"Mi enfoque en el tiempo que permaneceré en el negocio varía según las circunstancias y oportunidades que se presenten.",
+				"Otro:"
+			]
 		},
 		{
-			"id": 14,
+			"id": 12,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero y qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
 			"opciones": [
@@ -287,7 +286,7 @@
 			]
 		},
 		{
-			"id": 15,
+			"id": 13,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
 			"opciones": [
@@ -310,9 +309,13 @@
 		},
 		{
 			"id": 2,
-			"tipo": "opcion_multiple",
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Conoces los indicadores básicos de tu negocio? Margen bruto, beneficio neto, ROI del producto, etc.",
-			"opciones": ["Si", "No", "Algunos"],
+			"opciones": [
+				"Sí, estoy familiarizado con los indicadores básicos de mi negocio y los utilizo regularmente para evaluar su desempeño.",
+				"Conozco algunos de los indicadores mencionados, pero no todos.",
+				"No estoy seguro/a de qué son esos indicadores o cómo se aplican a mi negocio."
+			],
 			"tip": "Los indicadores más importantes para medir como mínimo cada 3 meses son los ratios de liquidez (liquidez corriente y prueba ácida), los ratios de rentabilidad (bruta y neta), ratios de eficiencia y ratios de endeudamiento."
 		},
 		{
@@ -364,7 +367,7 @@
 				"Sí, pero es muy básica",
 				"No, necesito armar una estructura de costos"
 			],
-			"tip": "Una estructura de costos en un negocio se refiere a la desglose detallado de todos los gastos necesarios para operar la empresa. Esto incluye costos variables, como materias primas y mano de obra directa, así como costos fijos, como alquiler, salarios administrativos y servicios públicos. Una estructura de costos bien definida ayuda a la empresa a entender sus gastos, calcular el punto de equilibrio y tomar decisiones financieras fundamentadas."
+			"tip": "Una estructura de costos en un negocio se refiere al desglose detallado de todos los gastos necesarios para operar la empresa. Esto incluye costos variables, como materias primas y mano de obra directa, así como costos fijos, como alquiler, salarios administrativos y servicios públicos. Una estructura de costos bien definida ayuda a la empresa a entender sus gastos, calcular el punto de equilibrio y tomar decisiones financieras fundamentadas."
 		},
 		{
 			"id": 10,
@@ -375,7 +378,7 @@
 				"Sí, tengo ahorros, aunque no sé cuantos meses me cubriria",
 				"No tengo dinero ahorrado para contingencias. Dependo de mis ventas mes a mes"
 			],
-			"tip": "Un fondo de tranquilidad es un fondo reservado para cubrir gastos situaciones imprevistas, como una disminución repentina en las ventas, gastos inesperados, problemas de flujo de efectivo o urgencias operativas, lo que ayuda a mantener la estabilidad financiera y operativa del negocio en tiempos difíciles."
+			"tip": "Un fondo de tranquilidad es un fondo reservado para cubrir gastos en situaciones imprevistas, como una disminución repentina en las ventas, gastos inesperados, problemas de flujo de efectivo o urgencias operativas, lo que ayuda a mantener la estabilidad financiera y operativa del negocio en tiempos difíciles."
 		},
 		{
 			"id": 11,
@@ -390,11 +393,11 @@
 		{
 			"id": 12,
 			"tipo": "opcion_multiple",
-			"texto": "¿Has establecido un plan para gestionar las deudas en caso de que tu negocio las tenga?",
+			"texto": "¿Cuentas con un plan concreto para manejar las deudas en caso de que tu negocio las adquiera?",
 			"opciones": [
-				"Tengo deudas y tengo un plan para pagarlas",
-				"Tengo deudas y no tengo un plan para pagarlas.",
-				"Mi negocio no tiene deudas"
+				"Tengo deudas y tengo un plan para pagarlas.",
+				"Tengo deudas y aún no he desarrollado un plan específico para pagarlas.",
+				"Mi negocio no tiene deudas."
 			]
 		},
 		{
@@ -453,7 +456,8 @@
 		{
 			"id": 19,
 			"tipo": "texto",
-			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)"
+			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)",
+			"opcional": true
 		}
 	],
 	"feedback": [
@@ -470,12 +474,12 @@
 		{
 			"id": 3,
 			"tipo": "texto",
-			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador? ¿Cual?"
+			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador? ¿Cuál?"
 		},
 		{
 			"id": 4,
 			"tipo": "area",
-			"texto": "¿Que sientes que aprendiste algo nuevo sobre la gestión financiera de tu negocio durante el proceso? "
+			"texto": "¿Qué nuevas perspectivas has adquirido sobre la gestión financiera de tu negocio durante este proceso de diagnóstico?"
 		},
 		{
 			"id": 5,

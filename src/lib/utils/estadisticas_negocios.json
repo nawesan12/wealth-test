@@ -2,36 +2,30 @@
 	"estadisticas_negocios": [
 		{
 			"id": 1,
-			"texto": "Solo el 40% de las startups son rentables. Según una estadísticas sobre las «tendencias de la pequeña empresa», el otro 30% de las startups tienen una esperanza de vida menor a 7 años y el último 30% seguirá perdiendo dinero."
+			"texto": "Solo el 40% de las startups son rentables, mientras que el otro 30% tienen una esperanza de vida menor a 7 años y el último 30% seguirá perdiendo dinero."
 		},
 		{
 			"id": 2,
-			"texto": "Según una reciente investigación de 500 global, (“Estudio de Salarios de Startups en LatAm”) el promedio salarial de un CEO es de $3.000 USD (En Argentina se aproxima más a los $2.000 USD)",
-			"subitems": [
-				{
-					"id": 3,
-					"texto": "El 56,9% de las compañías tiene entre 1 y 10 empleados."
-				},
-				{
-					"id": 4,
-					"texto": "Los **países con promedio de salarios más altos en el C-level** son: Brasil, Panamá, Chile, El Salvador, México, Uruguay y Costa Rica."
-				},
-				{
-					"id": 5,
-					"texto": "Los **países con promedio de salarios más bajos en el C-level** son: **Argentina,** Bolivia, Perú, Colombia, República Dominicana y Ecuador."
-				}
-			]
+			"texto": "El promedio salarial de un CEO es de $3,000 USD en general, aunque en Argentina se aproxima más a los $2,000 USD."
 		},
 		{
-			"id": 6,
+			"id": 3,
+			"texto": "Los países con promedio de salarios más altos en el C-level son: Brasil, Panamá, Chile, El Salvador, México, Uruguay y Costa Rica. Los países con promedio de salarios más bajos en el C-level son: Argentina, Bolivia, Perú, Colombia, República Dominicana y Ecuador."
+		},
+		{
+			"id": 4,
+			"texto": "El 56,9% de las compañías en LATAM poseen entre 1 y 10 empleados."
+		},
+		{
+			"id": 5,
 			"texto": "Japón es el país menos emprendedor, con solo el 1.3 % de los Japoneses siendo empresarios."
 		},
 		{
-			"id": 7,
+			"id": 6,
 			"texto": "Aproximadamente el 50% de las pequeñas empresas sobrevivirán a su quinto año en el negocio."
 		},
 		{
-			"id": 8,
+			"id": 7,
 			"texto": "Un estudio de 2018 muestra que una persona de 60 años es 3 veces más probable para construir una startup exitosa que una de 30 años. (Perspectiva de Kellogg)"
 		}
 	]
