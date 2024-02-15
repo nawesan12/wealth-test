@@ -8,7 +8,7 @@
 	}
 </script>
 
-<main class="m-4 rounded-lg bg-white p-8">
+<main class="m-4 max-w-4xl rounded-lg bg-white p-8">
 	<section class="mb-8">
 		<h2 class="mb-2 text-2xl font-semibold">Información del Usuario</h2>
 		<article class="space-y-2">
@@ -221,10 +221,6 @@
 			<p>
 				<strong class="font-semibold">Lecciones Aprendidas:</strong>
 				{datos?.feedback?.newLearnings}
-			</p>
-			<p>
-				<strong class="font-semibold">Aspectos Destacados:</strong>
-				{datos?.feedback?.highlights}
 			</p>
 			<p><strong class="font-semibold">Sugerencias:</strong> {datos?.feedback?.suggestions}</p>
 			<p>

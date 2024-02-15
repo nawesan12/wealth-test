@@ -10,6 +10,8 @@
 	$: token = $surveyAnswers.token;
 	$: userName = $surveyAnswers.datos_iniciales[0];
 
+	console.log(userEmail, token, userName);
+
 	onMount(() => {
 		emailjs.send(
 			'service_ztpqaee',
