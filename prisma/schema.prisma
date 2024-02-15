@@ -80,6 +80,7 @@ model BusinessInfo {
   employees               String    @db.Text
   audits                  String    @db.Text
   advertising             String    @db.Text
+  adMetrics               String?   @default("-")
   salesProjections        String    @db.Text
   Business                Business?
 }
@@ -92,6 +93,7 @@ model SubjectiveAnalysis {
   financialTraining       String    @db.Text
   partnerStatus           String    @db.Text
   delegation              String    @db.Text
+  delegatedAreas          String    @default("-") @db.Text
   emotionalExperience     String    @db.Text
   missedOpportunity       String    @db.Text
   suddenGrowth            String    @db.Text
@@ -121,6 +123,7 @@ model FinancialAnalysis {
   liquidityMeasurement    String    @db.Text
   financialStatements     String    @db.Text
   inventoryTracking       String    @db.Text
+  trackingMethod          String?   @default("-")
   externalFinancing       String    @db.Text
   growthTransitionPlan    String    @db.Text
   financialConsultantPlan String    @db.Text

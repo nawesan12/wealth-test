@@ -25,3 +25,6 @@ Y LISTO
 
 - ARREGLAR INFORME PA QUE SE VEA LINDO
 - AGREGAR las preguntas violetas
+
+224
+434

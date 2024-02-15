@@ -54,6 +54,7 @@
 			return;
 		}
 
+		// Perform conditional checks for displaying subsequent questions
 		if (currentStep === preguntas.length - 1) {
 			surveyAnswers.update((value) => {
 				return {
@@ -89,6 +90,22 @@
 					console.error(error);
 				});
 		} else {
+			// Check for conditional questions and skip if the condition is not met
+			if (currentQuestion.condicional) {
+				const previousAnswer = respuestas[currentStep];
+				const conditionalQuestionIndex = currentStep + 1;
+
+				if (!previousAnswer.includes('Sí')) {
+					// Skip conditional question if the previous answer was not positive
+					currentStep += 2; // Increment by 2 to skip both the conditional question and its subsequent question
+				} else {
+					// Fill conditional question with empty string if not answered
+					if (!respuestas[conditionalQuestionIndex]) {
+						respuestas[conditionalQuestionIndex] = '';
+					}
+				}
+			}
+
 			currentStep++;
 		}
 	}

@@ -29,7 +29,8 @@ export async function POST({ request }) {
 			employees: data[15] ?? '',
 			audits: data[16] ?? '',
 			advertising: data[17] ?? '',
-			salesProjections: data[18] ?? ''
+			adMetrics: data[18] ?? '',
+			salesProjections: data[19] ?? ''
 		};
 
 		const uploadedBusinessInfo = await prisma.businessInfo.create({
