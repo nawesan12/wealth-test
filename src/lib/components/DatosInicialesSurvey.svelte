@@ -17,6 +17,8 @@
 	export let next: string;
 	export let backend: string;
 
+	$: selectedRadios = [];
+
 	let currentStep = 0; // Keep track of the current step
 	let respuestas: Record<string, string> = {}; // Use a dictionary to store answers with question IDs
 	const questionsPerPage = 4;
@@ -105,7 +107,10 @@
 								<form>
 									{#each pregunta.opciones as opcion}
 										<label
-											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+											on:click={() => {
+												selectedRadios[pregunta.id] = opcion;
+											}}
+											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold  ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'} ${selectedRadios.includes(opcion) ? 'border-[#f8bc88] shadow-sm shadow-[#f8bc88]' : ''}`}
 											for={opcion}
 										>
 											<input
@@ -183,18 +188,3 @@
 		{currentStep * questionsPerPage >= preguntas.length ? 'Finalizar' : 'Siguiente'}
 	</button>
 </main>
-
-<style>
-	input[type='radio']:checked + label {
-		border-color: #f8bc88;
-		box-shadow: 0 0 0 2px #f8bc88;
-	}
-
-	/* Apply styles to label when the radio input is checked and focused */
-	input[type='radio']:checked:focus + label {
-		border-color: #f8bc88;
-		box-shadow:
-			0 0 0 2px #f8bc88,
-			0 0 0 4px rgba(248, 188, 136, 0.5);
-	}
-</style>
