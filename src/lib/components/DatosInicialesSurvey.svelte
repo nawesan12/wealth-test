@@ -102,23 +102,25 @@
 						<li>
 							<h3 class="mb-4 text-xl font-semibold text-white">{pregunta.texto}</h3>
 							{#if pregunta.tipo === 'opcion_multiple'}
-								{#each pregunta.opciones as opcion}
-									<label
-										class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
-										for={pregunta.id + opcion}
-									>
-										<input
-											type="radio"
-											id={pregunta.id + opcion}
-											name={pregunta.id}
-											bind:group={respuestas[pregunta.id]}
-											value={opcion}
-											class="absolute opacity-0"
-										/>
-										{opcion}
-									</label>
-									<br />
-								{/each}
+								<form>
+									{#each pregunta.opciones as opcion}
+										<label
+											class={`text-md text-md text-verde block w-full cursor-pointer rounded-lg border-4 border-transparent bg-white p-4 font-semibold focus-within:border-[#f8bc88] focus-within:shadow-sm focus-within:shadow-[#f8bc88] ${index % 2 === 0 ? 'slide-in-right' : 'slide-in-left'}`}
+											for={pregunta.id + opcion}
+										>
+											<input
+												type="radio"
+												id={pregunta.id + opcion}
+												name={pregunta.id}
+												bind:group={respuestas[pregunta.id]}
+												value={opcion}
+												class="absolute opacity-0"
+											/>
+											{opcion}
+										</label>
+										<br />
+									{/each}
+								</form>
 							{:else if pregunta.tipo === 'texto'}
 								<Input
 									type="text"
