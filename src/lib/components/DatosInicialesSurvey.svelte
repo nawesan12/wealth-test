@@ -59,7 +59,9 @@
 				return updatedAnswers;
 			});
 
-			$surveyAnswers[section][4] = countryCode + phoneNumber;
+			$surveyAnswers[section][5] = countryCode + phoneNumber;
+
+			console.log($surveyAnswers);
 
 			sendDataToBackendAndSave(backend, {
 				data: $surveyAnswers[section].slice(1),

@@ -23,6 +23,8 @@
 				};
 			});
 
+			console.log('TOKEN GUARDADO: ', $surveyAnswers);
+
 			const res = await fetch('/api/verify-access', {
 				method: 'POST',
 				headers: {
