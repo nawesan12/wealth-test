@@ -22,16 +22,23 @@ export async function POST({ request }) {
 			businessAgeAndSatisfaction: data[8] ?? ''
 		};
 
+		// worksss
 		const uploadedUser = await prisma.user.create({
 			data: initialDataToUpload
 		});
 
-		const createdToken = await prisma.accessInfoToken.update({
+		await prisma.accessInfoToken.update({
 			where: {
 				token: token as string
 			},
 			data: {
 				userId: uploadedUser.id
+			}
+		});
+
+		const tokenForId = await prisma.accessInfoToken.findUnique({
+			where: {
+				token: token as string
 			}
 		});
 
@@ -42,7 +49,7 @@ export async function POST({ request }) {
 				subjectiveAnalysisId: 0 as number,
 				financialAnalysisId: 0 as number,
 				feedbackId: 0 as number,
-				accessInfoTokenId: createdToken.id as number
+				accessInfoTokenId: tokenForId?.id as number
 			}
 		});
 
