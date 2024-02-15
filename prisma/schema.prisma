@@ -17,7 +17,7 @@ model User {
   id                         String            @id @default(uuid())
   name                       String
   instagram                  String            @unique
-  web                        String            @unique
+  web                        String            @default("Sin Web")
   email                      String            @unique
   whatsapp                   String            @unique
   age                        String
