@@ -127,7 +127,7 @@ model FinancialAnalysis {
   externalFinancing        String    @db.Text
   growthTransitionPlan     String    @db.Text
   financialConsultantPlan  String    @db.Text
-  extraCommentAboutCompany String?   @db.Text
+  extraCommentAboutCompany String?   @default("-") @db.Text
   Business                 Business?
 }
 
