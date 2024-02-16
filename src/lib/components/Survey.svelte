@@ -95,7 +95,10 @@
 				const previousAnswer = respuestas[currentStep];
 				const conditionalQuestionIndex = currentStep + 1;
 
-				if (!previousAnswer.includes('Sí')) {
+				if (!previousAnswer) {
+					// Check if the previous answer is empty (i.e., the optional question was not answered)
+					currentStep++; // Skip just the conditional question
+				} else if (!previousAnswer.includes('Sí')) {
 					// Skip conditional question if the previous answer was not positive
 					currentStep += 2; // Increment by 2 to skip both the conditional question and its subsequent question
 				} else {

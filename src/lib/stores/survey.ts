@@ -5,9 +5,7 @@ export const surveyAnswers = writable<SurveyAnswers>({
 	datos_iniciales: [],
 	conociendo_el_negocio: [],
 	analisis_subjetivo: [],
-	analisis_objetivo: [],
-	preguntas_extras: [],
+	analisis_financiero: [],
 	feedback: [],
-	dolor: [],
 	token: ''
 });
