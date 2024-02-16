@@ -26,10 +26,11 @@ export async function POST({ request }) {
 			liquidityMeasurement: data[12] ?? '',
 			financialStatements: data[13] ?? '',
 			inventoryTracking: data[14] ?? '',
-			trackingMethods: data[15] ?? '',
+			trackingMethod: data[15] ?? '',
 			externalFinancing: data[16] ?? '',
 			growthTransitionPlan: data[17] ?? '',
-			financialConsultantPlan: data[18] ?? ''
+			financialConsultantPlan: data[18] ?? '',
+			extraCommentAboutCompany: data[19] ?? ''
 		};
 
 		const uploadedObjectiveAnalysis = await prisma.financialAnalysis.create({
