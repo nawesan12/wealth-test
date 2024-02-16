@@ -30,7 +30,7 @@ model User {
 
 model AccessInfoToken {
   id       Int       @id @default(autoincrement())
-  token    String    @unique @default(uuid())
+  token    String    @unique
   isUsed   Boolean   @default(false)
   userId   String?
   User     User?     @relation(fields: [userId], references: [id])
@@ -135,7 +135,6 @@ model FinancialAnalysis {
 model Feedback {
   id                     Int         @id @default(autoincrement())
   comprehensiveDiagnosis String      @db.Text
-  feelings               String      @db.Text
   surprisingAspects      String      @db.Text
   newLearnings           String      @db.Text
   suggestions            String      @db.Text

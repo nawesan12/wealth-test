@@ -12,11 +12,10 @@ export async function POST({ request }) {
 
 		const initialDataToUpload = {
 			comprehensiveDiagnosis: data[0] ?? '',
-			feelings: data[1] ?? '',
-			surprisingAspects: data[2] ?? '',
-			newLearnings: data[3] ?? '',
-			suggestions: data[4] ?? '',
-			recommendSession: data[5] ?? ''
+			surprisingAspects: data[1] ?? '',
+			newLearnings: data[2] ?? '',
+			suggestions: data[3] ?? '',
+			recommendSession: data[4] ?? ''
 		};
 
 		const uploadedFeedback = await prisma.feedback.create({

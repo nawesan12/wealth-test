@@ -129,6 +129,17 @@
 									placeholder="Ingresa tu respuesta"
 									bind:value={respuestas[pregunta.id]}
 								/>
+							{:else if pregunta.tipo === 'social'}
+								<div class="relative">
+									<Input
+										type="text"
+										placeholder="@@ Ingresa tu usuario"
+										bind:value={respuestas[pregunta.id]}
+									/>
+									<span class="absolute bottom-2 left-2 bg-white pr-4 font-semibold text-zinc-700"
+										>@</span
+									>
+								</div>
 							{:else if pregunta.tipo === 'number'}
 								<Input
 									type="number"

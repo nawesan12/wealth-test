@@ -23,29 +23,72 @@
 		}
 	}
 
+	function goToNextQuestion() {
+		currentStep++;
+	}
+
+	function skipOptionalQuestion() {
+		currentStep += 2;
+	}
+
+	function fillOptionalQuestionWithEmptyString() {
+		if (!respuestas[currentStep]) {
+			respuestas[currentStep] = '';
+		}
+	}
+
+	function fieldValidation(tipo: string) {
+		if (['opcion_multiple', 'opcion_multiple_largas'].includes(tipo)) {
+			if (respuestas[currentStep] === '') {
+				toast.error('Debes elegir una opción');
+				return;
+			}
+		} else {
+			// For other question types, check if the response is empty
+			if (respuestas[currentStep] === '') {
+				toast.error('Debes llenar el campo');
+				return;
+			}
+		}
+	}
+
+	function saveAnswersAndSendToBackend() {
+		surveyAnswers.update((value) => {
+			return {
+				...value,
+				[section]: respuestas
+			};
+		});
+
+		sendDataToBackendAndSave(backend, {
+			data: $surveyAnswers[section],
+			token: $surveyAnswers.token
+		})
+			.then((data) => {
+				if (data.error) {
+					toast.error('Error al guardar las respuestas');
+					console.error(data.error);
+				} else {
+					console.log(data);
+					toast.success('Respuestas guardadas!', {
+						type: 'success'
+					});
+					goto(next);
+				}
+			})
+			.catch((error) => {
+				toast.error('Error al conectar con el servidor');
+				console.error(error);
+			});
+	}
+
 	function handleAnswers() {
 		const currentQuestion = preguntas[currentStep];
 
-		// Check if the current question is optional
 		if (currentQuestion.opcional) {
-			// If the question is optional and there's no response, fill it with an empty string
-			if (!respuestas[currentStep]) {
-				respuestas[currentStep] = '';
-			}
+			fillOptionalQuestionWithEmptyString();
 		} else {
-			// If the question is not optional, perform the required validation
-			if (['opcion_multiple', 'opcion_multiple_largas'].includes(currentQuestion.tipo)) {
-				if (respuestas[currentStep] === '') {
-					toast.error('Debes elegir una opción');
-					return;
-				}
-			} else {
-				// For other question types, check if the response is empty
-				if (respuestas[currentStep] === '') {
-					toast.error('Debes llenar el campo');
-					return;
-				}
-			}
+			fieldValidation(currentQuestion.tipo);
 		}
 
 		// Additional validation: Check input length
@@ -56,60 +99,21 @@
 
 		// Perform conditional checks for displaying subsequent questions
 		if (currentStep === preguntas.length - 1) {
-			surveyAnswers.update((value) => {
-				return {
-					...value,
-					[section]: respuestas
-				};
-			});
-
-			// Additional validation: Check if all required fields are filled
-			if (!currentQuestion.opcional && respuestas.some((answer) => answer === '')) {
-				toast.error('Por favor, completa todas las respuestas');
-				return;
-			}
-
-			sendDataToBackendAndSave(backend, {
-				data: $surveyAnswers[section],
-				token: $surveyAnswers.token
-			})
-				.then((data) => {
-					if (data.error) {
-						toast.error('Error al guardar las respuestas');
-						console.error(data.error);
-					} else {
-						console.log(data);
-						toast.success('Respuestas guardadas!', {
-							type: 'success'
-						});
-						goto(next);
-					}
-				})
-				.catch((error) => {
-					toast.error('Error al conectar con el servidor');
-					console.error(error);
-				});
+			saveAnswersAndSendToBackend();
 		} else {
-			// Check for conditional questions and skip if the condition is not met
 			if (currentQuestion.condicional) {
 				const previousAnswer = respuestas[currentStep];
 				const conditionalQuestionIndex = currentStep + 1;
 
-				if (!previousAnswer) {
-					// Check if the previous answer is empty (i.e., the optional question was not answered)
-					currentStep++; // Skip just the conditional question
-				} else if (!previousAnswer.includes('Sí')) {
-					// Skip conditional question if the previous answer was not positive
-					currentStep += 2; // Increment by 2 to skip both the conditional question and its subsequent question
+				if (!previousAnswer.includes('Sí')) {
+					respuestas[conditionalQuestionIndex] = ' ';
+					skipOptionalQuestion();
+					return;
 				} else {
-					// Fill conditional question with empty string if not answered
-					if (!respuestas[conditionalQuestionIndex]) {
-						respuestas[conditionalQuestionIndex] = '';
-					}
+					goToNextQuestion();
+					return;
 				}
 			}
-
-			currentStep++;
 		}
 	}
 </script>

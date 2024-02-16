@@ -7,7 +7,7 @@
 		},
 		{
 			"id": 2,
-			"tipo": "texto",
+			"tipo": "social",
 			"texto": "Instagram de la marca / negocio"
 		},
 		{
@@ -493,25 +493,20 @@
 		{
 			"id": 2,
 			"tipo": "texto",
-			"texto": "¿Cómo te sentiste a medida que ibas respondiendo las preguntas?"
-		},
-		{
-			"id": 3,
-			"tipo": "texto",
 			"texto": "¿Hubo algún aspecto específico del diagnóstico que te sorprendió o que consideraste especialmente revelador? ¿Cuál?"
 		},
 		{
-			"id": 4,
+			"id": 3,
 			"tipo": "area",
 			"texto": "¿Qué nuevas perspectivas has adquirido sobre la gestión financiera de tu negocio durante este proceso de diagnóstico?"
 		},
 		{
-			"id": 5,
+			"id": 4,
 			"tipo": "area",
 			"texto": "¿Hay algo que le agregarías o mejorarías de la dinámica?"
 		},
 		{
-			"id": 6,
+			"id": 5,
 			"tipo": "opcion_multiple",
 			"texto": "¿Le recomendarías esta sesión de análisis a otros emprendedores?",
 			"opciones": ["Si", "No"]
