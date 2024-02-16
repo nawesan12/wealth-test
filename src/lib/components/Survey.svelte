@@ -145,7 +145,7 @@
 			class="text-verde relative my-4 mb-16 rounded-lg border-2 border-green-800 bg-white p-12 py-8 text-center text-3xl font-bold"
 		>
 			<span class="text-verde absolute right-2 top-2 text-sm font-semibold"
-				>{preguntas[currentStep].id + '/' + preguntas.length}</span
+				>{`${String(preguntas[currentStep].id)} / ${String(preguntas.length)}`}</span
 			>
 			{preguntas[currentStep].texto}
 		</h2>

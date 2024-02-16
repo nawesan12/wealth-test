@@ -93,13 +93,23 @@
 			"id": 6,
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez realizaste un estudio de mercado sobre tu rubro y competidores a detalle?",
-			"opciones": ["Si", "No", "Otro:"]
+			"opciones": [
+				"Si, he realizado un estudio de mercado",
+				"Aún no he realizado un estudio completo",
+				"Otro:"
+			],
+			"tip": "Un estudio de mercado implica analizar el entorno empresarial, en el que opera un negocio, comprendiendo la demanda, la competencia y las tendencias del mercado. Es crucial para los emprendedores porque les proporciona información valiosa para tomar decisiones informadas, identificar oportunidades y amenazas, entender las necesidades de los clientes y diferenciarse de la competencia."
 		},
 		{
 			"id": 7,
 			"tipo": "opcion_multiple",
 			"texto": "¿Tienes un plan de Marketing?",
-			"opciones": ["Si", "No", "Otro:"]
+			"opciones": [
+				"Si, tengo un plan de marketing bien definido.",
+				"No, todavía no he desarrollado un plan de marketing.",
+				"Otro:"
+			],
+			"tip": "El plan de marketing es una estrategia detallada que describe cómo una empresa promocionará sus productos o servicios. Incluye objetivos, audiencia objetivo, tácticas de marketing y presupuesto. Es crucial para guiar las actividades de marketing y alcanzar los objetivos comerciales."
 		},
 		{
 			"id": 8,
@@ -221,7 +231,7 @@
 		{
 			"id": 5,
 			"tipo": "opcion_multiple_largas",
-			"texto": "¿Has considerado delegar responsabilidades en tu negocio? Si es así, ¿en qué áreas específicas te gustaría delegar y por qué?",
+			"texto": "¿Has considerado delegar responsabilidades en tu negocio?",
 			"opciones": [
 				"Sí, ya estoy delegando algunas responsabilidades en mi negocio. ",
 				"Estoy considerando delegar responsabilidades en el futuro.",
@@ -264,7 +274,6 @@
 			"texto": "Durante tu infancia-adolescencia, ¿Cómo fueron tus modelos de referencia, viviste una situación de escasez o de abundancia financiera? ¿Tuviste o tienes algún referente cercano que se dedicaba a los negocios?",
 			"tip": "Esta es una de las preguntas más importantes del diagnóstico debido a que saca a la luz nuestra relación con el dinero, y nos brinda información importante para entender nuestros patrones financieros como adultos."
 		},
-
 		{
 			"id": 11,
 			"tipo": "opcion_multiple",
@@ -334,7 +343,7 @@
 			"id": 4,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cómo mides el resultado del negocio a final de mes, en la moneda local o prefieres medir en dólares u otra moneda extranjera?",
-			"opciones": ["Moneda local", "Dolar estadounidense (USD)", "Otra"]
+			"opciones": ["Moneda local", "Dólar estadounidense (USD)", "Otra"]
 		},
 		{
 			"id": 5,
@@ -382,7 +391,7 @@
 			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
 				"Si, tengo un fondo de tranquilidad bien establecido para hacer frente a cualquier contingencia",
-				"Sí, tengo ahorros, aunque no sé cuantos meses me cubriria",
+				"Sí, tengo ahorros, aunque no sé cuantos meses me cubriría",
 				"No tengo dinero ahorrado para contingencias. Dependo de mis ventas mes a mes"
 			],
 			"tip": "Un fondo de tranquilidad es un fondo reservado para cubrir gastos en situaciones imprevistas, como una disminución repentina en las ventas, gastos inesperados, problemas de flujo de efectivo o urgencias operativas, lo que ayuda a mantener la estabilidad financiera y operativa del negocio en tiempos difíciles."
