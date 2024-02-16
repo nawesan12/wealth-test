@@ -4,7 +4,7 @@
 	const sections = {
 		datos_iniciales: {
 			name: 'Empecemos con lo esencial!',
-			introduction: 'Te pediremos algunos datos basicos.'
+			introduction: 'Te pediremos algunos datos básicos.'
 		},
 		conociendo_el_negocio: {
 			name: 'Ahora vamos a hablar de tu negocio',
