@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
 	export let data;
 
 	const datos = data.body.informe;
@@ -6,9 +9,15 @@
 	function formatAge(age: string | undefined): string {
 		return age ?? '';
 	}
+
+	onMount(() => {
+		if (!datos) {
+			goto('/');
+		}
+	});
 </script>
 
-<main class="m-4 max-w-4xl rounded-lg bg-white p-8">
+<main class="m-4 mx-auto max-w-4xl rounded-lg bg-white/10 p-8 text-white">
 	<section class="mb-8">
 		<h2 class="mb-2 text-2xl font-semibold">Información del Usuario</h2>
 		<article class="space-y-2">
@@ -31,10 +40,6 @@
 			<p>
 				<strong class="font-semibold">Tipo de Negocio:</strong>
 				{datos?.businessInfo?.businessType}
-			</p>
-			<p>
-				<strong class="font-semibold">Oferta de Negocio:</strong>
-				{datos?.businessInfo?.businessOffering}
 			</p>
 			<p>
 				<strong class="font-semibold">Modelo de Negocio:</strong>
@@ -175,16 +180,8 @@
 				{datos?.subjectiveAnalysis?.suddenGrowth}
 			</p>
 			<p>
-				<strong class="font-semibold">Creeencias de la Infancia:</strong>
-				{datos?.subjectiveAnalysis?.childhoodBeliefs}
-			</p>
-			<p>
 				<strong class="font-semibold">Experiencias de la Infancia:</strong>
 				{datos?.subjectiveAnalysis?.childhoodExperience}
-			</p>
-			<p>
-				<strong class="font-semibold">Incidentes de Vida:</strong>
-				{datos?.subjectiveAnalysis?.lifeIncidents}
 			</p>
 			<p>
 				<strong class="font-semibold">Evaluación Emocional:</strong>
