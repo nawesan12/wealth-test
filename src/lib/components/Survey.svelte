@@ -82,8 +82,17 @@
 			});
 	}
 
+	function scrollToTop() {
+		window.scrollTo({
+			behavior: 'smooth',
+			top: 0
+		});
+		return;
+	}
+
 	function handleAnswers() {
 		const currentQuestion = preguntas[currentStep];
+		const nextQuestion = preguntas[currentStep + 1];
 
 		if (currentQuestion.opcional) {
 			fillOptionalQuestionWithEmptyString();
@@ -97,23 +106,32 @@
 			return;
 		}
 
-		// Perform conditional checks for displaying subsequent questions
-		if (currentStep === preguntas.length - 1) {
+		const isTheLastQuestion = currentStep === preguntas.length - 1;
+
+		if (isTheLastQuestion) {
 			saveAnswersAndSendToBackend();
+			scrollToTop();
+			return;
 		} else {
-			if (currentQuestion.condicional) {
-				const previousAnswer = respuestas[currentStep];
+			if (nextQuestion.condicional) {
+				const actualAnswer = respuestas[currentStep];
 				const conditionalQuestionIndex = currentStep + 1;
 
-				if (!previousAnswer.includes('Sí')) {
+				if (!actualAnswer.includes('Sí')) {
 					respuestas[conditionalQuestionIndex] = ' ';
 					skipOptionalQuestion();
+					scrollToTop();
 					return;
 				} else {
 					goToNextQuestion();
+					scrollToTop();
 					return;
 				}
 			}
+
+			goToNextQuestion();
+			scrollToTop();
+			return;
 		}
 	}
 </script>
