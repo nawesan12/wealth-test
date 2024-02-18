@@ -61,7 +61,7 @@
 
 			$surveyAnswers[section][5] = countryCode + phoneNumber;
 
-			console.log("RESPUESTAS SIN CORTAR PARA EL BACKEND:", $surveyAnswers);
+			console.log('RESPUESTAS SIN CORTAR PARA EL BACKEND:', $surveyAnswers[section].slice(1));
 
 			sendDataToBackendAndSave(backend, {
 				data: $surveyAnswers[section].slice(1),
