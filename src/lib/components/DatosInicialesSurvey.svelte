@@ -130,13 +130,15 @@
 									bind:value={respuestas[pregunta.id]}
 								/>
 							{:else if pregunta.tipo === 'social'}
-								<div class="relative">
+								<div class="relative pl-6">
 									<Input
 										type="text"
-										placeholder="@@ Ingresa tu usuario"
+										class="px-4"
+										placeholder={`\t Ingresa tu usuario`}
 										bind:value={respuestas[pregunta.id]}
 									/>
-									<span class="absolute bottom-2 left-2 bg-white pr-4 font-semibold text-zinc-700"
+									<span
+										class="absolute bottom-0 left-0 flex h-full w-8 items-center justify-center rounded-l-lg border border-white bg-white pr-2 font-semibold text-zinc-700 focus-within:outline focus-within:outline-2 focus-within:outline-black"
 										>@</span
 									>
 								</div>

@@ -74,3 +74,29 @@ export const sendDataToBackendAndSave = async (url: string, data: string[]) => {
 		return error;
 	}
 };
+
+export async function checkIfTokenIsUsed(token: string) {
+	const res = await fetch('/api/token-checker', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: token
+	});
+	const data = await res.json();
+
+	return data.tokenIsAlreadyUsed;
+}
+
+export async function deprecateToken(token: string) {
+	const res = await fetch('/api/deprecate-token', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: token
+	});
+	const data = await res.json();
+
+	return data.success;
+}

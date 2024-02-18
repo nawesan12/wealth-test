@@ -3,14 +3,14 @@
 	import Confetti from 'svelte-confetti';
 	import emailjs from '@emailjs/browser';
 
+	import { deprecateToken } from '@/utils';
 	import { surveyAnswers } from '@/stores/survey';
 	import TokenChecker from '@/components/middleware-token/token-checker.svelte';
+	import { goto } from '$app/navigation';
 
-	$: userEmail = $surveyAnswers.datos_iniciales[3];
-	$: token = $surveyAnswers.token;
-	$: userName = $surveyAnswers.datos_iniciales[0];
-
-	console.log(userEmail, token, userName);
+	const userEmail = $surveyAnswers.datos_iniciales[4];
+	const token = $surveyAnswers.token;
+	const userName = $surveyAnswers.datos_iniciales[1];
 
 	onMount(() => {
 		emailjs.send(
@@ -23,6 +23,15 @@
 			},
 			'LzX3tW8GW9p6o7CRP'
 		);
+
+		setTimeout(() => {
+			deprecateToken(token).then((success) => {
+				if (!success) {
+					goto('/test');
+				}
+				return;
+			});
+		}, 1000);
 	});
 </script>
 
@@ -34,7 +43,7 @@
 	delay={[500, 2000]}
 	infinite
 	duration={10000}
-	amount={700}
+	amount={400}
 	fallDistance="98vh"
 />
 

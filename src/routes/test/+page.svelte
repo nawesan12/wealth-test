@@ -34,6 +34,11 @@
 			});
 			const data = await res.json();
 
+			if (data.msg) {
+				toast.error('Token invalido!');
+				return;
+			}
+
 			if (data.token !== token) {
 				toast.error('Token invalido!');
 				return;

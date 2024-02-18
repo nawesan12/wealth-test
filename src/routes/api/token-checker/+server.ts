@@ -1,12 +1,12 @@
 import { prisma } from '@/database/client.js';
 import { error, json, text } from '@sveltejs/kit';
 
-export async function POST({ request }) {
+export async function POST({ request }: { request: Request }) {
 	const token = await request.text();
 
 	// Additional validation: Check if token is provided
 	if (!token) {
-		return error(400, 'Token is required!');
+		return error(400, 'Please provide a token!');
 	}
 
 	const verifiedToken = await prisma.accessInfoToken.findUnique({
@@ -19,18 +19,12 @@ export async function POST({ request }) {
 		return error(400, 'Invalid token!');
 	}
 
-	const tokenForCheck = verifiedToken.token;
-
-	if(verifiedToken.isUsed) {
-		return json({ msg: "Token already used!"})
-	}
-
-	return json({ token: tokenForCheck });
+	return json({ tokenIsAlreadyUsed: verifiedToken.isUsed });
 }
 
 // This handler will respond to PUT, PATCH, DELETE, etc.
 /** @type {import('./$types').RequestHandler} */
-export async function fallback({ request }) {
+export async function fallback({ request }: { request: Request }) {
 	// Additional validation: Handle unsupported methods
 	return text(`Unsupported method: ${request.method}`);
 }
