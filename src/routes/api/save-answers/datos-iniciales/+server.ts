@@ -27,18 +27,12 @@ export async function POST({ request }) {
 			data: initialDataToUpload
 		});
 
-		await prisma.accessInfoToken.update({
+		const tokenForId = await prisma.accessInfoToken.update({
 			where: {
 				token: token as string
 			},
 			data: {
 				userId: uploadedUser.id
-			}
-		});
-
-		const tokenForId = await prisma.accessInfoToken.findUnique({
-			where: {
-				token: token as string
 			}
 		});
 
