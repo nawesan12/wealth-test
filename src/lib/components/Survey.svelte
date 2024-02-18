@@ -94,7 +94,7 @@
 		if (currentQuestion.opcional) {
 			fillOptionalQuestionWithEmptyString();
 		} else {
-			fieldValidation(currentQuestion.tipo, curresQuestion.opcional);
+			fieldValidation(currentQuestion.tipo, currentQuestion.opcional);
 		}
 
 		// Additional validation: Check input length
