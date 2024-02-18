@@ -365,8 +365,7 @@
 			"opciones": [
 				"Sí, utilizo las mismas cuentas bancarias para mis ingresos del negocio y mis gastos personales.",
 				"No, tengo cuentas bancarias separadas para mis ingresos del negocio y mis gastos personales.",
-				"A veces uso la misma cuenta para ambas cosas, pero trato de separar los ingresos y gastos.",
-				"No tengo cuentas bancarias propias, así que utilizo las de mi negocio para todo."
+				"A veces uso la misma cuenta para ambas cosas, pero trato de separar los ingresos y gastos."
 			],
 			"tip": "Muchos emprendedores centralizan todo su dinero en 2 o 3 cuentas y las utilizan tanto para los costos de su negocio como para sus gastos personales, desde mi punto de vista, te compartiré 3 razones por las cuales no deberías hacerlo. 1) Dificulta el seguimiento preciso de los ingresos y gastos de cada uno. 2) Desequilibrio en el flujo de efectivo, utilizan dinero de la empresa para gastos personales no planificados. 3) Puede dificultar la presentación de impuestos y la contabilidad adecuada."
 		},

@@ -4,7 +4,7 @@
 
 	export let data;
 
-	const datos = data.body.informe;
+	const datos = data.body?.informe;
 	// Función para formatear la edad del usuario
 	function formatAge(age: string | undefined): string {
 		return age ?? '';
@@ -210,7 +210,6 @@
 				<strong class="font-semibold">Diagnóstico Integral:</strong>
 				{datos?.feedback?.comprehensiveDiagnosis}
 			</p>
-			<p><strong class="font-semibold">Sentimientos:</strong> {datos?.feedback?.feelings}</p>
 			<p>
 				<strong class="font-semibold">Aspectos Sorprendentes:</strong>
 				{datos?.feedback?.surprisingAspects}

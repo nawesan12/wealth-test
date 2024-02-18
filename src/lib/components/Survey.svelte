@@ -117,7 +117,7 @@
 				const actualAnswer = respuestas[currentStep];
 				const conditionalQuestionIndex = currentStep + 1;
 
-				if (!actualAnswer.includes('Sí')) {
+				if (!actualAnswer.includes('Sí') || !actualAnswer.includes('Estoy')) {
 					respuestas[conditionalQuestionIndex] = ' ';
 					skipOptionalQuestion();
 					scrollToTop();
