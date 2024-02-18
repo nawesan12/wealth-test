@@ -56,7 +56,7 @@ model Business {
   token                AccessInfoToken?    @relation(fields: [accessInfoTokenId], references: [id])
   accessInfoTokenId    Int?                @unique
 
-  @@index([userId])
+  @@index([userId, accessInfoTokenId, businessInfoId, financialAnalysisId, subjectiveAnalysisId])
 }
 
 // Define the data model for the business information
