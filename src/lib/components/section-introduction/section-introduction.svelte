@@ -7,7 +7,7 @@
 			introduction: 'Te pediremos algunos datos básicos.'
 		},
 		conociendo_el_negocio: {
-			name: 'Ahora vamos a hablar de tu negocio',
+			name: 'Ahora vamos a hablar sobre tu negocio',
 			introduction:
 				'Decidimos iniciar el diagnóstico analizando la visión integral del negocio, explorando su historia, modelo de negocio, productos/servicios, ventaja competitiva, y otros aspectos claves. Este análisis profundo establece una base sólida para el resto del diagnóstico financiero.'
 		},
