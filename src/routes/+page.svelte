@@ -12,7 +12,7 @@
 				Diagnóstico <br /> Empresarial Personalizado
 			</p>
 			<blockquote class="slide-in-br block text-2xl italic">
-				“No sabemos lo que no sabemos” - Nicolás Copérnico
+				« No sabemos lo que no sabemos » - Nicolás Copérnico
 			</blockquote>
 		</div>
 	</header>
