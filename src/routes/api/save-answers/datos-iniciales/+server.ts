@@ -1,5 +1,7 @@
-import { prisma } from '@/database/client.js';
+import { PrismaClient } from '@prisma/client';
 import { error, json, text } from '@sveltejs/kit';
+
+const prisma = new PrismaClient();
 
 export async function POST({ request }) {
 	try {
