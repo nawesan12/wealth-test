@@ -18,19 +18,20 @@ export async function POST({ request }) {
 			inflationMitigation: data[4] ?? '',
 			financialAccounts: data[5] ?? '',
 			ownerCompensation: data[6] ?? '',
-			budgeting: data[7] ?? '',
-			costStructure: data[8] ?? '',
-			emergencyFund: data[9] ?? '',
-			breakevenAnalysis: data[10] ?? '',
-			debtManagement: data[11] ?? '',
-			liquidityMeasurement: data[12] ?? '',
-			financialStatements: data[13] ?? '',
-			inventoryTracking: data[14] ?? '',
-			trackingMethod: data[15] ?? '',
-			externalFinancing: data[16] ?? '',
-			growthTransitionPlan: data[17] ?? '',
-			financialConsultantPlan: data[18] ?? '',
-			extraCommentAboutCompany: data[19] ?? ''
+			separatedWallets: data[7] ?? '',
+			budgeting: data[8] ?? '',
+			costStructure: data[9] ?? '',
+			emergencyFund: data[10] ?? '',
+			breakevenAnalysis: data[11] ?? '',
+			debtManagement: data[12] ?? '',
+			liquidityMeasurement: data[13] ?? '',
+			financialStatements: data[14] ?? '',
+			inventoryTracking: data[15] ?? '',
+			trackingMethod: data[16] ?? '',
+			externalFinancing: data[17] ?? '',
+			growthTransitionPlan: data[18] ?? '',
+			financialConsultantPlan: data[19] ?? '',
+			extraCommentAboutCompany: data[20] ?? ''
 		};
 
 		const uploadedObjectiveAnalysis = await prisma.financialAnalysis.create({

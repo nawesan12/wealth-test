@@ -85,7 +85,9 @@
 				<br />
 				<br />
 				Hace unos meses tuve la posibilidad de diseñar un sistema financiero para una gran empresa que
-				al implementarlo se logró administrar correctamente una facturación de más de 6 cifras en dólares.
+				al implementarlo se logró administrar correctamente una facturación de más de 6 cifras en dólares,
+				ese fue mi inicio como consultor financiero de negocios.
+
 				<br />
 				<br />
 				Por último, soy <b>idóneo del mercado de capitales</b>, regulado por la Comisión Nacional de

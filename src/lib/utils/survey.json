@@ -361,6 +361,18 @@
 		{
 			"id": 7,
 			"tipo": "opcion_multiple_largas",
+			"texto": "¿Utilizas las mismas cuentas bancarias para las transacciones de tu negocio y tus gastos personales?",
+			"opciones": [
+				"Sí, utilizo las mismas cuentas bancarias para mis ingresos del negocio y mis gastos personales.",
+				"No, tengo cuentas bancarias separadas para mis ingresos del negocio y mis gastos personales.",
+				"A veces uso la misma cuenta para ambas cosas, pero trato de separar los ingresos y gastos.",
+				"No tengo cuentas bancarias propias, así que utilizo las de mi negocio para todo."
+			],
+			"tip": "Muchos emprendedores centralizan todo su dinero en 2 o 3 cuentas y las utilizan tanto para los costos de su negocio como para sus gastos personales, desde mi punto de vista, te compartiré 3 razones por las cuales no deberías hacerlo. 1) Dificulta el seguimiento preciso de los ingresos y gastos de cada uno. 2) Desequilibrio en el flujo de efectivo, utilizan dinero de la empresa para gastos personales no planificados. 3) Puede dificultar la presentación de impuestos y la contabilidad adecuada."
+		},
+		{
+			"id": 8,
+			"tipo": "opcion_multiple_largas",
 			"texto": "¿Cómo estableces tu remuneración como propietario del negocio? ¿Lo haces en función de un porcentaje de las ganancias o tienes un salario fijo? ¿Consideras tu compensación desde la perspectiva de propietario o ejecutivo?",
 			"opciones": [
 				"Salario fijo como propietario.",
@@ -370,13 +382,13 @@
 			]
 		},
 		{
-			"id": 8,
+			"id": 9,
 			"tipo": "opcion_multiple",
 			"texto": "¿Utilizas un presupuesto detallado que te permita tomar decisiones financieras fundamentadas? ¿Diferencias claramente entre ingresos, gastos y costos, y lo mantienes documentado ya sea en formato físico o virtual? [Puedes agregar una descripción detallada en el cuadro de texto]",
 			"opciones": ["Sí, tengo un presupuesto", "No, debería implementar un presupuesto", "Otro:"]
 		},
 		{
-			"id": 9,
+			"id": 10,
 			"tipo": "opcion_multiple",
 			"texto": "¿Tienes una estructura de costos organizada y eficiente?",
 			"opciones": [
@@ -387,7 +399,7 @@
 			"tip": "Una estructura de costos en un negocio se refiere al desglose detallado de todos los gastos necesarios para operar la empresa. Esto incluye costos variables, como materias primas y mano de obra directa, así como costos fijos, como alquiler, salarios administrativos y servicios públicos. Una estructura de costos bien definida ayuda a la empresa a entender sus gastos, calcular el punto de equilibrio y tomar decisiones financieras fundamentadas."
 		},
 		{
-			"id": 10,
+			"id": 11,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Cuentas con un fondo de tranquilidad que te proporcione seguridad financiera en caso de enfrentar una falta de ingresos?",
 			"opciones": [
@@ -398,7 +410,7 @@
 			"tip": "Un fondo de tranquilidad es un fondo reservado para cubrir gastos en situaciones imprevistas, como una disminución repentina en las ventas, gastos inesperados, problemas de flujo de efectivo o urgencias operativas, lo que ayuda a mantener la estabilidad financiera y operativa del negocio en tiempos difíciles."
 		},
 		{
-			"id": 11,
+			"id": 12,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Calculas regularmente el punto de equilibrio financiero del negocio para determinar el nivel de ventas necesario para cubrir los costos operativos del mismo?",
 			"opciones": [
@@ -408,7 +420,7 @@
 			"tip": "El punto de equilibrio es el nivel de ventas en el que los ingresos igualan los costos, lo que indica que el negocio no genera ganancias ni pérdidas. Conocer este dato ayuda mucho a establecer metas y tomar mejores decisiones."
 		},
 		{
-			"id": 12,
+			"id": 13,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cuentas con un plan concreto para manejar las deudas en caso de que tu negocio las adquiera?",
 			"opciones": [
@@ -418,14 +430,14 @@
 			]
 		},
 		{
-			"id": 13,
+			"id": 14,
 			"tipo": "opcion_multiple",
 			"texto": "¿Sueles medir la liquidez constante de tu negocio con el fin de gestionarlo mejor durante los períodos de baja demanda?",
 			"opciones": ["Sí, reviso la liquidez.", "No, me gustaría saber como medir la liquidez."],
 			"tip": "La liquidez es crucial para garantizar que el negocio pueda cumplir con sus obligaciones financieras y enfrentar cualquier eventualidad sin comprometer su funcionamiento continuo."
 		},
 		{
-			"id": 14,
+			"id": 15,
 			"tipo": "opcion_multiple",
 			"texto": "¿Elaboras estados financieros de manera regular (ya sea mensual, trimestral, semestral o anual) para revisar el estado de tu negocio, tomar decisiones informadas y proyectar resultados futuros, tal como lo hacen las grandes empresas?",
 			"opciones": [
@@ -436,7 +448,7 @@
 			"tip": "Los estados financieros son informes contables que muestran la situación financiera, el rendimiento y los flujos de efectivo de una empresa en un período específico. Incluyen el balance general, que resume los activos, pasivos y patrimonio neto; el estado de resultados, que muestra los ingresos, gastos y utilidades o pérdidas; y el estado de flujo de efectivo, que detalla los cambios en el efectivo y equivalentes durante el período."
 		},
 		{
-			"id": 15,
+			"id": 16,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Realizas un seguimiento de tu stock/inventario?",
 			"opciones": [
@@ -446,7 +458,7 @@
 			]
 		},
 		{
-			"id": 16,
+			"id": 17,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cómo lo llevas?",
 			"opciones": ["Anoto en papel", "Planilla de Excel", "Aplicación en el celular", "Software"],
@@ -454,7 +466,7 @@
 			"condicional": true
 		},
 		{
-			"id": 17,
+			"id": 18,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Has recurrido a financiamiento externo para tu negocio en algún momento?",
 			"opciones": [
@@ -464,7 +476,7 @@
 			]
 		},
 		{
-			"id": 18,
+			"id": 19,
 			"tipo": "opcion_multiple_largas",
 			"texto": "¿Has desarrollado un plan financiero claro para hacer la transición de un autoempleo a un negocio sólido? La falta de un plan y una estructura financiera definida suele ser una barrera para muchas marcas que nacen como pasatiempo y desean convertirse en empresas establecidas.",
 			"opciones": [
@@ -474,12 +486,12 @@
 			]
 		},
 		{
-			"id": 19,
+			"id": 20,
 			"tipo": "texto",
 			"texto": "¿Cuál es el objetivo principal que te gustaría lograr trabajando de la mano con un consultor  financiero?"
 		},
 		{
-			"id": 20,
+			"id": 21,
 			"tipo": "texto",
 			"texto": "Algún comentario o descripción extra que quieras agregar sobre tu negocio (Opcional)",
 			"opcional": true

@@ -115,6 +115,7 @@ model FinancialAnalysis {
   inflationMitigation      String    @db.Text
   financialAccounts        String    @db.Text
   ownerCompensation        String    @db.Text
+  separatedWallets         String    @default("") @db.Text
   budgeting                String    @db.Text
   costStructure            String    @db.Text
   emergencyFund            String    @db.Text
