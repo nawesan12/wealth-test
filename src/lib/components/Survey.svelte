@@ -38,14 +38,17 @@
 	}
 
 	function fieldValidation(tipo: string, opcional: boolean) {
-		if (['opcion_multiple', 'opcion_multiple_largas'].includes(tipo) && !opcional) {
-			if (respuestas[currentStep] === '') {
-				toast.error('Debes elegir una opción');
-				return;
-			}
-		} else if (respuestas[currentStep] === '' && !opcional) {
+		if (
+			['opcion_multiple', 'opcion_multiple_largas'].includes(tipo) &&
+			!opcional &&
+			respuestas[currentStep] === ''
+		) {
+			toast.error('Debes elegir una opción');
+			return false;
+		}
+		if (respuestas[currentStep] === '' && !opcional) {
 			toast.error('Debes llenar el campo');
-			return;
+			return false;
 		}
 	}
 
@@ -93,9 +96,9 @@
 
 		if (currentQuestion.opcional) {
 			fillOptionalQuestionWithEmptyString();
-		} else {
-			fieldValidation(currentQuestion.tipo, currentQuestion.opcional);
 		}
+
+		if (fieldValidation(currentQuestion.tipo, currentQuestion.opcional)) return;
 
 		// Additional validation: Check input length
 		if (respuestas[currentStep].length > 1000) {

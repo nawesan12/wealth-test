@@ -63,7 +63,7 @@
 
 			console.log('RESPUESTAS SIN CORTAR PARA EL BACKEND:', $surveyAnswers[section].slice(1));
 
-			sendDataToBackendAndSave(backend, {
+			sendDataToBackendAndSave('/api/save-answers/datos-iniciales', {
 				data: $surveyAnswers[section].slice(1),
 				token: $surveyAnswers.token
 			})

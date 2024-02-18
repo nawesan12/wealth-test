@@ -1,16 +1,11 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/database/client.js';
 import { error, json, text } from '@sveltejs/kit';
-
-const prisma = new PrismaClient();
 
 export async function POST({ request }) {
 	try {
 		const { data, token } = await request.json();
 
-		// Additional validation: Check if all required data is provided
-		if (!data || !token) {
-			throw new Error('Data and token are required!');
-		}
+		console.log(data, token);
 
 		const initialDataToUpload = {
 			name: data[0] ?? '',
@@ -29,6 +24,8 @@ export async function POST({ request }) {
 			data: initialDataToUpload
 		});
 
+		console.log(uploadedUser);
+
 		const tokenForId = await prisma.accessInfoToken.update({
 			where: {
 				token: token as string
@@ -38,16 +35,20 @@ export async function POST({ request }) {
 			}
 		});
 
-		await prisma.business.create({
+		console.log(tokenForId);
+
+		const createdBusiness = await prisma.business.create({
 			data: {
 				userId: uploadedUser.id as string,
-				businessInfoId: 0 as number,
-				subjectiveAnalysisId: 0 as number,
-				financialAnalysisId: 0 as number,
-				feedbackId: 0 as number,
+				businessInfoId: null,
+				subjectiveAnalysisId: null,
+				financialAnalysisId: null,
+				feedbackId: null,
 				accessInfoTokenId: tokenForId?.id as number
 			}
 		});
+
+		console.log(createdBusiness);
 
 		return json({ uploadedUser, token, success: true });
 	} catch (err: unknown) {
