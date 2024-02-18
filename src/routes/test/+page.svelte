@@ -105,12 +105,12 @@
 		<div
 			class="my-4 mb-12 flex flex-col gap-4 px-8 lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-4 lg:mx-auto lg:grid lg:max-w-lg lg:grid-cols-2"
 		>
-			<Input type="text" bind:value={token} placeholder="Codigo de acceso" />
+			<Input type="text" bind:value={token} placeholder="Código de acceso" />
 			<Button
 				class="bg-dorado flex items-center justify-center gap-1 rounded-xl p-4  font-medium text-black hover:bg-rose-700"
 				on:click={handleAccessToken}
 			>
-				Comenzar diagnostico
+				Comenzar diagnóstico
 			</Button>
 		</div>
 	</main>
