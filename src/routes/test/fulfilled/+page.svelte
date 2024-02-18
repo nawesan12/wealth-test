@@ -58,9 +58,9 @@
 			</h1>
 
 			<p class="mt-4 sm:text-xl/relaxed">
-				En breve te enviaremos el informe del diagnostico a tu email
+				En breve te enviaremos el informe del diagnóstico a tu email
 			</p>
-			<span>Tambien puedes acceder con este link</span>
+			<span>También puedes acceder con este link</span>
 
 			<div class="mt-8 flex flex-wrap justify-center gap-4">
 				<a
