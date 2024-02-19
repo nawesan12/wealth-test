@@ -262,7 +262,7 @@
 			"tipo": "opcion_multiple",
 			"texto": "¿Alguna vez te encontraste con una excelente oportunidad para hacer crecer tu negocio, pero no terminaste aprovechándola debido a algún temor interno?",
 			"opciones": ["Si", "No"],
-			"tip": "A veces, los emprendedores nos encontramos con oportunidades emocionantes que podrían impulsar nuestros negocios hacia adelante, pero ciertos temores internos pueden obstaculizar nuestra capacidad para aprovecharlas. Por ejemplo, imagina que te ofrecen asociarte con una empresa líder en tu industria para expandir tu negocio, pero te detiene el miedo al fracaso. O tal vez tienes la oportunidad de lanzar un nuevo producto innovador, pero te preocupa no tener suficiente experiencia en ese mercado. También podría ser que recibas una oferta de inversión para expandir tu empresa, pero te preocupa perder el control sobre tu visión. Estos son solo algunos ejemplos de situaciones en las que los temores internos pueden influir en nuestras decisiones empresariales."
+			"tip": "Los emprendedores a menudo nos enfrentamos a oportunidades emocionantes que podrían impulsar sus negocios, pero los temores internos pueden impedirles aprovecharlas. Por ejemplo, asociarse con una empresa líder, lanzar un nuevo producto innovador o aceptar una oferta de inversión pueden generar dudas sobre el miedo al fracaso, la falta de experiencia o la pérdida de control."
 		},
 		{
 			"id": 10,
@@ -300,7 +300,7 @@
 		{
 			"id": 14,
 			"tipo": "opcion_multiple",
-			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero y qué grado de intervención prefieres en la toma de decisiones financieras para su negocio?",
+			"texto": "¿Cuál es tu nivel de tolerancia al riesgo financiero?",
 			"opciones": [
 				"Tengo una alta tolerancia al riesgo",
 				"Tengo una baja tolerancia al riesgo",
