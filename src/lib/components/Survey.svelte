@@ -37,21 +37,6 @@
 		}
 	}
 
-	function fieldValidation(tipo: string, opcional: boolean) {
-		if (
-			['opcion_multiple', 'opcion_multiple_largas'].includes(tipo) &&
-			!opcional &&
-			respuestas[currentStep] === ''
-		) {
-			toast.error('Debes elegir una opción');
-			return false;
-		}
-		if (respuestas[currentStep] === '' && !opcional) {
-			toast.error('Debes llenar el campo');
-			return false;
-		}
-	}
-
 	function saveAnswersAndSendToBackend() {
 		surveyAnswers.update((value) => {
 			return {
@@ -98,7 +83,19 @@
 			fillOptionalQuestionWithEmptyString();
 		}
 
-		if (fieldValidation(currentQuestion.tipo, currentQuestion.opcional)) return;
+		if (
+			['opcion_multiple', 'opcion_multiple_largas'].includes(currentQuestion.tipo) &&
+			!currentQuestion.opcional &&
+			respuestas[currentStep] === ''
+		) {
+			toast.error('Debes elegir una opción');
+			return;
+		}
+
+		if (respuestas[currentStep] === '' && !currentQuestion.opcional) {
+			toast.error('Debes llenar el campo');
+			return;
+		}
 
 		// Additional validation: Check input length
 		if (respuestas[currentStep].length > 1000) {

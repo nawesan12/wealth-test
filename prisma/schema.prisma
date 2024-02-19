@@ -88,6 +88,7 @@ model BusinessInfo {
 // Define the data model for the subjective analysis
 model SubjectiveAnalysis {
   id                      Int       @id @default(autoincrement())
+  motivation              String?   @db.Text
   financialKnowledge      String    @db.Text
   accountingKnowledge     String    @db.Text
   financialTraining       String    @db.Text
