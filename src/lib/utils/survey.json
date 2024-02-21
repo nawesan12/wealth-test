@@ -211,13 +211,13 @@
 			"id": 2,
 			"tipo": "opcion_multiple",
 			"texto": "¿Cómo describirías tu conocimiento en el área de la administración financiera de negocios?",
-			"opciones": ["Basico", "Intermedio", "Avanzado", "Experto"]
+			"opciones": ["Básico", "Intermedio", "Avanzado", "Experto"]
 		},
 		{
 			"id": 3,
 			"tipo": "opcion_multiple",
 			"texto": "¿Qué nivel de conocimiento tienes en el área contable de tu negocio?",
-			"opciones": ["Basico", "Intermedio", "Avanzado", "Experto"]
+			"opciones": ["Básico", "Intermedio", "Avanzado", "Experto"]
 		},
 		{
 			"id": 4,
@@ -343,7 +343,8 @@
 		{
 			"id": 3,
 			"tipo": "area",
-			"texto": "¿Qué indicadores o métricas utilizas para evaluar la rentabilidad real de tu negocio y asegurarte de que esté generando ganancias?"
+			"texto": "¿Cómo evalúas la rentabilidad real de tu negocio y te aseguras de que esté generando ganancias?",
+			"tip": "Es crucial medir la rentabilidad real de tu negocio para comprender su salud financiera. Mientras que la mayoría solo revisa el total de ingresos y gastos del mes, es importante considerar otros indicadores como el margen de beneficio neto, el retorno sobre la inversión (ROI) y el flujo de efectivo operativo. Estos indicadores te brindan información valiosa sobre la eficiencia y la rentabilidad de tu negocio."
 		},
 		{
 			"id": 4,
