@@ -53,7 +53,7 @@
 			<h1 class="text-3xl font-extrabold sm:text-5xl">
 				Felicidades!
 				<strong class="min-w-max text-2xl font-extrabold sm:block">
-					Completaste tu diagnostico
+					Completaste tu diagnóstico
 				</strong>
 			</h1>
 
