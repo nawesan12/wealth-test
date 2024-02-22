@@ -18,7 +18,7 @@
 			'template_3wmncfg',
 			{
 				userEmail,
-				token: `https://dep.emperadorfinanciero.com/${token}`,
+				linkToInforme: `https://dep.emperadorfinanciero.com/${token}`,
 				userName
 			},
 			'LzX3tW8GW9p6o7CRP'
