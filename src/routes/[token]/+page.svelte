@@ -19,8 +19,8 @@
 	const titlesDictionary = {
 		datos_iniciales: 'Información del Usuario',
 		conociendo_el_negocio: 'Conociendo El Negocio',
-		analisis_subjetivo: 'Analisis Subjetivo',
-		analisis_financiero: 'Analisis Financiero',
+		analisis_subjetivo: 'Análisis Subjetivo',
+		analisis_financiero: 'Análisis Financiero',
 		feedback: 'Feedback'
 	};
 
