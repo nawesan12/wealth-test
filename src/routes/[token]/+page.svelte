@@ -36,7 +36,7 @@
 <main class="m-4 mx-auto max-w-4xl rounded-lg bg-white/10 p-8 text-white">
 	{#each sectionsToMapForDisplay as section}
 		<section class="mb-8">
-			<h2 class="mb-2 text-2xl font-semibold">{titlesDictionary[section]}</h2>
+			<h2 class="mb-2 text-2xl font-semibold underline">{titlesDictionary[section]}</h2>
 			<article class="my-6">
 				{#each survey[section] as question, indice (indice)}
 					<p class="my-4">
