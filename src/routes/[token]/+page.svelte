@@ -41,6 +41,7 @@
 				{#each survey[section] as question, indice (indice)}
 					<p>
 						<b class="font-semibold">{question.texto}</b>
+						<br />
 						{Object.values(datos[dbDictionary[section]])[indice]}
 					</p>
 				{/each}
