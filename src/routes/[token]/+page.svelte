@@ -37,12 +37,12 @@
 	{#each sectionsToMapForDisplay as section}
 		<section class="mb-8">
 			<h2 class="mb-2 text-2xl font-semibold">{titlesDictionary[section]}</h2>
-			<article class="space-y-2">
+			<article class="my-6">
 				{#each survey[section] as question, indice (indice)}
-					<p>
-						<b class="font-semibold">{question.texto}</b>
+					<p class="my-4">
+						<b class="font-semibold">{question.texto}:</b>
 						<br />
-						{Object.values(datos[dbDictionary[section]])[indice]}
+						{Object.values(datos[dbDictionary[section]]).slice(1)[indice]}
 					</p>
 				{/each}
 			</article>
