@@ -23,7 +23,7 @@
 		{
 			"id": 5,
 			"tipo": "phone",
-			"texto": "Telefono o celular"
+			"texto": "Número de WhatsApp (escribirlo con el prefijo de tu país)"
 		},
 		{
 			"id": 6,
