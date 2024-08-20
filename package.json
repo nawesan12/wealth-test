@@ -39,7 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@emailjs/browser": "^3.12.1",
-		"@prisma/client": "^5.9.1",
+		"@prisma/client": "5.8.1",
 		"@types/bcrypt": "^5.0.2",
 		"@types/jsonwebtoken": "^9.0.5",
 		"@types/uuid": "^9.0.8",
