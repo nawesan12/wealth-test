@@ -65,7 +65,7 @@
 	<img
 		src="/angelo.JPG"
 		alt=""
-		class="mx-auto aspect-square size-72 rounded-xl md:size-96 lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-2"
+		class="mx-auto w-72 rounded-xl md:w-96 lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-2"
 	/>
 
 	<main class="lg:col-span-2 lg:col-start-2 lg:row-span-1 lg:row-start-2">
