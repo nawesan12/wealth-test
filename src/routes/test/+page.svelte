@@ -63,7 +63,7 @@
 	</header>
 
 	<img
-		src="https://media.licdn.com/dms/image/C5603AQEsic89jJNboA/profile-displayphoto-shrink_800_800/0/1643241705131?e=1719446400&v=beta&t=07Z0Yt_H3aNab4OH47d3KKyxeIyzJQveHi3JglJpS2s"
+		src="/angelo.jpg"
 		alt=""
 		class="mx-auto aspect-square size-72 rounded-xl md:size-96 lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-2"
 	/>
