@@ -63,7 +63,7 @@
 	</header>
 
 	<img
-		src="/angelo.jpg"
+		src="/angelo.JPG"
 		alt=""
 		class="mx-auto aspect-square size-72 rounded-xl md:size-96 lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-2"
 	/>
