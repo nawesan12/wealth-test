@@ -3,6 +3,11 @@
 	import '../app.css';
 	import '../animations.css';
 	import '$lib/styles/app.css';
+
+	/** @type {import('@sveltejs/adapter-vercel').Config} */
+	export const config = {
+		runtime: 'nodejs22.x'
+	};
 </script>
 
 <svelte:head>
